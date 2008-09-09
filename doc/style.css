@@ -1,0 +1,127 @@
+
+  img {
+    border: 0;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    background: #333333;
+    color: white;
+    text-align: center;
+  }
+
+  pre {
+    margin-left: -20px;
+    font: 10pt monospace;
+    color: blue;
+  }
+
+  a {
+    color: red;
+    font: bold 9pt sans-serif;
+  }
+
+  h2 {
+    margin-bottom: 0px;
+  }
+
+  .section {
+     margin-top: 20px;
+     margin-bottom: 40px;
+  }
+
+  #container {
+    width: 805px;
+    margin: 0 auto;
+    position: relative;
+    background: url(img/pen.jpg) no-repeat black;
+  }
+
+  #menu {
+    margin: 0px 44px;
+    margin-top: 0px;
+    padding: 3px;
+    text-align: right;
+  }
+
+  #menu a {
+    text-decoration: none;
+    color: #DFF0AA;
+    margin: 10px;
+    background: transparent;
+  }
+
+  #menu a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+
+  #table {
+    padding: 20px;
+    background: black;
+  }
+
+  #notebook {
+    margin-left: 0px;
+    padding-left: 60px;
+    position: relative;
+    background: url(img/spiral.png) repeat-y black;
+    border-right: 2px solid gray;
+  }
+
+  #page {
+    padding: 30px 50px 30px 20px;
+    background: url(img/corner.png) 100% 100% no-repeat white;
+    color: black;
+    text-align: left;
+    position: relative;
+  }
+
+  #stick {
+    position: absolute;
+    right: 50px;
+    top: 70px;
+    z-index: 10;
+  }
+
+  #title {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  #name {
+    font: bold 85px serif;
+    color: black;
+    text-align: left;
+  }
+
+  #brief {
+    font: 14pt helvetica;
+    color: black;
+    text-align: center;
+  }
+
+  #content {
+    font: 10pt sans-serif;
+    color: black;
+  }
+
+  #resource {
+    font: 10pt sans-serif;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  #ad {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  #copyright {
+    padding-bottom: 20px;
+    font: 6pt serif;
+    background: transparent;
+  }
+

@@ -1,0 +1,16 @@
+body {
+  background: #222244;
+  text-align: center;
+  font-family: Microsoft sans-serif, sans-serif;
+  font-size: 11pt;
+  line-height: 15pt;
+}
+
+#adhispanic {
+  margin: 0 auto;
+  width: 900px;
+  text-align: left;
+  background: white;
+  padding: 20px;
+}
+

@@ -1,0 +1,137 @@
+
+<html>
+
+<head>
+  <title>Ruby English</title>
+
+  <meta name="description" content="Ruby programming library for text manipulation and english language processing."/>
+  <meta name="keywords" content="ruby, grammer, programming, text, string, english"/>
+
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link href="img/letter-e.jpg" rel="icon"/>
+
+  <script type="text/javascript">
+  </script>
+</head>
+
+<body>
+
+<div id="container">
+
+  <div style="width: 800px; margin: 0 auto; height: 320px;">
+    <!-- <img src="img/pen.jpg" align="left" style="padding-top: 10px;"/> -->
+    <img src="img/english.png" style="margin-left: 400px; margin-top: 120px;"/>
+  </div>
+
+  <div id="menu">
+    <a href="http://rubyforge.org/frs/?group_id=727">Download</a>
+    <a href="rdoc/index.html">Documentation</a>
+    <a href="http://rubyforge.org/projects/english/">Development</a>
+  </div>
+
+  <div id="table">
+  <div id="notebook">
+  <div id="page">
+
+    <div style="position: absolute; right: 0; top: 0;">
+      <a href="http://facets.rubyforge.org"><img src="img/itcamefrom.png"/></a>
+    </div>
+
+    <span id="name">English<!-- Ink --></span> <br/>
+    <span id="brief">Text and Language Processing</span>
+
+    <br/><br/>
+
+    <h2>Welcome</h2>
+
+    <div class="section">
+      <p>English is a collection of text manipulation and natural language processing
+      libraries the Ruby programming language. Over time we hope to provide a fairly
+      comprehensive set of tools for working with language data.</p>
+
+      <p>Here are some examples:</p>
+
+      <pre>
+        require 'english/similarity'
+
+        "Alexsander".similarity( "Aleksander" )  #=> 0.9
+      </pre>
+
+      <pre>
+        require 'english/roman'
+
+        100.to_roman  #=> "C"
+        9.to_roman    #=> "IX"
+      </pre>
+
+      <pre>
+        require 'english/textfilter'
+
+        tf = English::TextFilter.new
+        tf.rule(/Damn/) { |w| 'Darn' }
+        tf.apply("Damn it!")  #=> "Darn it!"
+      </pre>
+
+      <p>Despite the name of the project, some of the  libraries are rather language neutral.
+      They will work just as well on any linguistic textual data. Certain libraries, on the other
+      hand are completel English specific. For instance, the inflect.rb provides
+      singluar to plural / plural to singular inflection functions.</p>
+
+      <pre>
+        require 'english/inflect'
+
+        "boy".plural      #=> "boys"
+        "ox".plural       #=> "oxen"
+
+        "boys".singular   #=> "boy"
+        "oxen".singular   #=> "ox"
+      </pre>
+
+      For more details see the <a href="rdoc/index.html">API documentation</a>.
+
+    </div>
+
+    <h2>Resources</h2>
+
+    <br/>
+
+    <div class="resource">
+      <a href="grammer/gramdex.html">English Grammer</a> <br/>
+      Explinations and Exercises written by Mary Ansell.
+    </div>
+
+<!--
+    <div class="resource">
+      <a href="http://mathworld.wolfram.com/">MathWorld</a> <br/>
+      A free resource from Wolfram Research built on Mathematica
+      technology.
+    </div>
+-->
+
+    <div id="ad" style="text-align: left;">
+      <script type="text/javascript"><!--
+      google_ad_client = "pub-1126154564663472";
+      /* ENGLISH 468x60 */
+      google_ad_slot = "1473966285";
+      google_ad_width = 468;
+      google_ad_height = 60;
+      //-->
+      </script>
+      <script type="text/javascript"
+      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+  <div id="copyright">
+    English, Copyright &copy; 2008 Tiger Ops<br/>
+    Some included material has respective copyrights. See API documentation for specifics.
+  </div>
+
+</div>
+
+</body>
+</html>

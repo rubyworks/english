@@ -1,0 +1,52 @@
+8
+
+dir
+79
+svn+ssh://transami@rubyforge.org/var/svn/english/trunk/.config
+svn+ssh://transami@rubyforge.org/var/svn/english
+
+
+
+2008-09-07T14:34:33.130177Z
+79
+transami
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5d0e19dc-0d50-42bf-b22b-38b14fa4e50b
+
+roll.ini
+file
+
+
+
+
+2008-09-07T04:28:40.000000Z
+2dd4e6463634e216773329a92bf7dead
+2008-09-07T14:34:33.130177Z
+79
+transami
+
+reap.yaml
+file
+
+
+
+
+2008-09-06T17:33:24.000000Z
+68b329da9893e34099c7d8ad5cb9c940
+2008-09-06T17:44:50.947047Z
+69
+transami
+

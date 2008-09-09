@@ -1,0 +1,3 @@
+English is an general purpose English language processing library.
+It includes a number of useful libraries, such as inflect.rb, 
+similarity.rb, metaphone.rb, and so on.
