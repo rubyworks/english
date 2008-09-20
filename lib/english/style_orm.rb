@@ -1,16 +1,16 @@
-require 'english/inflect'
-require 'english/style/code'
-
 module English
+  require 'english/inflect'
+  require 'english/style'
 
-  module Style
-    ########################################################################
-    # ACTIVE SUPPORT                                                       #
-    #                                                                      #
-    # The following were extracted from ActiveSupport's Inflector class.   #
-    # It seemed prudent to maintian this desgree of compatbility, at least #
-    # for the time being. Ultimately we will improve upon it and diverge.  #
-    ########################################################################
+  module StyleORM
+
+    #########################################################
+    # ACTIVE SUPPORT                                        #
+    #                                                       #
+    # The following were extracted from ActiveSupport's     #
+    # Inflector class. It seemed prudent to maintian this   #
+    # degree of compatbility, at least for the time being.  #
+    #########################################################
 
     # By default, camelize converts strings to UpperCamelCase. If the
     # argument to camelize is set to ":lower" then camelize produces
@@ -123,7 +123,7 @@ module English
 
   end
 
-  module StyleReplace
+  module StyleORM::Replace
     def camelize!    ; replace(camelize)    ; end
     def underscore!  ; replace(underscore)  ; end
     def dasherize!   ; replace(dasherize)   ; end
@@ -137,8 +137,7 @@ module English
 end
 
 class String #:nodoc:
-  include English::Style
-  include English::StyleReplace
+  include English::StyleORM
+  include English::StyleORM::Replace
 end
-
 
