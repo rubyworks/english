@@ -1,14 +1,4 @@
-# = TITLE:
-#   String Jumble
-#
-# = SYNOPSIS:
-#   Means of scrambling and distorting text.
-#
-# = AUTHOR:
-#   - Trans
-
-warn "Use english/style/jumble for future versions."
-
+warn "Use english/style for future versions."
 
 module English #:nodoc:
 

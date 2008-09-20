@@ -1,15 +1,4 @@
-# = TITLE:
-#   Dresener Obfuscation
-#
-# = SYNOPSIS:
-#   Means of distorting text.
-#
-# = AUTHORS:
-#  - Trans
-#  - Kurt Dresner
-
-warn "Use english/style/dresner for future versions."
-
+warn "Use english/style for future version."
 
 module English #:nodoc:
 
