@@ -1,1 +1,34 @@
+#sow:
+#  service  : SowGen
+
+syntax:
+  service   : Syntax
+
+stats:
+  service   : BasicStats
+
+notes:
+  service   : Notes
+
+test:
+  service   : TestUnit
+
+rdoc:
+  service   : RDoc
+  template  : jamis  #./admin/config/rdoc-template
+  inline    : true
+
+ri:
+  service   : RIDoc
+
+vclog:
+  service   : VClog
+
+gem:
+  service   : Gem
+
+rubyforge:
+  service   : Rubyforge
+  unixname  : english
+  groupid   : 727
 
