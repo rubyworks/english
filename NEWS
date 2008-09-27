@@ -1,15 +1,15 @@
 English 0.3.0 is out! This new version provides two awesome
 improvements.
 
-English has gained a new Style module which extends the
+English's Inflect performance has been greatly improved.
+Inflect had used sorting and a comparision loop to find matches
+for singular and plural conversions. Now it uses a single Regexp
+which handles all the matching grunt work on it's own and
+provides a 10x performance gain! Thanks goes to Wycats
+for this superb work on this.
+
+English has also gained a new Style module which extends the
 String class. This mixin provides an assortment of String
 alteration methods such as titlecase, jumble, pathize, etc;
 all the ones you would expect and then some.
-
-English's Inflect performance has been greatly improved.
-Inflect has used sorting and a comparision loop to find matches
-for singular and plural conversions. Now it uses a single Regexp
-which handles all the matching grunt work on it's own and
-provides a 10x performance gain! Special thanks goes to
-Wycats for this superb work on this.
 
