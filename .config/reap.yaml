@@ -26,6 +26,7 @@ vclog:
 
 gem:
   service   : Gem
+  include   : [ bin, lib, meta, task, test, '[A-Z]*' ]
 
 rubyforge:
   service   : Rubyforge
