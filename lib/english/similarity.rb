@@ -11,8 +11,8 @@
 #   - Derek Lewis
 
 #require 'facets/string/cmp'
-require 'facets/blank'
-require 'facets/string/natcmp'
+#require 'facets/blank'
+#require 'facets/string/natcmp'
 
 class String
 
