@@ -50,6 +50,15 @@ module English
       downcase
     end
 
+    # Removes the module part from a modularized expression.
+    #
+    #   "English::Style".demodulize  #=> "Style"
+    #   "Style".demodulize           #=> "Style"
+    #
+    def demodulize
+      to_s.gsub(/^.*::/, '')
+    end
+
     # Replaces underscores with dashes in the string.
     #
     #   "puni_puni".dasherize  #=> "puni-puni"
@@ -126,6 +135,7 @@ module English
   module StyleORM::Replace
     def camelize!    ; replace(camelize)    ; end
     def underscore!  ; replace(underscore)  ; end
+    def demodulize!    ; replace(demodulize)    ; end
     def dasherize!   ; replace(dasherize)   ; end
     def classify!    ; replace(classify)    ; end
     def humanize!    ; replace(humanize)    ; end
