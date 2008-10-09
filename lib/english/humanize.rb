@@ -1,8 +1,13 @@
 module English
   require 'english/inflect'
-  require 'english/style'
+  require 'english/stylize'
 
-  module StyleORM
+  # = String Humanization
+  # ________________________________________________________________
+  #
+  # Transform strings into human readable forms.
+  #
+  module Humanize
 
     #########################################################
     # ACTIVE SUPPORT                                        #
@@ -33,38 +38,15 @@ module English
       end
     end
 
-    # The reverse of +camelize+. Makes an underscored, lowercase form from
-    # the expression in the string.
-    #
-    # Changes '::' to '/' to convert namespaces to paths.
-    #
-    #   "ActiveRecord".underscore          #=> "active_record"
-    #   "ActiveRecord::Errors".underscore  #=> active_record/errors
-    #
-    def underscore
-      to_s.
-      gsub(/::/, '/').
-      gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
-      gsub(/([a-z\d])([A-Z])/,'\1_\2').
-      tr("-", "_").
-      downcase
-    end
-
     # Removes the module part from a modularized expression.
     #
     #   "English::Style".demodulize  #=> "Style"
     #   "Style".demodulize           #=> "Style"
     #
+    # NOTE: This comes from ActiveSupport. The name of this
+    #       method blows. Think of a better one, please.
     def demodulize
       to_s.gsub(/^.*::/, '')
-    end
-
-    # Replaces underscores with dashes in the string.
-    #
-    #   "puni_puni".dasherize  #=> "puni-puni"
-    #
-    def dasherize
-      to_s.gsub(/_/, '-')
     end
 
     # Create a class name from a plural table name like Rails does
@@ -130,24 +112,29 @@ module English
       to_s.demodulize.underscore + (separate_id_with_underscore ? "_id" : "id")
     end
 
-  end
+    # Include Replace mixin if base class/module supports #replace method.
+    def self.included(base)
+      if base.instance_methods.include?('replace') or
+         base.instance_methods.include?(:replace) # Ruby 1.9
+        base.module_eval{ include Replace }
+      end
+    end
 
-  module StyleORM::Replace
-    def camelize!    ; replace(camelize)    ; end
-    def underscore!  ; replace(underscore)  ; end
-    def demodulize!    ; replace(demodulize)    ; end
-    def dasherize!   ; replace(dasherize)   ; end
-    def classify!    ; replace(classify)    ; end
-    def humanize!    ; replace(humanize)    ; end
-    def tableize!    ; replace(tableize)    ; end
-    def titleize!    ; replace(titleize)    ; end
-    def foreign_key! ; replace(foreign_key) ; end
+    module Replace
+      def camelize!    ; replace(camelize)    ; end
+      def demodulize!  ; replace(demodulize) ; end
+      def classify!    ; replace(classify)    ; end
+      def humanize!    ; replace(humanize)    ; end
+      def tableize!    ; replace(tableize)    ; end
+      def titleize!    ; replace(titleize)    ; end
+      def foreign_key! ; replace(foreign_key) ; end
+    end
+
   end
 
 end
 
 class String #:nodoc:
   include English::StyleORM
-  include English::StyleORM::Replace
 end
 

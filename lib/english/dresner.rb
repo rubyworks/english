@@ -1,4 +1,4 @@
-warn "Use english/style for future version."
+warn "Use english/obfuscate for future version."
 
 module English #:nodoc:
 
