@@ -135,6 +135,6 @@ module English
 end
 
 class String #:nodoc:
-  include English::StyleORM
+  include English::Humanize
 end
 
