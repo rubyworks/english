@@ -35,6 +35,10 @@ or download the .zip file and install manually:
 
 For Windows users the last line needs to be 'ruby task/setup'.
 
+== Run test suite
+
+To run test suite, use ./task/test.
+
 
 == Authors
 
