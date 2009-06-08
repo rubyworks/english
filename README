@@ -2,20 +2,16 @@
 
   http://english.rubyforge.org
 
-English is a spin-off of Facets, collecting together all the English
+English is a spin-off of Facets, collecting together all English
 language libraries together under a single unified project. The English
 project intends to provided a general purpose set of English-oriented 
 text manipulation and natural language processing Ruby libraries in one
 convenient package.
 
-The library thus far consists of censor.rb, double_metaphone.rb, dresner.rb,
-inflect.rb, jumble.rb, levenshtein.rb, metaphone.rb, numerals.rb, patterns.rb,
-porter_stemming.rb, roman.rb, similarity.rb, soundex.rb and textfilter.rb.
-
 
 == Release Notes
 
-Please see the NOTES file.
+Please see the RELEASE file.
 
 
 == Usage
@@ -25,15 +21,16 @@ Please see the API documentation.
 
 == Install
 
-  % gem install english
+  $ sudo gem install english
 
 or download the .zip file and install manually:
 
-  % unzip english-x.y.z.zip
-  % cd english-x.y.z
-  % sudo task/setup
+  $ unzip english-x.y.z.zip
+  $ cd english-x.y.z
+  $ sudo task/setup
 
 For Windows users the last line needs to be 'ruby task/setup'.
+
 
 == Run test suite
 

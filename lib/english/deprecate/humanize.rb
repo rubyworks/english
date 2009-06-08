@@ -1,4 +1,4 @@
-warn "English::Humanize is being deprecated."
+warn "English::Humanize is being deprecated. Use Facets instead."
 
 module English
   require 'english/inflect'

@@ -1,4 +1,4 @@
-warn "English::Case is being deprecated. With the execption of #namecase, all of its methods are available via Facets Core."
+warn "English::Case is being deprecated. Use Facets instead (except #namecase)."
 
 module English
 

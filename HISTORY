@@ -1,0 +1,27 @@
+== 0.4.0 / 2009-06-06
+
+* Major Changes
+
+    * dresner.rb and jumble.rb are deprecated (use obfuscate.rb instead).
+    * The following will be deprecated in the the next version:
+        case.rb
+        humanize.rb
+        stylize.rb
+        textfilter.rb
+      (use Ruby Facets for equivalent functionality)
+    * string.rb has been renamed words.rb
+    * created namecase.rb (used to be in case.rb)
+
+== 0.3.1 / 2008-09-28
+
+* 1 Minor Enhancements
+
+    * English no longer requires Facets.  (#b451854bfc3f77f86397557b4cc4eacf31631103)
+
+
+== 0.3.0 / 2008-09-27
+
+* 1 Minor Enhancements
+
+    * dresner.rb and jumble.rb will be deprecated  (#80a36d6713849d67a887bc0af500b0f2a6e664c8)
+

@@ -1,20 +1,20 @@
 module English
 
-  module String
+  module Words
 
     # Returns an array of characters.
     #
     #   "abc 123".words  #=> ["abc","123"]
     #
     def words
-      self.split(/\s+/)
+      split(/\s+/)
     end
 
     # Iterate through each word of a string.
     #
     #   "a string".each_word { |word, range| ... }
     #
-    def each_word_with_range(&yld)
+    def each_word(&yld)
       rest_of_string = self
       wordfind = /([-'\w]+)/
       arity = yld.arity
@@ -204,7 +204,6 @@ end
 
 
 class String #:nodoc:
-  include English::String
+  include English::Words
 end
-
 

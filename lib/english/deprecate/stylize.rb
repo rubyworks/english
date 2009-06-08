@@ -1,4 +1,4 @@
-warn "English::Stylize is being deprecated."
+warn "English::Stylize is being deprecated. Use Facets instead."
 
 module English
 
