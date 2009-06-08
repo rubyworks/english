@@ -1,7 +1,10 @@
+warn "English::Stylize is being deprecated."
+
 module English
 
   # = String Stylization
-  # ______________________________________________________________
+  #
+  # == WARNING: This module is being deprecated. These methods are generally available via Facets.
   #
   # The Stylize mixin provides common transformation to strings.
   #

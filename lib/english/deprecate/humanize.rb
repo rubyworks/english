@@ -1,11 +1,14 @@
+warn "English::Humanize is being deprecated."
+
 module English
   require 'english/inflect'
   require 'english/stylize'
 
   # = String Humanization
-  # ________________________________________________________________
   #
-  # Transform strings into human readable forms.
+  # == WARNING: This module is being deprecated. It's use is geared toward ORMs which can define their own if needed.
+  #
+  # Transform strings into human readable forms. Used for ORM.
   #
   module Humanize
 

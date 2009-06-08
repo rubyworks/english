@@ -1,7 +1,10 @@
+warn "English::Case is being deprecated. With the execption of #namecase, all of its methods are available via Facets Core."
+
 module English
 
   # = String Casing
-  # ______________________________________________________________
+  #
+  # == WARNING: This is being deprecated! Use Facets instead.
   #
   # The Case mixin provides a means of case related alterations
   # to strings.
@@ -86,9 +89,7 @@ module English
       downcase
     end
 
-    # By default, camelize converts strings to UpperCamelCase. If the
-    # argument to camelize is set to ":lower" then camelize produces
-    # lowerCamelCase.
+    # By default, camelize converts strings to UpperCamelCase.
     #
     # camelize will also convert '/' to '::' which is useful for
     # converting paths to namespaces
