@@ -1,0 +1,10 @@
+---
+rdoc:
+  service  : RDoc
+  template : hanna
+  include  : ~
+  exclude  : ~
+  main     : ~
+  extra    : ~
+  active   : true
+
