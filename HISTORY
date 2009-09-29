@@ -1,27 +1,86 @@
+= RELEASE HISTORY
+
 == 0.4.0 / 2009-06-06
 
-* Major Changes
+This version of English (v0.4.0) is the first step in a two part
+process to scale the library back to it's "pure English" roots.
+With limited exceptions, library scripts that are not strictly related
+to providing routines for working with the English language will be
+deprecated. Any useful deprecated functionality will most likely be
+supported  in Ruby Facets instead.
 
-    * dresner.rb and jumble.rb are deprecated (use obfuscate.rb instead).
-    * The following will be deprecated in the the next version:
-        case.rb
-        humanize.rb
-        stylize.rb
-        textfilter.rb
-      (use Ruby Facets for equivalent functionality)
-    * string.rb has been renamed words.rb
-    * created namecase.rb (used to be in case.rb)
+Changes:
 
-== 0.3.1 / 2008-09-28
+* 3 Major Enhancements
 
-* 1 Minor Enhancements
-
-    * English no longer requires Facets.  (#b451854bfc3f77f86397557b4cc4eacf31631103)
+  * dresner.rb and jumble.rb are deprecated (use obfuscate.rb instead).
+  * string.rb has been renamed words.rb
+  * created namecase.rb (used to be in case.rb)
 
 
 == 0.3.0 / 2008-09-27
 
-* 1 Minor Enhancements
+English's Inflect performance has been greatly improved.
+Inflect had used sorting and a comparision loop to find matches
+for singular and plural conversions. Now it uses a single Regexp
+which handles all the matching grunt work on it's own and
+provides a 10x performance gain! Thanks goes to Wycats
+for this superb work on this.
 
-    * dresner.rb and jumble.rb will be deprecated  (#80a36d6713849d67a887bc0af500b0f2a6e664c8)
+English has also gained a new Style module which extends the
+String class. This mixin provides an assortment of String
+alteration methods such as titlecase, jumble, pathize, etc;
+all the ones you would expect and then some.
+
+Changes:
+
+* 3 Major Enhancements
+
+    * Applied wycats improvements to inflect.rb. Now 10x faster!
+    * Renamed database.rb to orm.rb and metacode.rb to code.rb.
+    * Added style.rb from Facets.
+
+* 5 Minor Enhancements
+
+    * Added warning to old jumble.rb and dresner.rb.
+    * Added rule 'ess', 'esses' to inflect.rb.
+    * Fixed vertex plural.
+    * Fixed similarity require.
+    * Minor adjustments to English::Filter.
+
+
+== 0.2.0 / 2008-02-07
+
+Continued work in general orginaization, deciding what will and will not
+be included, what the best names for things are, etc.
+
+Changes:
+
+* 7 Major Enhancements
+
+    * Added roman.rb
+    * Added jumble.rb.
+    * Added porter_stemmingrb
+    * Added levenshtien.rb.
+    * Merged wordfilter.rb into censor.rb.
+    * Renamed metaphone.rb to double_metaphone.rb.
+    * Merged rewrite.rb into censor.rb.
+
+* 3 Minor Enhancements
+
+    * Improved soundex.rb.
+    * Added grammer reference to docs.
+    * Added double_metaphone test.
+
+
+== 0.1.0 / 2007-08-01
+
+English is a spin-off project from Ruby Facets, collecting
+a number of english-related libraries under a single unified
+package. This is the first stab at pulling these libraries
+together.
+
+Changes:
+
+* Happy Birthday!
 
