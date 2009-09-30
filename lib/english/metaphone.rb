@@ -1,7 +1,7 @@
-# Ruby implementation of the Double Metaphone algorithm by Lawrence Philips,
-# originally published in the June 2000 issue of C/C++ Users Journal.
+# Ruby implementation of Metaphone and Double Metaphone algorithms by Lawrence Philips.
 #
-# Based on Stephen Woodbridge's PHP version - http://swoodbridge.com/DoubleMetaPhone/
+# Double Metaphone algoirthm originally published in the June 2000 issue of C/C++ Users Journal.
+# Ruby version based on Stephen Woodbridge's PHP version - http://swoodbridge.com/DoubleMetaPhone/
 
 module English
 
