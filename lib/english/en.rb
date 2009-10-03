@@ -31,3 +31,17 @@ class Array
 
 end
 
+
+class Integer
+
+  # Higher-order function to invoke English functions
+  # for current string.
+  #--
+  # TODO: Use Functor.instance for future version.
+  #++
+  def en
+    English::Integer.instance(self)
+  end
+
+end
+

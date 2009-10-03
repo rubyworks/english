@@ -1,4 +1,4 @@
-require 'english/porter_stemmer'
+require 'english/stemming'
 require 'english/en'
 
 class String

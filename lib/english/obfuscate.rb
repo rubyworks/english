@@ -1,12 +1,6 @@
 module English
 
-  def self.jumble(string)
-    Obfuscate.jumble(string)
-  end
-
-  def self.dresner(string)
-    Obfuscate.dresner(string)
-  end
+  require 'english/class'
 
   # = Obfuscation
   #
@@ -67,8 +61,17 @@ module English
 
   end
 
+  def self.jumble(string)
+    Obfuscate.jumble(string)
+  end
+
+  def self.dresner(string)
+    Obfuscate.dresner(string)
+  end
+
+  class String
+    include Obfuscate
+  end
+
 end
 
-class String
-  include English::Obfuscate
-end

@@ -1,67 +1,67 @@
 module English
-#require 'facets/string/fold'
-  module Words
 
-    # Returns an array of characters.
+  # English Writing Structure
+  #
+  # Methods for identifying and ultizing structural language elements.
+  #
+  module Structure
+
+    # If block given, iterate through each word.
+    #
+    #   "a string".each_word { |word, range| ... }
+    #    
+    # Returns an array of words.
     #
     #   "abc 123".words  #=> ["abc","123"]
     #
-    def words
-      split(/\s+/)
-    end
-
-    # Iterate through each word of a string.
-    #
-    #   "a string".each_word { |word, range| ... }
-    #
-    def each_word(&yld)
-      rest_of_string = self
-      wordfind = /([-'\w]+)/
-      arity = yld.arity
-      offset = 0
-      while wmatch = wordfind.match(rest_of_string)
-        word = wmatch[0]
-        range = offset+wmatch.begin(0) ... offset+wmatch.end(0)
-        rest_of_string = wmatch.post_match
-        if arity == 1
-          yld.call(word)
-        else
-          yld.call(word, range)
+    def self.words(string, &yld)
+      if block_given?
+        scan(/([-'\w]+)/).each do |word|
+          range = $~.begin(0)...$~.end(0)
+          if yld.arity == 1
+            yld.call(word)
+          else
+            yld.call(word, range)
+          end
         end
-        offset = self.length - rest_of_string.length
+      else
+        scan(/([-'\w]+)/)
       end
     end
 
-    # Filters out words from a string based on block test.
     #
-    #   "a string".word_filter { |word| word =~ /^a/ }  #=> "string"
-    #
-    #   CREDIT: George Moschovitis
-
-    def word_filter( &blk )
-      s = self.dup
-      s.word_filter!( &blk )
-    end
-
-    # In place version of #word_filter.
-    #
-    #   "a string".word_filter { |word| ... }
-    #
-    #   CREDIT: George Moschovitis
-
-    def word_filter! #:yield:
-      rest_of_string = self
-      wordfind = /(\w+)/
-      offset = 0
-      while wmatch = wordfind.match(rest_of_string)
-        word = wmatch[0]
-        range = offset+wmatch.begin(0) ... offset+wmatch.end(0)
-        rest_of_string = wmatch.post_match
-        self[range] = yield( word ).to_s
-        offset = self.length - rest_of_string.length
+    def self.sentences(string)
+      if block_given?
+        scan(/(.*?\.\ )/).each do |sentence|
+          range = $~.begin(0)...$~.end(0)
+          if yld.arity == 1
+            yld.call(sentence)
+          else
+            yld.call(sentence, range)
+          end
+        end
+      else
+        scan(/(.*?\.\ )/)
       end
-      self
     end
+
+    #
+    def self.paragraph(string)
+      if block_given?
+        scan(/(.*?\n\s{2,})/).each do |paragraph|
+          range = $~.begin(0)...$~.end(0)
+          if yld.arity == 1
+            yld.call(paragraph)
+          else
+            yld.call(paragraph, range)
+          end
+        end
+      else
+        scan(/(.*?\n\s{2,})/)
+      end
+    end
+
+
 
     # TODO: This is alternateive from glue: worth providing?
     #
@@ -102,22 +102,22 @@ module English
     #   is a
     #   test
     #
-    #   CREDIT: Gavin Kistner
-    #   CREDIT: Dayne Broderson
+    # CREDIT: Gavin Kistner
+    # CREDIT: Dayne Broderson
 
-    def word_wrap( col_width=80 )
-      self.dup.word_wrap!( col_width )
+    def self.word_wrap(string, col_width=79)
+      string.dup.word_wrap!( col_width )
     end
 
     # As with #word_wrap, but modifies the string in place.
     #
-    #   CREDIT: Gavin Kistner
-    #   CREDIT: Dayne Broderson
+    # CREDIT: Gavin Kistner
+    # CREDIT: Dayne Broderson
 
-    def word_wrap!( col_width=80 )
-      self.gsub!( /(\S{#{col_width}})(?=\S)/, '\1 ' )
-      self.gsub!( /(.{1,#{col_width}})(?:\s+|$)/, "\\1\n" )
-      self
+    def self.word_wrap!(string, col_width=79)
+      string.gsub!( /(\S{#{col_width}})(?=\S)/, '\1 ' )
+      string.gsub!( /(.{1,#{col_width}})(?:\s+|$)/, "\\1\n" )
+      string
     end
 
     # old def
@@ -134,6 +134,70 @@ module English
     #  gsub!( /(.{1,#{max-1}}\S)([ ]|\n)/, "\\1\n")
     #end
 
+  end
+
+  class String #:nodoc:
+
+    #
+    def words(&blk)
+      if block_given?
+        Structure.words(self, &blk)
+      else
+        Structure.words(self).to_enum(:each)
+      end
+    end
+
+    #
+    def each_word(&blk)
+      Structure.words(self, &blk)
+    end
+
+    #
+    def sentences(&blk)
+      if block_given?
+        Structure.sentences(self, &blk)
+      else
+        Structure.sentences(self).to_enum(:each)
+      end
+    end
+
+    #
+    def each_sentences(&blk)
+      Structure.sentences(self, &blk)
+    end
+
+    #
+    def paragraphs(&blk)
+      if block_given?
+        Structure.paragraphs(self, &blk)
+      else
+        Structure.paragraphs(self).to_enum(:each)
+      end
+    end
+
+    #
+    def each_paragraphs(&blk)
+      Structure.paragraphs(self, &blk)
+    end
+
+    #
+    def word_wrap(col_width=79)
+      Structure.word_wrap(self, col_width=79)
+    end
+
+    #
+    def word_wrap!(col_width=79)
+      Structure.word_wrap(self, col_width=79)
+    end
+
+  end
+
+end # module English
+
+
+
+
+=begin
     # Returns a new string with all new lines removed from
     # adjacent lines of text.
     #
@@ -198,10 +262,36 @@ module English
       end
     end
 
-  end
+    # Filters out words from a string based on block test.
+    #
+    #   "a string".word_filter { |word| word =~ /^a/ }  #=> "string"
+    #
+    #   CREDIT: George Moschovitis
 
-end
+    def word_filter( &blk )
+      s = self.dup
+      s.word_filter!( &blk )
+    end
 
-class String #:nodoc:
-  include English::Words
-end
+    # In place version of #word_filter.
+    #
+    #   "a string".word_filter { |word| ... }
+    #
+    #   CREDIT: George Moschovitis
+
+    def word_filter! #:yield:
+      rest_of_string = self
+      wordfind = /(\w+)/
+      offset = 0
+      while wmatch = wordfind.match(rest_of_string)
+        word = wmatch[0]
+        range = offset+wmatch.begin(0) ... offset+wmatch.end(0)
+        rest_of_string = wmatch.post_match
+        self[range] = yield( word ).to_s
+        offset = self.length - rest_of_string.length
+      end
+      self
+    end
+
+=end
+

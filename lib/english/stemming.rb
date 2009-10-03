@@ -13,7 +13,7 @@ module English
   #
   # This version based on Ray Pereda's stemmable.rb (c) 2003.
   #
-  module PorterStemmer
+  module Stemming
 
     PORTER_STEMS = []
 

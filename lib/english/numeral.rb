@@ -14,20 +14,20 @@ module English
     #   '1003'.ordinalize  # => "1003rd"
     #
     def self.ordinal(number)
-      number_string = number.to_s
-      if number_string =~ /\d{1,2}$/
-        number = $1.to_i
+      number_string = number.to_s.strip
+      if md = /\d{1,2}$/.match(number_string)
+        n = md[0].to_i
         if (11..13).include?(number.to_i % 100)
-          r = "#{number}th"
+          "#{number}th"
         else
-          r = case number.to_i % 10
+          case n % 10
             when 1; "#{number}st"
             when 2; "#{number}nd"
             when 3; "#{number}rd"
             else    "#{number}th"
           end
-        end
-        number_string.sub(/\d{1,2}$/, r)
+        end      
+        #number_string.sub(/\d{1,2}$/, r)
       else
         number_string
       end
@@ -49,7 +49,7 @@ module English
       places = integer.to_i.to_s.split(//).collect{|s| s.to_i}.reverse
       name = []
       ((places.length + 2) / 3).times do |p|
-        strings = Numerals.trio(places[p * 3, 3])
+        strings = trio(places[p * 3, 3])
         name.push(Mega[p]) if strings.length > 0 and p > 0
         name += strings
       end
@@ -79,29 +79,31 @@ module English
 
   #
   def self.ordinal(integer)
-    Numerals.ordinal(integer)
+    Numeral.ordinal(integer)
   end
 
   #
   def self.numeral(integer)
-    Numerals.name(integer)
+    Numeral.name(integer)
   end
+
 
   class String
     def ordinal
-      English.ordinal(self)
+      Numeral.ordinal(self)
     end
     def numeral
-      English::Numerals.name(self)
+      Numeral.name(self)
     end
   end
 
+
   class Integer
     def ordinal
-      English.ordinal(self)
+      Numeral.ordinal(to_i)
     end
     def numeral
-      English::Numerals.name(self)
+      Numeral.name(to_i)
     end
   end
 
