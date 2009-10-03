@@ -107,9 +107,17 @@
 
   <div id="documentation">
     <h1><a href="English.html">English</a></h1>
-<pre>
-  http://english.rubyforge.org
-</pre>
+<ul>
+<li><a
+href="http://rubyworks.github.com/english">rubyworks.github.com/english</a>
+
+</li>
+<li><a
+href="http://github.com/rubyworks/english">github.com/rubyworks/english</a>
+
+</li>
+</ul>
+<h2>DESCRIPTION:</h2>
 <p>
 <a href="English.html">English</a> is a spin-off of Facets, collecting
 together all <a href="English.html">English</a> language libraries together
@@ -118,36 +126,42 @@ project intends to provided a general purpose set of English-oriented text
 manipulation and natural language processing Ruby libraries in one
 convenient package.
 </p>
-<h2>Release Notes</h2>
+<h2>RELEASE NOTES:</h2>
 <p>
-Please see the RELEASE file.
+Please see the <a href="HISTORY.html">HISTORY</a> file.
 </p>
-<h2>Usage</h2>
+<h2>SYNOPSIS</h2>
 <p>
 Please see the API documentation.
 </p>
-<h2>Install</h2>
+<h2>INSTALLATION:</h2>
+<p>
+Using RubyGems:
+</p>
 <pre>
   $ sudo gem install english
 </pre>
 <p>
-or download the .zip file and install manually:
+Or using Ruby Setup, download the .tar.gz file and install manually:
 </p>
 <pre>
-  $ unzip english-x.y.z.zip
+  $ tar -xvzf english-x.y.z.tar.gz
   $ cd english-x.y.z
-  $ sudo task/setup
+  $ sudo setup.rb
 </pre>
 <p>
-For Windows users the last line needs to be &#8216;ruby task/setup&#8217;.
+For Windows users the last line needs to be &#8216;ruby setup.rb&#8217;.
 </p>
-<h2>Run test suite</h2>
+<h2>TESTING:</h2>
 <p>
-To run test suite, use ./task/test.
+To run the test suite without installing, you can use:
 </p>
-<h2>Authors</h2>
+<pre>
+  $ script/test
+</pre>
+<h2>AUHTORS:</h2>
 <ul>
-<li>Trans
+<li>Thomas Sawyer
 
 </li>
 <li>Paul Battley
@@ -166,21 +180,19 @@ To run test suite, use ./task/test.
 
 </li>
 </ul>
-<h2>Changes</h2>
+<h2>COPYING:</h2>
 <p>
-Please see CHANGES files.
-</p>
-<h2>Copying</h2>
-<p>
-<a href="English.html">English</a>, Copyright &#169; 2006–2008 Tiger Ops
+<a href="English.html">English</a>, Copyright &#169; 2006–2008 Thomas
+Sawyer
 </p>
 <p>
 Some libraries within <a href="English.html">English</a> are copyrighted to
-respective authors, or are derivatives of such acknowledged work.
+respective authors, or are derivatives of such acknowledged work. See the
+library files for copyright notices.
 </p>
 <p>
 <a href="English.html">English</a> is distributed under the terms of the
-Ruby License. Which is a dual GPL license.
+Ruby License, which is a dual GPL license.
 </p>
 
   </div>
