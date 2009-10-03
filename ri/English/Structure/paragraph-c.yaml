@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: English::Structure::paragraph
+is_singleton: true
+name: paragraph
+params: (string)
+visibility: public

@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: English::Stemming#stem_porter
+is_singleton: false
+name: stem_porter
+params: ()
+visibility: public

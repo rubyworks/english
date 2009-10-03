@@ -1,0 +1,18 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Rules that apply only to words. This takes the regular expression and add word boundry matches to either side.
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  filter.word_rule(/damn/){ |w| 'darn' }\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Is equivalent to teh regular rule:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  filter.rule(/\\bdamn\\b/){ |w| 'darn' }\n"
+full_name: English::Censor#word_rule
+is_singleton: false
+name: word_rule
+params: (match, &edit)
+visibility: public

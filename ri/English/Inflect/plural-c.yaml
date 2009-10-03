@@ -1,0 +1,14 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Convert an English word from singular to plurel.
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  &quot;boy&quot;.plural     #=&gt; boys\n  &quot;tomato&quot;.plural  #=&gt; tomatoes\n"
+full_name: English::Inflect::plural
+is_singleton: true
+name: plural
+params: (word)
+visibility: public

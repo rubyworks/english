@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Define a singularization rule.
+full_name: English::Inflect::singular_rule
+is_singleton: true
+name: singular_rule
+params: (singular, plural)
+visibility: public

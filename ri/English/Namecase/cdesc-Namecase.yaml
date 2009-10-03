@@ -1,0 +1,31 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: namecase
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Namecase
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Perl Version Copyright (c) Mark Summerfield 1998-2002 &lt;summer@perlpress.com&gt;
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Ruby Version: Copyright (c) Aaron Patterson 2006"
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Namecase
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Perl Version Copyright (c) Mark Summerfield 1998-2002 &lt;summer@perlpress.com&gt;
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Ruby Version: Copyright (c) Aaron Patterson 2006"
+constants: []
+
+full_name: English::Namecase
+includes: []
+
+instance_methods: []
+
+name: Namecase

@@ -1,0 +1,31 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: instance
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Can't subclass b/c no #new."
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Can't subclass b/c no #new."
+constants: []
+
+full_name: English::Integer
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: method_missing
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: numeral
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: ordinal
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: to_i
+name: Integer
+superclass: Object

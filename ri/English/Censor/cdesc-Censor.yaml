@@ -1,0 +1,53 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: 
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Abritraty rules.
+  name: rules
+  rw: R
+- !ruby/object:RDoc::RI::Attribute 
+  comment: 
+  - !ruby/struct:RDoc::Markup::Flow::P 
+    body: Word-oriented rules.
+  name: word_rules
+  rw: R
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Censor
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This class allows one to define a resuable text filter. This is useful for removing or replacing curse words or senstive information from user input.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Censor
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This class allows one to define a resuable text filter. This is useful for removing or replacing curse words or senstive information from user input.
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: CURSE_WORDS
+  value: "'fuck shit damn pussy dick cunt bitch'"
+full_name: English::Censor
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: apply
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: censored?
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: filter
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: matches
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: rule
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: word_rule
+name: Censor
+superclass: Object

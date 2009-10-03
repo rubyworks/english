@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: English::numeral
+is_singleton: true
+name: numeral
+params: (integer)
+visibility: public

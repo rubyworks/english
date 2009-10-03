@@ -1,0 +1,14 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Returns the Metaphone representation of a string. If the string contains multiple words, each word in turn is converted into its Metaphone representation. Note that only the letters A-Z are supported, so any language-specific processing should be done beforehand.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: If <tt>alt</tt> is set to true, alternate 'buggy' rules are used.
+full_name: English::Metaphone::metaphone
+is_singleton: true
+name: metaphone
+params: (string, alt=nil)
+visibility: public

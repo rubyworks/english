@@ -1,0 +1,43 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: conjunction
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: constant?
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: double_metaphone
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: dresner
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: jumble
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: metaphone
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: numeral
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: ordinal
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: plural
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: singular
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: soundx
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: stem_porter
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: vowel?
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: " ---\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: require 'english/class'
+constants: []
+
+full_name: English
+includes: []
+
+instance_methods: []
+
+name: English

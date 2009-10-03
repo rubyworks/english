@@ -1,0 +1,14 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "As with #word_wrap, but modifies the string in place."
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "CREDIT: Gavin Kistner CREDIT: Dayne Broderson"
+full_name: English::Structure::word_wrap!
+is_singleton: true
+name: word_wrap!
+params: (string, col_width=79)
+visibility: public

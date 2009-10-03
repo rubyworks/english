@@ -1,0 +1,77 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: stem
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: An implementaion of the Porter Stemming algorithm by Martin Porter.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "This is the Porter Stemming algorithm, ported to Ruby from the version coded up in Perl. It's easy to follow against the rules in the original paper in:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  Porter, 1980, An algorithm for suffix stripping, Program, Vol. 14,\n  no. 3, pp 130-137,\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Taken from http://www.tartarus.org/~martin/PorterStemmer (Public Domain)
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This version based on Ray Pereda's stemmable.rb (c) 2003.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: An implementaion of the Porter Stemming algorithm by Martin Porter.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "This is the Porter Stemming algorithm, ported to Ruby from the version coded up in Perl. It's easy to follow against the rules in the original paper in:"
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  Porter, 1980, An algorithm for suffix stripping, Program, Vol. 14,\n  no. 3, pp 130-137,\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Taken from http://www.tartarus.org/~martin/PorterStemmer (Public Domain)
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This version based on Ray Pereda's stemmable.rb (c) 2003.
+constants: 
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: C
+  value: "\"[^aeiou]\""
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: CC
+  value: "\"#{C}(?>[^aeiouy]*)\""
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: MEQ1
+  value: /^(#{CC})?#{VV}#{CC}(#{VV})?$/o
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: MGR0
+  value: /^(#{CC})?#{VV}#{CC}/o
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: MGR1
+  value: /^(#{CC})?#{VV}#{CC}#{VV}#{CC}/o
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: PORTER_STEMS
+  value: "[]"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: PORTER_STEMS_RE
+  value: "[]"
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: V
+  value: "\"[aeiouy]\""
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: VOWEL_IN_STEM
+  value: /^(#{CC})?#{V}/o
+- !ruby/object:RDoc::RI::Constant 
+  comment: 
+  name: VV
+  value: "\"#{V}(?>[aeiou]*)\""
+full_name: English::Stemming
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: stem_porter
+name: Stemming

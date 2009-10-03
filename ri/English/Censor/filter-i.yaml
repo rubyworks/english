@@ -1,0 +1,13 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: 
+- !ruby/object:RDoc::RI::AliasName 
+  name: apply
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Apply the set of rules (regular expression matches) to a string.
+full_name: English::Censor#filter
+is_singleton: false
+name: filter
+params: (string)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Convert an integer to the english spelling of that number.
+full_name: English::Numeral::name
+is_singleton: true
+name: name
+params: (integer)
+visibility: public

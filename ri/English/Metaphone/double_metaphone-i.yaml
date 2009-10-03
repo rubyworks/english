@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Mixable form of double_metaphone.
+full_name: English::Metaphone#double_metaphone
+is_singleton: false
+name: double_metaphone
+params: ()
+visibility: private

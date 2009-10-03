@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: English::Metaphone::metaphone_word
+is_singleton: true
+name: metaphone_word
+params: (w, alt=nil)
+visibility: private

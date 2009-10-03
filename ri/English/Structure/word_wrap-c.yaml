@@ -1,0 +1,20 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Word wrap a string not exceeding max width.
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  puts &quot;this is a test&quot;.word_wrap(4)\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: <em>produces</em>
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  this\n  is a\n  test\n"
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "CREDIT: Gavin Kistner CREDIT: Dayne Broderson"
+full_name: English::Structure::word_wrap
+is_singleton: true
+name: word_wrap
+params: (string, col_width=79)
+visibility: public

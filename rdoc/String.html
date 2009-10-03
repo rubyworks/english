@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: String</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+  <div class="head">
+    <h1 class="class">String</h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/english/en/namecase_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/namecase.rb">lib/english/en/namecase.rb</a></li>
+          
+            <li><a href="./lib/english/en/general_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/general.rb">lib/english/en/general.rb</a></li>
+          
+            <li><a href="./lib/english/en/obfuscate_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/obfuscate.rb">lib/english/en/obfuscate.rb</a></li>
+          
+            <li><a href="./lib/english/en/soundex_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/soundex.rb">lib/english/en/soundex.rb</a></li>
+          
+            <li><a href="./lib/english/en/metaphone_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/metaphone.rb">lib/english/en/metaphone.rb</a></li>
+          
+            <li><a href="./lib/english/en/inflect_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/inflect.rb">lib/english/en/inflect.rb</a></li>
+          
+            <li><a href="./lib/english/en/numeral_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/numeral.rb">lib/english/en/numeral.rb</a></li>
+          
+            <li><a href="./lib/english/en/structure_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/structure.rb">lib/english/en/structure.rb</a></li>
+          
+            <li><a href="./lib/english/en/stemming_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en/stemming.rb">lib/english/en/stemming.rb</a></li>
+          
+            <li><a href="./lib/english/en_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/en.rb">lib/english/en.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#M000009">#constant?</a></li>
+          
+          <li><a href="#M000014">#double_metaphone</a></li>
+          
+          <li><a href="#M000011">#dresner</a></li>
+          
+          <li><a href="#M000028">#each_paragraphs</a></li>
+          
+          <li><a href="#M000026">#each_sentences</a></li>
+          
+          <li><a href="#M000022">#each_word</a></li>
+          
+          <li><a href="#M000103">#en</a></li>
+          
+          <li><a href="#M000010">#jumble</a></li>
+          
+          <li><a href="#M000013">#metaphone</a></li>
+          
+          <li><a href="#M000000">#namecase</a></li>
+          
+          <li><a href="#M000020">#numeral</a></li>
+          
+          <li><a href="#M000019">#ordinal</a></li>
+          
+          <li><a href="#M000027">#paragraphs</a></li>
+          
+          <li><a href="#M000017">#plural</a></li>
+          
+          <li><a href="#M000018">#pluralize</a></li>
+          
+          <li><a href="#M000025">#sentences</a></li>
+          
+          <li><a href="#M000015">#singular</a></li>
+          
+          <li><a href="#M000016">#singularize</a></li>
+          
+          <li><a href="#M000012">#soundex</a></li>
+          
+          <li><a href="#M000031">#stem_porter</a></li>
+          
+          <li><a href="#M000008">#vowel?</a></li>
+          
+          <li><a href="#M000029">#word_wrap</a></li>
+          
+          <li><a href="#M000030">#word_wrap!</a></li>
+          
+          <li><a href="#M000021">#words</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./COPYING.html">COPYING</a></li>
+        
+          <li class="file"><a href="./HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="./English.html">English</a></li>
+        
+          <li class="class"><a href="./English/Array.html">English::Array</a></li>
+        
+          <li class="class"><a href="./English/Censor.html">English::Censor</a></li>
+        
+          <li class="module"><a href="./English/Conjunction.html">English::Conjunction</a></li>
+        
+          <li class="module"><a href="./English/Inflect.html">English::Inflect</a></li>
+        
+          <li class="class"><a href="./English/Integer.html">English::Integer</a></li>
+        
+          <li class="module"><a href="./English/Metaphone.html">English::Metaphone</a></li>
+        
+          <li class="module"><a href="./English/Namecase.html">English::Namecase</a></li>
+        
+          <li class="module"><a href="./English/Numeral.html">English::Numeral</a></li>
+        
+          <li class="module"><a href="./English/Obfuscate.html">English::Obfuscate</a></li>
+        
+          <li class="module"><a href="./English/Soundex.html">English::Soundex</a></li>
+        
+          <li class="module"><a href="./English/Stemming.html">English::Stemming</a></li>
+        
+          <li class="module"><a href="./English/Structure.html">English::Structure</a></li>
+        
+          <li class="class"><a href="./Array.html">Array</a></li>
+        
+          <li class="class"><a href="./Integer.html">Integer</a></li>
+        
+          <li class="class"><a href="./String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+
+    <div id="validator-badges">
+      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a>.<br/>
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="constant--method" class="method-detail ">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">constant?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="constant--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/general.rb, line 10</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">constant?</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">vowel?</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="double-metaphone-method" class="method-detail ">
+        <a name="M000014"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">double_metaphone</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="double-metaphone-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/metaphone.rb, line 10</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">double_metaphone</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$langauge</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'en'</span>).<span class="ruby-identifier">double_metaphone</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="dresner-method" class="method-detail ">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">dresner</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="dresner-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/obfuscate.rb, line 12</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dresner</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'en'</span>).<span class="ruby-identifier">dresner</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="each-paragraphs-method" class="method-detail ">
+        <a name="M000028"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">each_paragraphs</span><span
+            class="method-args">(&blk)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="each-paragraphs-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/structure.rb, line 32</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_paragraphs</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">each_paragraph</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="each-sentences-method" class="method-detail ">
+        <a name="M000026"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">each_sentences</span><span
+            class="method-args">(&blk)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="each-sentences-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/structure.rb, line 22</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_sentences</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">each_sentence</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="each-word-method" class="method-detail ">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">each_word</span><span
+            class="method-args">(&blk)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="each-word-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/structure.rb, line 12</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_word</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">each_word</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="en-method" class="method-detail ">
+        <a name="M000103"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">en</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Higher-order function to invoke <a href="English.html">English</a>
+functions for current string.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="en-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en.rb, line 15</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">en</span>
+    <span class="ruby-constant">English</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">instance</span>(<span class="ruby-keyword kw">self</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="jumble-method" class="method-detail ">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">jumble</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="jumble-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/obfuscate.rb, line 7</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">jumble</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'en'</span>).<span class="ruby-identifier">jumble</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="metaphone-method" class="method-detail ">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">metaphone</span><span
+            class="method-args">(alt=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="metaphone-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/metaphone.rb, line 6</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">metaphone</span>(<span class="ruby-identifier">alt</span>=<span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$langauge</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'en'</span>).<span class="ruby-identifier">metaphone</span>(<span class="ruby-identifier">alt</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="namecase-method" class="method-detail ">
+        <a name="M000000"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">namecase</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="namecase-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/namecase.rb, line 6</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">namecase</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">namecase</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="numeral-method" class="method-detail ">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">numeral</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="numeral-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/numeral.rb, line 12</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">numeral</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'en'</span>).<span class="ruby-identifier">numeral</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="ordinal-method" class="method-detail ">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">ordinal</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="ordinal-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/numeral.rb, line 7</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ordinal</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'en'</span>).<span class="ruby-identifier">ordinal</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="paragraphs-method" class="method-detail ">
+        <a name="M000027"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">paragraphs</span><span
+            class="method-args">(&blk)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="paragraphs-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/structure.rb, line 27</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">paragraphs</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">paragraphs</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="plural-method" class="method-detail ">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">plural</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="plural-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/inflect.rb, line 15</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">plural</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'en'</span>).<span class="ruby-identifier">plural</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="String.html#M000018">pluralize</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="pluralize-method" class="method-detail method-alias">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">pluralize</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="String.html#M000017">plural</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sentences-method" class="method-detail ">
+        <a name="M000025"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sentences</span><span
+            class="method-args">(&blk)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="sentences-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/structure.rb, line 17</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sentences</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">sentences</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="singular-method" class="method-detail ">
+        <a name="M000015"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">singular</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="singular-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/inflect.rb, line 7</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">singular</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'en'</span>).<span class="ruby-identifier">singular</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="String.html#M000016">singularize</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="singularize-method" class="method-detail method-alias">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">singularize</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="String.html#M000015">singular</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="soundex-method" class="method-detail ">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">soundex</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="soundex-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/soundex.rb, line 6</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">soundex</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">soundex</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="stem-porter-method" class="method-detail ">
+        <a name="M000031"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">stem_porter</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="stem-porter-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/stemming.rb, line 6</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stem_porter</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">stem_porter</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="vowel--method" class="method-detail ">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">vowel?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="vowel--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/general.rb, line 6</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vowel?</span>
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">vowel?</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="word-wrap-method" class="method-detail ">
+        <a name="M000029"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">word_wrap</span><span
+            class="method-args">(col_width=79)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="word-wrap-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/structure.rb, line 37</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">word_wrap</span>(<span class="ruby-identifier">col_width</span>=<span class="ruby-value">79</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">word_wrap</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="word-wrap--method" class="method-detail ">
+        <a name="M000030"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">word_wrap!</span><span
+            class="method-args">(col_width=79)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="word-wrap--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/structure.rb, line 42</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">word_wrap!</span>(<span class="ruby-identifier">col_width</span>=<span class="ruby-value">79</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">word_wrap!</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="words-method" class="method-detail ">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">words</span><span
+            class="method-args">(&blk)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="words-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/english/en/structure.rb, line 7</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">words</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+    <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">$language</span><span class="ruby-operator">|</span><span class="ruby-value str">'en'</span>).<span class="ruby-identifier">words</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</body>
+</html>

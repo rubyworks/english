@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: English::Inflect::plural_of
+is_singleton: true
+name: plural_of
+params: ()
+visibility: public

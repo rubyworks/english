@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: English module method for Metaphone.
+full_name: English::metaphone
+is_singleton: true
+name: metaphone
+params: (string, alt=nil)
+visibility: public

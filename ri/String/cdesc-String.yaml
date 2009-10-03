@@ -1,0 +1,62 @@
+--- !ruby/object:RDoc::RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: String
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: constant?
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: double_metaphone
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: dresner
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: each_paragraphs
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: each_sentences
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: each_word
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: en
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: jumble
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: metaphone
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: namecase
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: numeral
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: ordinal
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: paragraphs
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: plural
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: pluralize
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: sentences
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: singular
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: singularize
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: soundex
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: stem_porter
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: vowel?
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: word_wrap
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: word_wrap!
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: words
+name: String
+superclass: Object

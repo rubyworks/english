@@ -1,0 +1,11 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: String#sentences
+is_singleton: false
+name: sentences
+params: (&blk)
+visibility: public

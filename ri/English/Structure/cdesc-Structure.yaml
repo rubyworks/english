@@ -1,0 +1,33 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: paragraph
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: sentences
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: word_wrap
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: word_wrap!
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: words
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: English Writing Structure
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Methods for identifying and ultizing structural language elements.
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: English Writing Structure
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Methods for identifying and ultizing structural language elements.
+constants: []
+
+full_name: English::Structure
+includes: []
+
+instance_methods: []
+
+name: Structure

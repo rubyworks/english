@@ -1,0 +1,16 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Define a general two-way exception.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: This also defines a general rule, so foo_child will correctly become foo_children.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Whole words also work if they are capitalized (Goose =&gt; Geese).
+full_name: English::Inflect::word
+is_singleton: true
+name: word
+params: (singular, plural=nil)
+visibility: public

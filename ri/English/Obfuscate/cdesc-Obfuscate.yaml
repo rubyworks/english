@@ -1,0 +1,48 @@
+--- !ruby/object:RDoc::RI::ModuleDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: dresner
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: jumble
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Obfuscation
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The Obfuscate mixin provides a means of applying common scrambling patterns to strings.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "This module is automatically mixed into the String class, but the mixin is designed in such a way that it can be mixed into any class that supports the #to_s method."
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Examples
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  &quot;superman&quot;.jumble  #=&gt; &quot;SUpeRmAn&quot;\n"
+- !ruby/struct:RDoc::Markup::Flow::RULE 
+  width: 
+- !ruby/struct:RDoc::Markup::Flow::H 
+  level: 1
+  text: Obfuscation
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: The Obfuscate mixin provides a means of applying common scrambling patterns to strings.
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "This module is automatically mixed into the String class, but the mixin is designed in such a way that it can be mixed into any class that supports the #to_s method."
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Examples
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  &quot;superman&quot;.jumble  #=&gt; &quot;SUpeRmAn&quot;\n"
+constants: []
+
+full_name: English::Obfuscate
+includes: []
+
+instance_methods: 
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: dresner
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: dresner!
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: jumble
+- !ruby/object:RDoc::RI::MethodSummary 
+  name: jumble!
+name: Obfuscate

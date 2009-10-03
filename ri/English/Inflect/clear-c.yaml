@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Clear all rules.
+full_name: English::Inflect::clear
+is_singleton: true
+name: clear
+params: (type = :all)
+visibility: public

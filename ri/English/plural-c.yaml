@@ -1,0 +1,10 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: English::plural
+is_singleton: true
+name: plural
+params: (string)
+visibility: public

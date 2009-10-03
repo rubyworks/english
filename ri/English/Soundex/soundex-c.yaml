@@ -1,0 +1,14 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Returns nil if the value couldn't be calculated b/c of empty-string or invalid character.
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  &quot;Ruby&quot;.soundex  #=&gt; &quot;R100&quot;\n"
+full_name: English::Soundex::soundex
+is_singleton: true
+name: soundex
+params: (str)
+visibility: public

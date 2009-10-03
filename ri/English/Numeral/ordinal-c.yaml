@@ -1,0 +1,14 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: Ordinalize turns a number string into an ordinal string used to denote the position in an ordered sequence such as 1st, 2nd, 3rd, 4th.
+- !ruby/struct:RDoc::Markup::Flow::VERB 
+  body: "  '1'.ordinalize     # =&gt; &quot;1st&quot;\n  '2'.ordinalize     # =&gt; &quot;2nd&quot;\n  '1002'.ordinalize  # =&gt; &quot;1002nd&quot;\n  '1003'.ordinalize  # =&gt; &quot;1003rd&quot;\n"
+full_name: English::Numeral::ordinal
+is_singleton: true
+name: ordinal
+params: (number)
+visibility: public

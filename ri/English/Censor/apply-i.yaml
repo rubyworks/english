@@ -1,0 +1,12 @@
+--- !ruby/object:RDoc::RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:RDoc::Markup::Flow::P 
+  body: "Alias for #filter"
+full_name: English::Censor#apply
+is_singleton: false
+name: apply
+params: (string)
+visibility: public
