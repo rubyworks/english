@@ -8,6 +8,6 @@ require 'english/en/soundex'
 require 'english/en/stemming'
 require 'english/en/structure'
 
-#require 'english/censor'
+require 'english/censor'
 
 
