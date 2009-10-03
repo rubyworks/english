@@ -1,11 +1,4 @@
-# This version based on Ray Pereda's stemmable.rb (c) 2003.
-
-#
 module English
-
-  def self.stem_porter(string)
-    PorterStemmer.stem(string)
-  end
 
   # An implementaion of the Porter Stemming algorithm by Martin Porter.
   #
@@ -18,9 +11,13 @@ module English
   #
   # Taken from http://www.tartarus.org/~martin/PorterStemmer (Public Domain)
   #
+  # This version based on Ray Pereda's stemmable.rb (c) 2003.
+  #
   module PorterStemmer
 
-    STEP_2_LIST = {
+    PORTER_STEMS = []
+
+    PORTER_STEMS[0] = {
       'ational' => 'ate', 'tional' => 'tion', 'enci' => 'ence', 'anci' => 'ance',
       'izer' => 'ize', 'bli' => 'ble',
       'alli' => 'al', 'entli' => 'ent', 'eli' => 'e', 'ousli' => 'ous',
@@ -30,53 +27,37 @@ module English
       'iviti' => 'ive', 'biliti' => 'ble', 'logi' => 'log'
     }
 
-    STEP_3_LIST = {
+    PORTER_STEMS[1] = {
       'icate' => 'ic', 'ative' => '', 'alize' => 'al', 'iciti' => 'ic',
       'ical' => 'ic', 'ful' => '', 'ness' => ''
     }
 
-    SUFFIX_1_REGEXP = /(
-                      ational  |
-                      tional   |
-                      enci     |
-                      anci     |
-                      izer     |
-                      bli      |
-                      alli     |
-                      entli    |
-                      eli      |
-                      ousli    |
-                      ization  |
-                      ation    |
-                      ator     |
-                      alism    |
-                      iveness  |
-                      fulness  |
-                      ousness  |
-                      aliti    |
-                      iviti    |
-                      biliti   |
-                      logi)$/x
 
-    SUFFIX_2_REGEXP = /(
-                        al       |
-                        ance     |
-                        ence     |
-                        er       |
-                        ic       |
-                        able     |
-                        ible     |
-                        ant      |
-                        ement    |
-                        ment     |
-                        ent      |
-                        ou       |
-                        ism      |
-                        ate      |
-                        iti      |
-                        ous      |
-                        ive      |
-                        ize)$/x
+    PORTER_STEMS_RE = []
+
+    PORTER_STEMS_RE[0] = Regexp.new(PORTER_STEMS[0].keys.join('|'), Regexp::EXTENDED)
+
+    PORTER_STEMS_RE[1] = Regexp.new(PORTER_STEMS[1].keys.join('|'), Regexp::EXTENDED)
+
+    PORTER_STEMS_RE[2] = /(
+                          al       |
+                          ance     |
+                          ence     |
+                          er       |
+                          ic       |
+                          able     |
+                          ible     |
+                          ant      |
+                          ement    |
+                          ment     |
+                          ent      |
+                          ou       |
+                          ism      |
+                          ate      |
+                          iti      |
+                          ous      |
+                          ive      |
+                          ize)$/x
 
     C = "[^aeiou]"             # consonant
     V = "[aeiouy]"             # vowel
@@ -86,7 +67,8 @@ module English
     MGR0 = /^(#{CC})?#{VV}#{CC}/o                # [cc]vvcc... is m>0
     MEQ1 = /^(#{CC})?#{VV}#{CC}(#{VV})?$/o       # [cc]vvcc[vv] is m=1
     MGR1 = /^(#{CC})?#{VV}#{CC}#{VV}#{CC}/o      # [cc]vvccvvcc... is m>1
-    VOWEL_IN_STEM   = /^(#{CC})?#{V}/o           # vowel in stem
+
+    VOWEL_IN_STEM = /^(#{CC})?#{V}/o             # vowel in stem
 
     def self.stem(word)
 
@@ -126,26 +108,26 @@ module English
       end
 
       # Step 2
-      if word =~ SUFFIX_1_REGEXP
+      if word =~ PORTER_STEMS_RE[0]
         stem = $`
         suffix = $1
         # print "stem= " + stem + "\n" + "suffix=" + suffix + "\n"
         if stem =~ MGR0
-          word = stem + STEP_2_LIST[suffix]
+          word = stem + PORTER_STEM[0][suffix]
         end
       end
 
       # Step 3
-      if word =~ /(icate|ative|alize|iciti|ical|ful|ness)$/
+      if word =~ PORTER_STEMS_RE[1]
         stem = $`
         suffix = $1
         if stem =~ MGR0
-          word = stem + STEP_3_LIST[suffix]
+          word = stem + PORTER_STEMS[1][suffix]
         end
       end
 
       # Step 4
-      if word =~ SUFFIX_2_REGEXP
+      if word =~ PORTER_STEMS_RE[2]
         stem = $`
         if stem =~ MGR1
           word = stem
@@ -176,6 +158,23 @@ module English
       word
     end
 
+    #
+    def stem_porter
+      PorterStemmer.stem(to_s)
+    end
+
+  end
+
+  #
+  def self.stem_porter(string)
+    PorterStemmer.stem(string)
+  end
+
+  class String
+    #
+    def stem_porter
+      PorterStemmer.stem(self)
+    end
   end
 
 end

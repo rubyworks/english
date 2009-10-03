@@ -12,8 +12,8 @@ module English
 
     # Returns a new +String+ with the contents properly namecased.
     #
-    def namecase
-      localstring = downcase
+    def self.namecase(name)
+      localstring = name.downcase
       localstring.gsub!(/\b\w/) { |first| first.upcase }
       localstring.gsub!(/\'\w\b/) { |c| c.downcase } # Lowercase 's
 
@@ -56,15 +56,21 @@ module English
       localstring
     end
 
-    #
-    def namecase!
-      replace(namecase)
+  end
+
+  class String
+    #include Namecase
+
+    def namecase
+      Namecase.namecase(self)
     end
 
-  end
+    #
+    def namecase!(name)
+      replace(Namecase.namecase(self))
+    end
+
+  end # class String
 
 end #module English
 
-class String #:nodoc:
-  include English::Namecase
-end

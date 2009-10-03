@@ -1,34 +1,21 @@
-# = TITLE:
-#   Soundex
-#
-# = SYNOPSIS:
-#   Ruby implementation of the Soundex algorithm,
-#   as described by Knuth in volume 3 of The Art
-#   of Computer Programming.
-#
-# = AUTHOR:
-#   Michael Neumann (neumann@s-direktnet.de)
+module English
 
-module English # :nodoc:
-
-  def self.soundex(string)
-    Soundex.soundex(string)
-  end
+  require 'english/class'
 
   # Ruby implementation of the Soundex algorithm,
   # as described by Knuth in volume 3 of The Art
   # of Computer Programming.
   #
+  # Based on work by Michael Neumann (neumann@s-direktnet.de)
+  #
   module Soundex
-
-    module_function
 
     # Returns nil if the value couldn't be calculated b/c of
     # empty-string or invalid character.
     #
     #   "Ruby".soundex  #=> "R100"
-
-    def soundex(str)
+    #
+    def self.soundex(str)
       return nil if str.empty?
 
       str = str.upcase
@@ -55,21 +42,31 @@ module English # :nodoc:
 
     # Support function for String#soundex.
     # Returns code for a single character.
-
-    def soundex_code(char)
+    #
+    def self.soundex_code(char)
       char.tr! "AEIOUYWHBPFVCSKGJQXZDTLMNR", "00000000111122222222334556"
     end
 
+    # Mixable version of soundex method.
+    #
+    def soundex
+      Soundex.soundex(to_s)
+    end
+
   end # module Soundex
-
-end # module English
-
-
-class String
-
-  def soundex
-    English.soundex(self)
+ 
+  # English module method for Soundex.
+  #
+  def self.soundx(string)
+    Soundx.soundx(string)
   end
 
-end
+  class String
+    #
+    def soundex
+      Soundex.soundex(self)
+    end
+  end
+
+end # module English
 

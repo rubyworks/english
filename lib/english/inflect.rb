@@ -283,9 +283,44 @@ module English
     plural_rule 'ive' , 'ives' # don't want to snag wife
     plural_rule 'fe'  , 'ves'  # don't want to snag perspectives 
   end
+
+
+  class << self
+
+    def singular(string)
+      English::Inflect.singular(string)
+    end
+
+    alias_method(:singularize, :singular)
+
+    def plural(string)
+      English::Inflect.plural(string)
+    end
+
+    alias_method(:pluralize, :plural)
+
+  end
+
+
+  class String
+
+    def singular
+      English::Inflect.singular(self)
+    end
+
+    alias_method(:singularize, :singular)
+
+    def plural
+      English::Inflect.plural(self)
+    end
+
+    alias_method(:pluralize, :plural)
+
+  end
+
 end
 
-
+=begin
 class String
   def singular
     English::Inflect.singular(self)
@@ -297,3 +332,5 @@ class String
   end
   alias_method(:pluralize, :plural)
 end
+=end
+

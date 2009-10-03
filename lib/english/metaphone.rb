@@ -1,18 +1,30 @@
-# Ruby implementation of Metaphone and Double Metaphone algorithms by Lawrence Philips.
-#
-# Double Metaphone algoirthm originally published in the June 2000 issue of C/C++ Users Journal.
-# Ruby version based on Stephen Woodbridge's PHP version - http://swoodbridge.com/DoubleMetaPhone/
-
 module English
 
-  def self.metaphone(string)
-    Metaphone.metaphone(string)
-  end
+  require 'english/class'
 
-  def self.double_metaphone(string)
-    Metaphone.double_metaphone(string)
-  end
-
+  # Implementation of  Lawrence Philips' Metaphone and Double Metaphone algorithms.
+  #
+  # Metaphone encodes names into a phonetic form such that similar-sounding names
+  # have the same or similar Metaphone encodings.
+  #
+  # The original system was described by Lawrence Philips in Computer Language
+  # Vol. 7 No. 12, December 1990, pp 39-43.
+  #
+  # There are multiple implementations of Metaphone, each with their own
+  # quirks, I have based this on my interpretation of the algorithm specification.
+  # Even LP's original BASIC implementation appears to contain bugs (specifically
+  # with the handling of CC and MB), when compared to his explanation of the
+  # algorithm.
+  #
+  # I have also compared this implementation with that found in PHP's standard
+  # library, which appears to mimic the behaviour of LP's original BASIC
+  # implementation. For compatibility, these rules can also be used by passing
+  # :alternate=>true to the methods.
+  #
+  # Double Metaphone algoirthm originally published in the June 2000 issue of C/C++ Users Journal.
+  # Ruby version based on Stephen Woodbridge's PHP version - http://swoodbridge.com/DoubleMetaPhone/
+  #
+  # Ruby implementation of Double Metaphone based on work by Paul Battley (pbattley@gmail.com).
   #
   module Metaphone
 
@@ -49,35 +61,15 @@ module English
       [ /[wy](?![aeiou])/, '' ],
       [ /z/,              'S' ],
       [ /v/,              'F' ],
-      [ /(?!^)[aeiou]+/,  ''  ],
+      [ /(?!^)[aeiou]+/,  ''  ]
     ]
 
     # The rules for the 'buggy' alternate implementation used by PHP etc.
 
-    METAPHONE_RULES_LP = RULES.dup
+    METAPHONE_RULES_LP = METAPHONE_RULES.dup
     METAPHONE_RULES_LP[0] = [ /([bdfhjklmnpqrstvwxyz])\1+/, '\1' ]
     METAPHONE_RULES_LP[6] = [ /mb/, 'M' ]
 
-    # Implemenatation of Metaphone algorithm developed by Lawrence Philips.
-    #
-    # Metaphone encodes names into a phonetic form such that similar-sounding names
-    # have the same or similar Metaphone encodings.
-    #
-    # The original system was described by Lawrence Philips in Computer Language
-    # Vol. 7 No. 12, December 1990, pp 39-43.
-    #
-    # As there are multiple implementations of Metaphone, each with their own
-    # quirks, I have based this on my interpretation of the algorithm specification.
-    # Even LP's original BASIC implementation appears to contain bugs (specifically
-    # with the handling of CC and MB), when compared to his explanation of the
-    # algorithm.
-    #
-    # I have also compared this implementation with that found in PHP's standard
-    # library, which appears to mimic the behaviour of LP's original BASIC
-    # implementation. For compatibility, these rules can also be used by passing
-    # :alternate=>true to the methods.
-    #
-    #
     # Returns the Metaphone representation of a string. If the string contains
     # multiple words, each word in turn is converted into its Metaphone
     # representation. Note that only the letters A-Z are supported, so any
@@ -85,8 +77,6 @@ module English
     #
     # If +alt+ is set to true, alternate 'buggy' rules are used.
     #
-    # Ruby implementation based on work by Paul Battley (pbattley@gmail.com).
-
     def self.metaphone(string, alt=nil)
       string.to_s.strip.split(/\s+/).map{ |w| metaphone_word(w, alt) }.join(' ')
     end
@@ -445,6 +435,44 @@ module English
       end
     end
 
+    # Mixable form of metaphone.
+    def metaphone(alt=nil)
+      Metaphone.metaphone(to_s, alt=nil)
+    end
+
+    # Mixable form of double_metaphone.
+    def double_metaphone
+      Metaphone.double_metaphone(to_s)
+    end
+
   end # module Metaphone
 
+  # English module method for Metaphone.
+  #
+  def self.metaphone(string, alt=nil)
+    Metaphone.metaphone(string, alt)
+  end
+
+  # English module method for Double Metaphone.
+  #
+  def self.double_metaphone(string)
+    Metaphone.double_metaphone(string)
+  end
+
+  #--
+  # TODO: Should we mixin instead?
+  #++
+  class String
+    # Mixable form of metaphone.
+    def metaphone(alt=nil)
+      Metaphone.metaphone(to_s, alt=nil)
+    end
+
+    # Mixable form of double_metaphone.
+    def double_metaphone
+      Metaphone.double_metaphone(to_s)
+    end
+  end
+
 end # module English
+
