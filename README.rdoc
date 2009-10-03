@@ -1,6 +1,10 @@
 = English
 
-  http://english.rubyforge.org
+* http://rubyworks.github.com/english
+* http://github.com/rubyworks/english
+
+
+== DESCRIPTION:
 
 English is a spin-off of Facets, collecting together all English
 language libraries together under a single unified project. The English
@@ -9,37 +13,41 @@ text manipulation and natural language processing Ruby libraries in one
 convenient package.
 
 
-== Release Notes
+== RELEASE NOTES:
 
-Please see the RELEASE file.
+Please see the HISTORY file.
 
 
-== Usage
+== SYNOPSIS
 
 Please see the API documentation.
 
 
-== Install
+== INSTALLATION:
+
+Using RubyGems:
 
   $ sudo gem install english
 
-or download the .zip file and install manually:
+Or using Ruby Setup, download the .tar.gz file and install manually:
 
-  $ unzip english-x.y.z.zip
+  $ tar -xvzf english-x.y.z.tar.gz
   $ cd english-x.y.z
-  $ sudo task/setup
+  $ sudo setup.rb
 
-For Windows users the last line needs to be 'ruby task/setup'.
-
-
-== Run test suite
-
-To run test suite, use ./task/test.
+For Windows users the last line needs to be 'ruby setup.rb'.
 
 
-== Authors
+== TESTING:
 
-* Trans
+To run the test suite without installing, you can use:
+
+  $ script/test
+
+
+== AUHTORS:
+
+* Thomas Sawyer
 * Paul Battley
 * Tim Fletcher
 * Derek Lewis
@@ -47,18 +55,14 @@ To run test suite, use ./task/test.
 * Michael Neumann
 
 
-== Changes
+== COPYING:
 
-Please see CHANGES files.
-
-
-== Copying
-
-English, Copyright (c) 2006–2008 Tiger Ops
+English, Copyright (c) 2006–2008 Thomas Sawyer
 
 Some libraries within English are copyrighted to respective authors,
-or are derivatives of such acknowledged work.
+or are derivatives of such acknowledged work. See the library files
+for copyright notices.
 
-English is distributed under the terms of the Ruby License.
-Which is a dual GPL license.
+English is distributed under the terms of the Ruby License, which
+is a dual GPL license.
 
