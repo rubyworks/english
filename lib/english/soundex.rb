@@ -11,10 +11,14 @@
 
 module English # :nodoc:
 
+  def self.soundex(string)
+    Soundex.soundex(string)
+  end
+
   # Ruby implementation of the Soundex algorithm,
   # as described by Knuth in volume 3 of The Art
   # of Computer Programming.
-
+  #
   module Soundex
 
     module_function
@@ -64,7 +68,8 @@ end # module English
 class String
 
   def soundex
-    English::Soundex.soundex(self)
+    English.soundex(self)
   end
 
 end
+

@@ -1,5 +1,5 @@
 module English
-
+#require 'facets/string/fold'
   module Words
 
     # Returns an array of characters.
@@ -202,8 +202,6 @@ module English
 
 end
 
-
 class String #:nodoc:
   include English::Words
 end
-

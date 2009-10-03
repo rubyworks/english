@@ -1,7 +1,14 @@
 module English
 
-  # = String Obfuscation
-  #______________________________________________________________
+  def self.jumble(string)
+    Obfuscate.jumble(string)
+  end
+
+  def self.dresner(string)
+    Obfuscate.dresner(string)
+  end
+
+  # = Obfuscation
   #
   # The Obfuscate mixin provides a means of applying common
   # scrambling patterns to strings.
@@ -19,9 +26,9 @@ module English
     # Jumble string.
     #
     #
-    def jumble
+    def self.jumble(string)
       j = ''
-      to_s.split(//).each_with_index{ |c,i| j << ( i % 2 == 0 ? c.downcase : c.upcase ) }
+      string.to_s.split(//).each_with_index{ |c,i| j << ( i % 2 == 0 ? c.downcase : c.upcase ) }
       j
     end
 
@@ -35,32 +42,33 @@ module English
     #   Srblamce the iennr cchrteaars of wodrs lvenaig the txet stlil rbeaadle
     #   (rreceash at Cbamigdre Uverintisy, cdoe by KrneruestDr?)
     #
-    # :credit: Kurt Dresener
+    # CREDIT: Kurt Dresener
+    #
+    def self.dresner(string)
+      string.to_s.gsub(/\B\w+\B/){$&.split(//).sort_by{rand}}
+    end
+
+
+    def jumble
+      Obfuscate.jumble(self)
+    end
+
+    def jumble!
+      replace(Obfuscate.jumble(self))
+    end
+
     def dresner
-      to_s.gsub(/\B\w+\B/){$&.split(//).sort_by{rand}}
+      Obfuscate.dresner(self)
     end
 
-    # Include Replace mixin if base class/module supports #replace method.
-    def self.included(base)
-      if base.instance_methods.include?('replace') or
-         base.instance_methods.include?(:replace) # Ruby 1.9
-        base.module_eval{ include Replace }
-      end
-    end
-
-    # TODO: Replace this will dynamic generate of inplace methods.
-    #       But only when the base defines #replace (?) Need to
-    #       think about this some more.
-    module Replace
-      def jumble!        ; replace(jumble)        ; end
-      def dresner!       ; replace(dresner)       ; end
+    def dresner!
+      replace(Obfuscate.dresner(self))
     end
 
   end
 
 end
 
-class String #:nodoc:
+class String
   include English::Obfuscate
 end
-

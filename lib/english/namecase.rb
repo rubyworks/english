@@ -68,4 +68,3 @@ end #module English
 class String #:nodoc:
   include English::Namecase
 end
-
