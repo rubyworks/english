@@ -39,7 +39,7 @@
   }
 
   #menu {
-    margin: 0px 44px;
+    margin: 0px 40px;
     margin-top: 0px;
     padding: 3px;
     text-align: right;
@@ -48,7 +48,7 @@
   #menu a {
     text-decoration: none;
     color: #DFF0AA;
-    margin: 10px;
+    margin: 5px 0px 5px 10px;
     background: transparent;
   }
 
@@ -58,7 +58,7 @@
   }
 
   #table {
-    padding: 20px;
+    padding: 10px 20px;
     background: black;
   }
 
