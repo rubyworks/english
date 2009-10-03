@@ -10,9 +10,6 @@
   <link href="assets/styles/style.css" rel="stylesheet" type="text/css"/>
   <link href="assets/images/letter-e.jpg" rel="icon"/>
 
-  <style>
-    iframe { border: none; width: 100%; height: 200px; margin: 0; padding: 0; }
-  </style>
 
   <script type="text/javascript">
   </script>
@@ -28,9 +25,9 @@
   </div>
 
   <div id="menu">
-    <a href="http://rubyforge.org/frs/?group_id=727">Download</a>
+    <a href="http://googlegroups/group/rubyworks-mailinglist/">Discussion</a>
     <a href="rdoc/index.html">Documentation</a>
-    <a href="http://github.com/trans/english/tree/master">Development</a>
+    <a href="http://github.com/rubyworks/english">Development</a>
   </div>
 
   <div id="table">
@@ -49,49 +46,56 @@
     <h2>Welcome</h2>
 
     <div class="section">
-      <p>English is a collection of text manipulation and natural language processing
-      libraries the Ruby programming language. Over time we hope to provide a fairly
-      comprehensive set of tools for working with language data.</p>
+      <p>English is a collection English-related text manipulation and natural language
+      processing libraries for the Ruby programming language. Over time the project hopes
+      to provide a fairly comprehensive set of tools for working with English language data.</p>
 
       <p>Here are some examples:</p>
 
       <pre>
-        require 'english/similarity'
+        require 'english/en/inflect'
 
-        "Alexsander".similarity( "Aleksander" )  #=> 0.9
+        "boy".en.plural      #=> "boys"
+        "boys".en.singular   #=> "boy"
+
+        "ox".en.plural       #=> "oxen"
+        "oxen".en.singular   #=> "ox"
       </pre>
 
-      <pre>
-        require 'english/roman'
-
-        100.to_roman  #=> "C"
-        9.to_roman    #=> "IX"
-      </pre>
+      <p>By default the <code>$langauge</code> global variable is set to <code>'en'</code>,
+      so the <code>#en</code> method call can be left out and the same result achieved.</p>
 
       <pre>
-        require 'english/textfilter'
-
-        tf = English::TextFilter.new
-        tf.rule(/Damn/) { |w| 'Darn' }
-        tf.apply("Damn it!")  #=> "Darn it!"
-      </pre>
-
-      <p>Despite the name of the project, some of the  libraries are rather language neutral.
-      They will work just as well on any linguistic textual data. Certain libraries, on the other
-      hand are completel English specific. For instance, the inflect.rb provides
-      singluar to plural / plural to singular inflection functions.</p>
-
-      <pre>
-        require 'english/inflect'
-
         "boy".plural      #=> "boys"
-        "ox".plural       #=> "oxen"
-
         "boys".singular   #=> "boy"
+
+        "ox".plural       #=> "oxen"
         "oxen".singular   #=> "ox"
       </pre>
 
-      For more details see the <a href="rdoc/index.html">API documentation</a>.
+      <p>English includes a number of similar methods. It also includes a few useful classes.
+       For example, the <code>Censor</code> class.</p>
+
+      <pre>
+        require 'english/censor'
+
+        tc = English::Censor.new
+
+        tc.rule(/Damn/) { |w| 'Darn' }
+        tc.rule(/Crap/) { |w| 'Crud' }
+
+        tc.apply("Crap! Damn it!")  #=> "Crud! Darn it!"
+      </pre>
+
+
+      <p>Each English library can be utilized independently. Or all libraries can be loaded with
+      the single <code>require</code>.</p>
+
+      <pre>
+        require 'english'
+      </pre>
+
+      <p>For more details see the <a href="rdoc/index.html">Rdoc API documentation</a>.</p>
 
     </div>
 
@@ -119,15 +123,15 @@
   </div>
 
   <div style="position: absolute; left: 10px; top: 5px;">
-    <a href="http://tigerops.org">
-      <img src="http://tigerops.org/assets/images/tiger-sm.png" align="left"/>
-      <img src="http://tigerops.org/assets/images/tiger-logo-180.png" align="top"/>
+    <a href="http://rubyworks.github.com">
+      <!-- <img src="http://tigerops.org/assets/images/tiger-sm.png" align="left"/> -->
+      <img src="http://rubyworks.github.com/assets/images/rubyworks.png" align="top" width="200px" />
     </a><br/>
   </div>
 
   <div id="copyright">
-    English, Copyright &copy; 2008 Tiger Ops<br/>
-    Some included material has respective copyrights. See API documentation for specifics.
+    English, Copyright &copy; 2009 Thomas Sawyer<br/>
+    Some included material has respective copyrights. See documentation for specifics.
   </div>
 
 </div>
