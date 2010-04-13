@@ -1,10 +1,10 @@
 = English
 
-* http://rubyworks.github.com/english
-* http://github.com/rubyworks/english
+* home: http://rubyworks.github.com/english
+* work: http://github.com/rubyworks/english
 
 
-== DESCRIPTION:
+== DESCRIPTION
 
 English is a spin-off of Facets, collecting together all English
 language libraries together under a single unified project. The English
@@ -13,49 +13,75 @@ text manipulation and natural language processing Ruby libraries in one
 convenient package.
 
 
-== RELEASE NOTES:
+== RELEASE NOTES
 
 Please see the HISTORY file.
 
 
 == SYNOPSIS
 
-Please see the API documentation.
+The primary means of usage is via the English::String class.
+A normal Ruby +String+ can be quickly concerted to an +English::String+
+class using the +#en+ method. With the converted object you can
+call any of the string-based English methods.
+
+  require 'english/inflect'
+
+  "Goose".en.plural  #=> "Geese"
+
+By loading the 'language/mixin' library, you can further remove
+the need for the #en method. Instead the Language module will
+use whatever language is set as *current*. By default 'en' is
+the current language setting.
+
+  require 'language/mixin'
+
+  "Goose".plural  #=> "Geese"
+
+To load the entire English library, including the 'lanaguage/mixin'
+script, simply use:
+
+  require 'english'
+
+See Language project for more information on support for other languages.
+For details on all the methods the English library supplies see the
+<a href="rubyworks.github.com/english/rdoc/">API documentation</a>.
 
 
-== INSTALLATION:
+== INSTALLATION
 
-Using RubyGems:
+Using RubyGems
 
   $ sudo gem install english
 
-Or using Ruby Setup, download the .tar.gz file and install manually:
+We do not recommend site installations any longer, but if you need
+to do so, you can download the .tar.gz file from GitHub and use
+<a href="proutils.github.com/setup/">Ruby Setup<a/> to install
+English manually:
 
-  $ tar -xvzf english-x.y.z.tar.gz
-  $ cd english-x.y.z
+  $ tar -xvzf english-1.0.0.tar.gz
+  $ cd english-1.0.0
   $ sudo setup.rb
 
 For Windows users the last line needs to be 'ruby setup.rb'.
 
 
-== TESTING:
+== TESTING
 
 To run the test suite without installing, you can use:
 
   $ script/test
 
 
-== AUHTORS:
+== AUTHORS
 
 * Thomas Sawyer
 * Paul Battley
-* Tim Fletcher
-* Derek Lewis
 * George Moschovitis
 * Michael Neumann
 
 
-== COPYING:
+== COPYING
 
 English, Copyright (c) 2006–2008 Thomas Sawyer
 
