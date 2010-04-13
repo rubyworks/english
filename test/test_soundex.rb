@@ -10,7 +10,7 @@ class TC_Soundex < Test::Unit::TestCase
 
   def test_cases
     DATA.each do |input, expected_output|
-      assert_equal expected_output, English::Soundex.soundex(input)
+      assert_equal expected_output, English.soundex(input)
     end
   end
 
