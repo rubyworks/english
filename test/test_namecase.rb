@@ -1,19 +1,8 @@
-require 'english/case'
+require 'english/namecase'
 require 'test/unit'
 
-#$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
-#$:.unshift File.join(File.dirname(__FILE__), "..", "test")
+class TC_Namecase < Test::Unit::TestCase
 
-class Test_Case < Test::Unit::TestCase
-
-  def test_titlecase
-    assert_equal('Title Case', 'title case'.titlecase)
-  end
-
-end
-
-
-class Test_Style_NameCase < Test::Unit::TestCase
   def setup
     @proper_names = [
       "Keith",            "Leigh-Williams",       "McCarthy",
@@ -59,4 +48,12 @@ class Test_Style_NameCase < Test::Unit::TestCase
     assert_equal(proper_cased, proper_cased.downcase.namecase)
   end
 end
+
+#class Test_Case < Test::Unit::TestCase
+#
+#  def test_titlecase
+#    assert_equal('Title Case', 'title case'.titlecase)
+#  end
+#
+#end
 

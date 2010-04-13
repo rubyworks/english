@@ -1,8 +1,11 @@
+require 'english/classes'
+
 module English
 
-  # = English Nouns Number Inflection.
+  # = Noun Number Inflections
   #
   # This module provides english singular <-> plural noun inflections.
+
   module Inflect
 
     @singular_of = {}
@@ -284,34 +287,26 @@ module English
     plural_rule 'fe'  , 'ves'  # don't want to snag perspectives 
   end
 
-
-  class << self
-
-    def singular(string)
-      English::Inflect.singular(string)
-    end
-
-    alias_method(:singularize, :singular)
-
-    def plural(string)
-      English::Inflect.plural(string)
-    end
-
-    alias_method(:pluralize, :plural)
-
+  #
+  def singular(string)
+    English::Inflect.singular(string)
   end
 
+  #
+  def plural(string)
+    English::Inflect.plural(string)
+  end
 
   class String
 
     def singular
-      English::Inflect.singular(self)
+      language.singular(self)
     end
 
     alias_method(:singularize, :singular)
 
     def plural
-      English::Inflect.plural(self)
+      language.plural(self)
     end
 
     alias_method(:pluralize, :plural)
@@ -319,18 +314,4 @@ module English
   end
 
 end
-
-=begin
-class String
-  def singular
-    English::Inflect.singular(self)
-  end
-  alias_method(:singularize, :singular)
-
-  def plural
-    English::Inflect.plural(self)
-  end
-  alias_method(:pluralize, :plural)
-end
-=end
 

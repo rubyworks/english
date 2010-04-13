@@ -1,3 +1,4 @@
+require 'language/mixin'
 require 'english/inflect'
 require 'test/unit'
 

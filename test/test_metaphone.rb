@@ -44,3 +44,23 @@ class TC_Metaphone < Test::Unit::TestCase
   end
 
 end
+
+
+class TC_DoubleMetaphone < Test::Unit::TestCase
+
+  DIR  = File.dirname(__FILE__)
+  DATA = File.read(File.join(DIR,'fixture/double_metaphone.txt')).split(/\n/)
+
+  DATA.each_with_index do |line, i|
+    row = *line.split(', ')
+    #primary, secondary = English::Metaphone[row[0]]
+    primary, secondary = English::Metaphone.double_metaphone(row[0])
+
+    define_method("test_#{i}") do
+      assert_equal row[1], primary
+      assert_equal row[2], (secondary.nil?? primary : secondary)
+    end
+  end
+
+end
+

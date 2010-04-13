@@ -1,6 +1,6 @@
-module English
+require 'english/classes'
 
-  require 'english/class'
+module English
 
   # Implementation of  Lawrence Philips' Metaphone and Double Metaphone algorithms.
   #
@@ -25,7 +25,7 @@ module English
   # Ruby version based on Stephen Woodbridge's PHP version - http://swoodbridge.com/DoubleMetaPhone/
   #
   # Ruby implementation of Double Metaphone based on work by Paul Battley (pbattley@gmail.com).
-  #
+
   module Metaphone
 
     # Metaphone rules. These are simply applied in order.
@@ -435,44 +435,32 @@ module English
       end
     end
 
-    # Mixable form of metaphone.
-    def metaphone(alt=nil)
-      Metaphone.metaphone(to_s, alt=nil)
-    end
-
-    # Mixable form of double_metaphone.
-    def double_metaphone
-      Metaphone.double_metaphone(to_s)
-    end
-
   end # module Metaphone
 
   # English module method for Metaphone.
   #
-  def self.metaphone(string, alt=nil)
+  def metaphone(string, alt=nil)
     Metaphone.metaphone(string, alt)
   end
 
   # English module method for Double Metaphone.
   #
-  def self.double_metaphone(string)
+  def double_metaphone(string)
     Metaphone.double_metaphone(string)
   end
 
-  #--
-  # TODO: Should we mixin instead?
-  #++
+
   class String
-    # Mixable form of metaphone.
+    #
     def metaphone(alt=nil)
-      Metaphone.metaphone(to_s, alt=nil)
+      language.metaphone(self, alt=nil)
     end
 
-    # Mixable form of double_metaphone.
+    #
     def double_metaphone
-      Metaphone.double_metaphone(to_s)
+      language.double_metaphone(self)
     end
   end
 
-end # module English
+end
 

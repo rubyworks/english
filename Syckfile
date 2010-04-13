@@ -1,0 +1,77 @@
+---
+email:
+  service : Email
+  file    : ~
+  subject : ~
+  mailto  : ruby-talk@ruby-lang.org
+  active  : true
+
+box:
+  service: Box
+  types  : [gem, tar]
+  active : true
+
+testrb:
+  service  : Testrb
+  tests    : ~
+  exclude  : ~
+  loadpath : ~
+  requires : ~
+  live     : false   
+  active   : false
+
+syntax:
+  service  : Syntax
+  loadpath : ~
+  exclude  : ~
+  active   : false
+
+dnote:
+  service  : DNote
+  loadpath : ~
+  labels   : ~
+  output   : ~
+  format   : ~
+  active   : false
+
+rdoc:
+  service  : RDoc
+  template : redfish
+  include  : ~
+  exclude  : [ Syckfile ]
+  main     : ~
+  extra    : ~
+  active   : true
+
+ridoc:
+  service: RIDoc
+  include: ~
+  exclude: ~
+  active : true
+
+stats:
+  service  : Stats
+  title    : ~
+  loadpath : ~
+  exclude  : ~
+  output   : ~
+  active   : true
+
+vclog:
+  service  : VClog
+  format   : html   # xml, txt
+  layout   : rel    # gnu
+  typed    : false
+  output   : ~
+  active   : false
+
+#rubyforge:
+#  service : Rubyforge
+#  unixname: <%= project %>
+#  groupid : ~
+#  package : <%= package %>
+#  sitemap:
+#    doc/rdoc: <%= package %>
+#  active  : false
+
+

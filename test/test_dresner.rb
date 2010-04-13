@@ -1,10 +1,7 @@
-require 'english/obfuscate'
+require 'english/dresner'
 require 'test/unit'
 
-#$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
-#$:.unshift File.join(File.dirname(__FILE__), "..", "test")
-
-class Test_Obfuscate < Test::Unit::TestCase
+class TC_Dresner < Test::Unit::TestCase
 
   def test_dresner
     # assert_still_legible ;-)

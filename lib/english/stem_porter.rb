@@ -1,3 +1,5 @@
+require 'english/classes'
+
 module English
 
   # An implementaion of the Porter Stemming algorithm by Martin Porter.
@@ -13,7 +15,7 @@ module English
   #
   # This version based on Ray Pereda's stemmable.rb (c) 2003.
   #
-  module Stemming
+  module PorterStemmer
 
     PORTER_STEMS = []
 
@@ -32,12 +34,36 @@ module English
       'ical' => 'ic', 'ful' => '', 'ness' => ''
     }
 
-
     PORTER_STEMS_RE = []
 
-    PORTER_STEMS_RE[0] = Regexp.new(PORTER_STEMS[0].keys.join('|'), Regexp::EXTENDED)
+    #PORTER_STEMS_RE[0] = Regexp.new('('+PORTER_STEMS[0].keys.join('|')+')', Regexp::EXTENDED)
 
-    PORTER_STEMS_RE[1] = Regexp.new(PORTER_STEMS[1].keys.join('|'), Regexp::EXTENDED)
+    PORTER_STEMS_RE[0] = /(
+                    ational  |
+                    tional   |
+                    enci     |
+                    anci     |
+                    izer     |
+                    bli      |
+                    alli     |
+                    entli    |
+                    eli      |
+                    ousli    |
+                    ization  |
+                    ation    |
+                    ator     |
+                    alism    |
+                    iveness  |
+                    fulness  |
+                    ousness  |
+                    aliti    |
+                    iviti    |
+                    biliti   |
+                    logi)$/x
+
+    #PORTER_STEMS_RE[1] = Regexp.new('('+PORTER_STEMS[1].keys.join('|')+')', Regexp::EXTENDED)
+
+    PORTER_STEMS_RE[1] = /(icate|ative|alize|iciti|ical|ful|ness)$/
 
     PORTER_STEMS_RE[2] = /(
                           al       |
@@ -70,8 +96,8 @@ module English
 
     VOWEL_IN_STEM = /^(#{CC})?#{V}/o             # vowel in stem
 
+    #
     def self.stem(word)
-
       # make a copy of the given object and convert it to a string.
       word = word.dup.to_str
 
@@ -113,7 +139,7 @@ module English
         suffix = $1
         # print "stem= " + stem + "\n" + "suffix=" + suffix + "\n"
         if stem =~ MGR0
-          word = stem + PORTER_STEM[0][suffix]
+          word = stem + PORTER_STEMS[0][suffix]
         end
       end
 
@@ -158,22 +184,18 @@ module English
       word
     end
 
-    #
-    def stem_porter
-      PorterStemmer.stem(to_s)
-    end
-
   end
 
-  #
-  def self.stem_porter(string)
+  # Returns the word stem using the Porter Stemming algorithm by Martin Porter.
+  def stem_porter(string)
     PorterStemmer.stem(string)
   end
 
+
   class String
-    #
-    def stem_porter
-      PorterStemmer.stem(self)
+    # Returns the word stem using the Porter Stemming algorithm by Martin Porter.
+    def stem_porter(string)
+      language.stem_porter(self)
     end
   end
 

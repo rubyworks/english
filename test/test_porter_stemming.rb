@@ -1,8 +1,8 @@
-require 'english/porter_stemming'
+require 'english/stem_porter'
 
 require 'test/unit'
 
-class TC_PorterStemming < Test::Unit::TestCase
+class TC_PorterStemmer < Test::Unit::TestCase
 
   DIR  = File.dirname(__FILE__)
   DATA_INPUT  = File.read(File.join(DIR,'fixture/porter_stemming_input.txt')).split(/\n/)
@@ -15,7 +15,7 @@ class TC_PorterStemming < Test::Unit::TestCase
   def test_cases
     cases = DATA_INPUT.zip(DATA_OUTPUT)
     cases.each do |word, expected_output|
-      assert_equal expected_output, English::PorterStemming.stem(word)
+      assert_equal expected_output, English::PorterStemmer.stem(word)
     end
   end
 
