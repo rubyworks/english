@@ -1,0 +1,27 @@
+--- 
+title  : English
+suite  : rubyworks
+summary: English Code Kit
+license: MIT 
+contact: trans <transfire@gmail.com>
+created: 2007-08-01
+
+authors:
+  - Thomas Sawyer
+  - George Moschovitis
+
+description:
+  English is an general purpose English language processing library.
+  It includes a number of useful libraries, such as inflect.rb, 
+  similarity.rb, metaphone.rb, and so on.
+
+resources:
+  homepage   : http://rubyworks.github.com/english
+  development: http://github.com/rubyworks/english
+  repository : git://github.com/rubyworks/english.git
+  mailinglist: http://groups.google.com/group/rubyworks-mailinglist
+  subscribe  : rubyworks-mailinglist+subscribe@googlegroups.com
+  distributor: http://rubygems.org/english
+
+copyright:
+  Copyright (c) 2007 Thomas Sawyer
