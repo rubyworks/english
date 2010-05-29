@@ -23,7 +23,7 @@ class English
   # TODO: Maybe separate into #and, #or and #but ?
   #++
 
-  def conjunction(array, type=:and, seperator=",")
+  def self.conjunction(array, type=:and, seperator=",")
     array     = array.to_a
     type      = type.to_s
     separator = separator.to_s
