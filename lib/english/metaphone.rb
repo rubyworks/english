@@ -1,6 +1,6 @@
-require 'english/classes'
+require 'english/class'
 
-module English
+class English
 
   # Implementation of  Lawrence Philips' Metaphone and Double Metaphone algorithms.
   #
@@ -439,27 +439,24 @@ module English
 
   # English module method for Metaphone.
   #
-  def metaphone(string, alt=nil)
+  def self.metaphone(string, alt=nil)
     Metaphone.metaphone(string, alt)
   end
 
   # English module method for Double Metaphone.
   #
-  def double_metaphone(string)
+  def self.double_metaphone(string)
     Metaphone.double_metaphone(string)
   end
 
+  #
+  def metaphone(alt=nil)
+    self.class.metaphone(@self, alt=nil)
+  end
 
-  class String
-    #
-    def metaphone(alt=nil)
-      language.metaphone(self, alt=nil)
-    end
-
-    #
-    def double_metaphone
-      language.double_metaphone(self)
-    end
+  #
+  def double_metaphone
+    self.class.double_metaphone(@self)
   end
 
 end

@@ -1,12 +1,6 @@
-# Credit goes to Glenn P. Parker
-#
-# TODO: Get English#numeral to handle decicmal fractions.
-#
-# TODO: Get English#numeral to handle larger groups of thousands.
+require 'english/class'
 
-require 'english/classes'
-
-module English
+class English
 
   ONES = %w[ zero one two three four five six seven eight nine ]
 
@@ -19,7 +13,7 @@ module English
   MEGA = %w[ none thousand million billion ]
 
   # Convert an integer to the english spelling of that number.
-  def numeral(integer)
+  def self.numeral(integer)
     places = integer.to_i.to_s.split(//).collect{|s| s.to_i}.reverse
     name = []
     ((places.length + 2) / 3).times do |p|
@@ -32,7 +26,7 @@ module English
   end
 
   #
-  def trio(places)
+  def self.trio(places)
     strings = []
     if places[1] == 1
       strings.push(TEEN[places[0]])
@@ -47,19 +41,19 @@ module English
     strings
   end
 
-  class String
-    # Convert an integer to the english spelling of that number.
-    def numeral
-      language.numeral(self)
-    end
+  # Convert to the english spelling of a number.
+  #
+  #   10.numeral  #=> "10"
+  #
+  def numeral
+    self.class.numeral(@self)
   end
 
-  class Integer
-    # Convert an integer to the english spelling of that number.
-    def numeral
-      language.numeral(self)
-    end
-  end
+  # Credit goes to Glenn P. Parker
+  #
+  # TODO: Get English#numeral to handle decicmal fractions.
+  #
+  # TODO: Get English#numeral to handle larger groups of thousands.
 
 end
 

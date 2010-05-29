@@ -29,23 +29,23 @@ class TC_Namecase < Test::Unit::TestCase
 
   def test_namecase
     @proper_names.each do |name|
-      assert_equal(name, name.namecase)
-      assert_equal(name, name.downcase.namecase)
+      assert_equal(name, name.en.namecase)
+      assert_equal(name, name.downcase.en.namecase)
     end
   end
 
   def test_namecase_modify
     @proper_names.each do |name|
-      assert_equal(name, name.namecase)
-      assert_equal(name, name.downcase.namecase)
+      assert_equal(name, name.en.namecase)
+      assert_equal(name, name.downcase.en.namecase)
     end
   end
 
   def test_namecase_multibyte
     $KCODE = 'u'
     proper_cased = 'Iñtërnâtiônàlizætiøn'
-    assert_equal(proper_cased, proper_cased.namecase)
-    assert_equal(proper_cased, proper_cased.downcase.namecase)
+    assert_equal(proper_cased, proper_cased.en.namecase)
+    assert_equal(proper_cased, proper_cased.downcase.en.namecase)
   end
 end
 

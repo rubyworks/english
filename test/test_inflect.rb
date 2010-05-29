@@ -84,11 +84,11 @@ class TestInflect < Test::Unit::TestCase
 
   tests.each do |(p, s)|
     define_method("test_singular_of_#{p}") do
-      assert_equal(s, p.singular)
+      assert_equal(s, p.en.singular)
     end
 
     define_method("test_plural_of_#{s}") do
-      assert_equal(p, s.plural)
+      assert_equal(p, s.en.plural)
     end
   end
 end

@@ -1,3 +1,3 @@
-require 'english/classes'
+require 'english/class'
 require 'language/words'
 

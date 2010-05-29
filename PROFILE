@@ -8,7 +8,6 @@ created: 2007-08-01
 
 authors:
   - Thomas Sawyer
-  - George Moschovitis
 
 description:
   English is an general purpose English language processing library.

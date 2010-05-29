@@ -19,7 +19,7 @@ end
 class TC_String_Soundex < Test::Unit::TestCase
 
   def test_soundex
-    assert_equal("Ruby".soundex, "R100")
+    assert_equal("Ruby".en.soundex, "R100")
   end
 
 end

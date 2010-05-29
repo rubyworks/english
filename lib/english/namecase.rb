@@ -1,6 +1,6 @@
-require 'english/classes'
+require 'english/class'
 
-module English
+class English
 
   # Returns a new +String+ with the contents properly namecased.
   #
@@ -9,7 +9,7 @@ module English
   #
   # Ruby Version Copyright (c) Aaron Patterson 2006
 
-  def namecase(name)
+  def self.namecase(name)
     localstring = name.downcase
     localstring.gsub!(/\b\w/) { |first| first.upcase }
     localstring.gsub!(/\'\w\b/) { |c| c.downcase } # Lowercase 's
@@ -53,12 +53,9 @@ module English
     localstring
   end
 
-
-  class String
-    # Returns a new +String+ with the contents properly namecased.
-    def namecase
-      language.namecase(self)
-    end
+  # Returns a new +String+ with the contents properly namecased.
+  def namecase
+    self.class.namecase(@self)
   end
 
 end

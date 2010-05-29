@@ -1,6 +1,6 @@
-require 'english/classes'
+require 'english/class'
 
-module English
+class English
 
   # English conjunciton.
   #
@@ -41,26 +41,23 @@ module English
     end
   end
 
+  # This is more advanced form of #join, as it allows for an
+  # English-based terminating separator.
   #
-  class Array
-    # This is more advanced form of #join, as it allows for an
-    # English-based terminating separator.
-    #
-    # The default type of conjunction --the terminating separator,
-    # is "and", and the default regualt separator is ",".
-    #
-    #   [1,2,3].conjunction
-    #   => "1, 2 and 3
-    #
-    #   [1,2,3].conjunction(:or)
-    #   => "1, 2 or 3
-    #
-    #   [1,2,3].conjunction(:or, ';')
-    #   => "1; 2 or 3
-    #
-    def conjunction(type=:and, seperator=",")
-      English.conjunction(self, type, separator)
-    end
+  # The default type of conjunction --the terminating separator,
+  # is "and", and the default regualt separator is ",".
+  #
+  #   [1,2,3].conjunction
+  #   => "1, 2 and 3
+  #
+  #   [1,2,3].conjunction(:or)
+  #   => "1, 2 or 3
+  #
+  #   [1,2,3].conjunction(:or, ';')
+  #   => "1; 2 or 3
+  #
+  def conjunction(type=:and, seperator=",")
+    self.class.conjunction(@self, type, separator)
   end
 
 end

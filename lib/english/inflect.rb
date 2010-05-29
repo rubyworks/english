@@ -1,11 +1,10 @@
-require 'english/classes'
+require 'english/class'
 
-module English
+class English
 
   # = Noun Number Inflections
   #
   # This module provides english singular <-> plural noun inflections.
-
   module Inflect
 
     @singular_of = {}
@@ -288,39 +287,36 @@ module English
   end
 
   #
-  def singular(string)
+  def self.singular(string)
     English::Inflect.singular(string)
   end
 
   #
-  def plural(string)
+  def self.plural(string)
     English::Inflect.plural(string)
   end
 
-  class String
-    # Convert an English word from plurel to singular.
-    #
-    #   "boys".singular      #=> boy
-    #   "tomatoes".singular  #=> tomato
-    #
-    def singular
-      English.singular(self)
-    end
-
-    #alias_method(:singularize, :singular)
-
-    # Convert an English word from plurel to singular.
-    #
-    #   "boys".singular      #=> boy
-    #   "tomatoes".singular  #=> tomato
-    #
-    def plural
-      English.plural(self)
-    end
-
-    #alias_method(:pluralize, :plural)
-
+  # Convert an English word from plurel to singular.
+  #
+  #   "boys".singular      #=> boy
+  #   "tomatoes".singular  #=> tomato
+  #
+  def singular
+    self.class.singular(@self)
   end
+
+  #alias_method(:singularize, :singular)
+
+  # Convert an English word from plurel to singular.
+  #
+  #   "boys".singular      #=> boy
+  #   "tomatoes".singular  #=> tomato
+  #
+  def plural
+    self.class.plural(@self)
+  end
+
+  #alias_method(:pluralize, :plural)
 
 end
 

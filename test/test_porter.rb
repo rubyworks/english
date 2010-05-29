@@ -1,4 +1,4 @@
-require 'english/stem_porter'
+require 'english/porter'
 
 require 'test/unit'
 

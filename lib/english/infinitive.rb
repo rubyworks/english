@@ -1,4 +1,6 @@
-module English
+require 'english/class'
+
+class English
 
   # This file contains functions for deriving the infinitive forms of conjugated
   # English words. Requiring this file adds functions and constants to the

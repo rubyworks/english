@@ -1,6 +1,6 @@
-#require 'english/classes'
+require 'english/class'
 
-module English
+class English
 
   # Jumble letter casing.
   #
@@ -11,20 +11,18 @@ module English
   # should be deprecated or moved to Langauge?
   #++
 
-  def jumble(string)
+  def self.jumble(string)
     j = ''
     string.to_s.split(//).each_with_index{ |c,i| j << ( i % 2 == 0 ? c.downcase : c.upcase ) }
     j
   end
 
-  class String
-    # Jumble letter casing.
-    #
-    #   "superman".jumble  #=> "SUpeRmAn"
-    #
-    def jumble
-      English.jumble(self)
-    end
+  # Jumble letter casing.
+  #
+  #   "superman".jumble  #=> "SUpeRmAn"
+  #
+  def jumble
+    self.class.jumble(@self)
   end
 
 end

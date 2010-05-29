@@ -1,6 +1,6 @@
-require 'english/classes'
+require 'english/class'
 
-module English
+class English
 
   # Ordinalize turns a number string into an ordinal string
   # used to denote the position in an ordered sequence such
@@ -11,7 +11,7 @@ module English
   #   English.ordinal(102)  #=> "102nd"
   #   English.ordinal(103)  #=> "103rd"
   #
-  def ordinal(number)
+  def self.ordinal(number)
     number_string = number.to_s.strip
     if md = /\d{1,2}$/.match(number_string)
       n = md[0].to_i
@@ -31,35 +31,23 @@ module English
     end
   end
 
-  class String
-    # Ordinalize turns a number string into an ordinal string
-    # used to denote the position in an ordered sequence such
-    # as 1st, 2nd, 3rd, 4th.
-    #
-    #   '1'.ordinal     # => "1st"
-    #   '2'.ordinal     # => "2nd"
-    #   '102'.ordinal   # => "102nd"
-    #   '103'.ordinal   # => "103rd"
-    #
-    def ordinal
-      language.ordinal(self)
-    end
+  # Ordinalize turns a number string into an ordinal string
+  # used to denote the position in an ordered sequence such
+  # as 1st, 2nd, 3rd, 4th.
+  #
+  #   '1'.ordinal     # => "1st"
+  #   '2'.ordinal     # => "2nd"
+  #   '102'.ordinal   # => "102nd"
+  #   '103'.ordinal   # => "103rd"
+  #
+  #   1.ordinal     # => "1st"
+  #   2.ordinal     # => "2nd"
+  #   102.ordinal   # => "102nd"
+  #   103.ordinal   # => "103rd"
+  #
+  def ordinal
+    self.class.ordinal(@self)
   end
 
-  class Integer
-    # Ordinalize turns a number string into an ordinal string
-    # used to denote the position in an ordered sequence such
-    # as 1st, 2nd, 3rd, 4th.
-    #
-    #   1.ordinal     # => "1st"
-    #   2.ordinal     # => "2nd"
-    #   102.ordinal   # => "102nd"
-    #   103.ordinal   # => "103rd"
-    #
-    def ordinal
-      language.ordinal(self)
-    end
-  end
-
-end # module English
+end
 

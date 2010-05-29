@@ -1,4 +1,4 @@
-module English
+class English
 
   def self.present_participle(word)
     plural = plural_verb(word.to_s, 2)

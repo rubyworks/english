@@ -1,6 +1,6 @@
-require 'english/classes'
+require 'english/class'
 
-module English
+class English
 
   # An implementaion of the Porter Stemming algorithm by Martin Porter.
   #
@@ -187,15 +187,13 @@ module English
   end
 
   # Returns the word stem using the Porter Stemming algorithm by Martin Porter.
-  def stem_porter(string)
+  def self.stem_porter(string)
     PorterStemmer.stem(string)
   end
 
-  class String
-    # Returns the word stem using the Porter Stemming algorithm by Martin Porter.
-    def stem_porter
-      English.stem_porter(self)
-    end
+  # Returns the word stem using the Porter Stemming algorithm by Martin Porter.
+  def stem_porter
+    self.class.stem_porter(@self)
   end
 
 end
