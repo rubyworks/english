@@ -83,12 +83,11 @@ To run the test suite without installing, you can use:
 
 == COPYING
 
-English, Copyright (c) 2006–2008 Thomas Sawyer
+English, Copyright (c) 2006–2010 Thomas Sawyer
 
 Some libraries within English are copyrighted to respective authors,
 or are derivatives of such acknowledged work. See the library files
 for copyright notices.
 
-English is distributed under the terms of the Ruby License, which
-is a dual GPL license.
+The English collection is distributed under the terms of the MIT license.
 
