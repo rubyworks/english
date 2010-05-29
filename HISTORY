@@ -1,5 +1,40 @@
 = RELEASE HISTORY
 
+== 0.6.0 / 2010-05-29
+
+This release is a significant milestone and short of any bug reports
+will become the 1.0 release in the coming months. The biggest change
+is the dependency on Language library, which is a spin-off of English
+to house language neutral and multi-language code.
+
+Changes:
+
+* Major Enhancments
+
+  * Language library spun-off.
+  * Reduced three class design to a single class.
+
+
+== 0.5.0 / 2009-10-03
+
+Initial progress towards a more elegant design. This release
+it turns out is a little premature. I do not recommed using
+it in production. But it does provide a feel for were
+English is headed.
+
+Changes:
+
+* 3 Major Enhancements
+
+  * New three class design (English::String, English::Array, English::Integer).
+  * Use #method_missing to dispatch language methods to correct language module.
+  * Split obfustcate.rb back out to dresner.rb and jumble.rb.
+
+* 1 Deprecation
+
+  * Deprecated roman.rb (put back in Ruby Facets).
+
+
 == 0.4.0 / 2009-06-06
 
 This version of English (v0.4.0) is the first step in a two part
@@ -7,7 +42,7 @@ process to scale the library back to it's "pure English" roots.
 With limited exceptions, library scripts that are not strictly related
 to providing routines for working with the English language will be
 deprecated. Any useful deprecated functionality will most likely be
-supported  in Ruby Facets instead.
+supported in Ruby Facets instead.
 
 Changes:
 
