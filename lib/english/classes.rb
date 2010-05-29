@@ -8,16 +8,19 @@ module English
 
   #
   class String < Language::String
+    # Returns English
     def self.language; English; end
   end
 
   #
   class Integer < Language::Integer
+    # Returns English
     def self.language; English; end
   end
 
   #
   class Array < Language::Array
+    # Returns English
     def self.language; English; end
   end
 

@@ -191,11 +191,10 @@ module English
     PorterStemmer.stem(string)
   end
 
-
   class String
     # Returns the word stem using the Porter Stemming algorithm by Martin Porter.
-    def stem_porter(string)
-      language.stem_porter(self)
+    def stem_porter
+      English.stem_porter(self)
     end
   end
 

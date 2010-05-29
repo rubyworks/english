@@ -1,4 +1,4 @@
-require 'english/classes'
+#require 'english/classes'
 
 module English
 
@@ -23,8 +23,9 @@ module English
     #   "superman".jumble  #=> "SUpeRmAn"
     #
     def jumble
-      language.jumble(self)
+      English.jumble(self)
     end
   end
 
 end
+

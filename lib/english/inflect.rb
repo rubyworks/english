@@ -298,18 +298,27 @@ module English
   end
 
   class String
-
+    # Convert an English word from plurel to singular.
+    #
+    #   "boys".singular      #=> boy
+    #   "tomatoes".singular  #=> tomato
+    #
     def singular
-      language.singular(self)
+      English.singular(self)
     end
 
-    alias_method(:singularize, :singular)
+    #alias_method(:singularize, :singular)
 
+    # Convert an English word from plurel to singular.
+    #
+    #   "boys".singular      #=> boy
+    #   "tomatoes".singular  #=> tomato
+    #
     def plural
-      language.plural(self)
+      English.plural(self)
     end
 
-    alias_method(:pluralize, :plural)
+    #alias_method(:pluralize, :plural)
 
   end
 

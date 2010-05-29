@@ -41,9 +41,6 @@ module English
     end
   end
 
-  # Alias for #conjunction.
-  #alias_method :join_sentence, :conjunction
-
   #
   class Array
     # This is more advanced form of #join, as it allows for an
@@ -62,7 +59,7 @@ module English
     #   => "1; 2 or 3
     #
     def conjunction(type=:and, seperator=",")
-      language.conjunction(self, type, separator)
+      English.conjunction(self, type, separator)
     end
   end
 

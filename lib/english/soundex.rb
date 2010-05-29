@@ -38,7 +38,7 @@ module English
     return soundex_code + "000"[0,4-soundex_code.size]
   end
 
-  # Support function for String#soundex.
+  # Support function for #soundex.
   # Returns code for a single character.
   #
   def soundex_code(char)
@@ -57,7 +57,7 @@ module English
     #
     # Based on work by Michael Neumann (neumann@s-direktnet.de)
     def soundex
-      language.soundex(self)
+      English.soundex(self)
     end
   end
 

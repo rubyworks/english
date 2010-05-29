@@ -27,7 +27,7 @@ module English
     #
     # CREDIT: Kurt Dresener
     def dresner
-      language.dresner(self)
+      English.dresner(self)
     end
   end
 
