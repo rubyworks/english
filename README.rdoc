@@ -75,22 +75,8 @@ To run the test suite without installing, you can use:
 
 == AUTHORS
 
-As with many good programming libraries, portions were derived from
-the efforts of many good programmers. English oews it's existence
-to the hard work of following developers:
-
-* Paul Battley
-* Kurt Dresner
-* Michael Granger
-* George Moschovitis
-* Michael Neumann
-* Aaron Patterson
-* Ray Pereda
-* Lawrence Philips
-* Martin Porter
-* Thomas Sawyer
-* Louis J Scoras
-* Stephen Woodbridge
+Many developers, both directly and indirectly, made English possible.
+See the AUTHORS file for a list of specific acknowledgements.
 
 
 == COPYING
