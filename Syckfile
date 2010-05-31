@@ -6,9 +6,12 @@ email:
   mailto  : ruby-talk@ruby-lang.org
   active  : true
 
+grancher:
+  active: true
+
 box:
   service: Box
-  types  : [gem, tar]
+  types  : [gem]
   active : true
 
 testrb:
@@ -18,7 +21,7 @@ testrb:
   loadpath : ~
   requires : ~
   live     : false   
-  active   : false
+  active   : true
 
 syntax:
   service  : Syntax
