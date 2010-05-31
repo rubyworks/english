@@ -40,10 +40,10 @@ class English
   #   '102'.ordinal   # => "102nd"
   #   '103'.ordinal   # => "103rd"
   #
-  #   1.ordinal     # => "1st"
-  #   2.ordinal     # => "2nd"
-  #   102.ordinal   # => "102nd"
-  #   103.ordinal   # => "103rd"
+  #   1.ordinal       # => "1st"
+  #   2.ordinal       # => "2nd"
+  #   102.ordinal     # => "102nd"
+  #   103.ordinal     # => "103rd"
   #
   def ordinal
     self.class.ordinal(@self)
