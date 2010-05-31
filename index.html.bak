@@ -25,11 +25,9 @@
   </div>
 
   <div id="menu">
-    <a href="http://groups.google.com/group/rubyworks-mailinglist/">EMail</a>
-    <a href="rdoc/index.html">API</a>
-    <!-- <a href="qedoc/index.html">QED</a> -->
-    <a href="http://wiki.github.com/rubyworks/english">Wiki</a>
-    <a href="http://github.com/rubyworks/english">Code</a>
+    <a href="http://googlegroups/group/rubyworks-mailinglist/">Discussion</a>
+    <a href="rdoc/index.html">Documentation</a>
+    <a href="http://github.com/rubyworks/english">Development</a>
   </div>
 
   <div id="table">
@@ -52,10 +50,10 @@
       processing libraries for the Ruby programming language. Over time the project hopes
       to provide a fairly comprehensive set of tools for working with English language data.</p>
 
-      <p>Probably the most typical example of it use is:</p>
+      <p>Here are some examples:</p>
 
       <pre>
-        require 'english/inflect'
+        require 'english/en/inflect'
 
         "boy".en.plural      #=> "boys"
         "boys".en.singular   #=> "boy"
@@ -64,13 +62,10 @@
         "oxen".en.singular   #=> "ox"
       </pre>
 
-      <p>By default the <code>$language</code> global variable is set to <code>'en'</code>.
-      If the <code>english/mixin</code> library is loadeds the <code>#en</code> method call
-      can be left out and the same result achieved.</p>
+      <p>By default the <code>$langauge</code> global variable is set to <code>'en'</code>,
+      so the <code>#en</code> method call can be left out and the same result achieved.</p>
 
       <pre>
-        require 'english/mixin'
-
         "boy".plural      #=> "boys"
         "boys".singular   #=> "boy"
 
@@ -78,16 +73,30 @@
         "oxen".singular   #=> "ox"
       </pre>
 
-      <p>English includes many other useful methods and also a few useful classes.
-      <p>Each  library can be utilized independently. Or all libraries can be loaded with
+      <p>English includes a number of similar methods. It also includes a few useful classes.
+       For example, the <code>Censor</code> class.</p>
+
+      <pre>
+        require 'english/censor'
+
+        tc = English::Censor.new
+
+        tc.rule(/Damn/) { |w| 'Darn' }
+        tc.rule(/Crap/) { |w| 'Crud' }
+
+        tc.apply("Crap! Damn it!")  #=> "Crud! Darn it!"
+      </pre>
+
+
+      <p>Each English library can be utilized independently. Or all libraries can be loaded with
       the single <code>require</code>.</p>
 
       <pre>
         require 'english'
       </pre>
 
-      <p>For more details see the <a href="http://wiki.github.com/rubyworks/english">Wiki</href>
-        or the <a href="rdoc/index.html">RDoc API documentation</a>.</p>
+      <p>For more details see the <a href="rdoc/index.html">Rdoc API documentation</a>.</p>
+
     </div>
 
     <h2>Resources</h2>
@@ -95,8 +104,8 @@
     <br/>
 
     <div class="resource">
-      <a href="grammar/gramdex.html">English Grammar</a> <br/>
-      Explanations and Exercises written by Mary Ansell.
+      <a href="grammer/gramdex.html">English Grammer</a> <br/>
+      Explinations and Exercises written by Mary Ansell.
     </div>
 
 <!--
