@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: English::Infinitive</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../assets/icon/module.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="../assets/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="../assets/highlight/styles/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="../assets/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/main.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      hookHighlightSyntax();
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind("click", highlightClickTarget);
+    });
+  </script>
+</head>
+<body class="module">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../assets/icon/module.png" align="absmiddle">&nbsp;
+      
+      <a href="../index.html">English</a>&nbsp;
+      <a href="/">English::Infinitive</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../lib/english/infinitive_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/infinitive.rb">lib/english/infinitive.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+
+      <!-- Namespace Contents -->
+      
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li class="class"><a href="Infinitive/Infinitive.html">English::Infinitive::Infinitive</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+            
+            <li class="method">
+              <a href="#method-i-infinitive">#infinitive</a>
+            </li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Information</h3>
+        <ul>
+        
+          <li class="file"><a href="../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../PROFILE.html">PROFILE</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../VERSION.html">VERSION</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+          <li class="file"><a href="../REQUIRE.html">REQUIRE</a></li>
+        
+          <li class="file"><a href="../AUTHORS.html">AUTHORS</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../assets/icon/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="class"><a href="../English.html">English</a></li>
+        
+          <li class="class"><a href="../English/Censor.html">English::Censor</a></li>
+        
+          <li class="module"><a href="../English/Infinitive.html">English::Infinitive</a></li>
+        
+          <li class="class"><a href="../English/Infinitive/Infinitive.html">English::Infinitive::Infinitive</a></li>
+        
+          <li class="module"><a href="../English/Inflect.html">English::Inflect</a></li>
+        
+          <li class="module"><a href="../English/Metaphone.html">English::Metaphone</a></li>
+        
+          <li class="module"><a href="../English/PorterStemmer.html">English::PorterStemmer</a></li>
+        
+          <li class="class"><a href="../Array.html">Array</a></li>
+        
+          <li class="class"><a href="../Integer.html">Integer</a></li>
+        
+          <li class="class"><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="../assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
+      </div>
+      Generated with <a href="http://github.com/proutils/webri">WebRI Redfish</a> 1.2.1
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>Infinitive</h1>
+      
+
+      <p>
+This file contains functions for deriving the infinitive forms of
+conjugated <a href="../English.html">English</a> words. Requiring this file
+adds functions and constants to the <a href="../English.html">English</a>
+module.
+</p>
+<h2>Authors</h2>
+<ul>
+<li><p>
+Michael Granger <ged@FaerieMUD.org>
+</p>
+</li>
+</ul>
+<h2>Acknowledgments</h2>
+<p>
+This code was ported from the excellent
+&#8216;Lingua::EN::Infinitive&#8217; Perl module by Ron Savage, which is
+distributed under the following license:
+</p>
+<pre>
+   Australian copyright (c) 1999-2002 Ron Savage.
+   
+   All Programs of mine are 'OSI Certified Open Source Software';
+   you can redistribute them and/or modify them under the terms of
+   The Artistic License, a copy of which is available at:
+   http://www.opensource.org/licenses/index.html
+   </pre>
+
+    </div>
+
+    <!-- Constants -->
+    
+    <div id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt><a name="IrregularInfinitives">IrregularInfinitives</a></dt>
+        
+        <dd class="description"><p>
+Irregular words => infinitive forms
+</p></dd>
+        
+      
+        <dt><a name="InfSuffixRules">InfSuffixRules</a></dt>
+        
+        <dd class="description"><p>
+Mapping of word suffixes to infinitive rules.
+</p></dd>
+        
+      
+        <dt><a name="InfSuffixRuleOrder">InfSuffixRuleOrder</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+      </dl>
+    </div>
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="infinitive-method" class="method-detail ">
+        <a name="method-i-infinitive"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">infinitive</span><span
+            class="method-args">( word )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Return the infinitive form of the given word
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="infinitive-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/english/infinitive.rb, line 1063</span>
+1063:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">infinitive</span>( <span class="ruby-identifier">word</span> )
+1064:                   <span class="ruby-identifier">word</span> = <span class="ruby-identifier">word</span>.<span class="ruby-identifier">to_s</span>
+1065:                   <span class="ruby-identifier">word1</span> = <span class="ruby-identifier">word2</span> = <span class="ruby-identifier">suffix</span> = <span class="ruby-identifier">rule</span> = <span class="ruby-identifier">newword</span> = <span class="ruby-value str">''</span>
+1066: 
+1067:                   <span class="ruby-keyword kw">if</span> <span class="ruby-constant">IrregularInfinitives</span>.<span class="ruby-identifier">key?</span>( <span class="ruby-identifier">word</span> )
+1068:                           <span class="ruby-identifier">word1</span>      = <span class="ruby-constant">IrregularInfinitives</span>[ <span class="ruby-identifier">word</span> ]
+1069:                           <span class="ruby-identifier">rule</span>       = <span class="ruby-value str">'irregular'</span>
+1070:                   <span class="ruby-keyword kw">else</span>
+1071:                           <span class="ruby-comment cmt"># Build up $prefix{$suffix} as an array of prefixes, from longest to shortest.</span>
+1072:                           <span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">suffix</span> = <span class="ruby-keyword kw">nil</span>
+1073:                           <span class="ruby-identifier">prefixes</span> = <span class="ruby-constant">Hash</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">hsh</span>,<span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hsh</span>[<span class="ruby-identifier">key</span>] = []}
+1074: 
+1075:                           <span class="ruby-comment cmt"># Build the hash of prefixes for the word</span>
+1076:                           <span class="ruby-value">1</span>.<span class="ruby-identifier">upto</span>( <span class="ruby-identifier">word</span>.<span class="ruby-identifier">length</span> ) {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+1077:                                   <span class="ruby-identifier">prefix</span> = <span class="ruby-identifier">word</span>[<span class="ruby-value">0</span>, <span class="ruby-identifier">i</span>]
+1078:                                   <span class="ruby-identifier">suffix</span> = <span class="ruby-identifier">word</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+1079: 
+1080:                                   (<span class="ruby-identifier">suffix</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">downto</span>( <span class="ruby-value">0</span> ) {<span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+1081:                                           <span class="ruby-identifier">newword</span> = <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>[<span class="ruby-value">0</span>, <span class="ruby-identifier">j</span>]
+1082:                                           <span class="ruby-identifier">prefixes</span>[ <span class="ruby-identifier">suffix</span> ].<span class="ruby-identifier">push</span>( <span class="ruby-identifier">newword</span> )
+1083:                                   }
+1084:                           }
+1085: 
+1086:                           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;prefixes: %p&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">prefixes</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+1087: 
+1088:                           <span class="ruby-comment cmt"># Now check for rules covering the prefixes for this word, picking</span>
+1089:                           <span class="ruby-comment cmt"># the first one if one was found.</span>
+1090:                           <span class="ruby-keyword kw">if</span> (( <span class="ruby-identifier">suffix</span> = ((<span class="ruby-constant">InfSuffixRuleOrder</span> &amp; <span class="ruby-identifier">prefixes</span>.<span class="ruby-identifier">keys</span>).<span class="ruby-identifier">first</span>) ))
+1091:                                   <span class="ruby-identifier">rule</span> = <span class="ruby-constant">InfSuffixRules</span>[ <span class="ruby-identifier">suffix</span> ][<span class="ruby-value">:rule</span>]
+1092:                                   <span class="ruby-identifier">shortestPrefix</span> = <span class="ruby-constant">InfSuffixRules</span>[ <span class="ruby-identifier">suffix</span> ][<span class="ruby-value">:word1</span>]
+1093:                                   <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Using rule %p (%p) for suffix %p&quot;</span> <span class="ruby-operator">%</span> 
+1094:                                           [ <span class="ruby-identifier">rule</span>, <span class="ruby-identifier">shortestPrefix</span>, <span class="ruby-identifier">suffix</span> ] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+1095: 
+1096:                                   <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">shortestPrefix</span>
+1097:                                   <span class="ruby-keyword kw">when</span> <span class="ruby-value">0</span>
+1098:                                           <span class="ruby-identifier">word1</span> = <span class="ruby-identifier">prefixes</span>[ <span class="ruby-identifier">suffix</span> ][ <span class="ruby-value">0</span> ]
+1099:                                           <span class="ruby-identifier">word2</span> = <span class="ruby-identifier">prefixes</span>[ <span class="ruby-identifier">suffix</span> ][ <span class="ruby-value">1</span> ]
+1100:                                           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;For sp = 0: word1: %p, word2: %p&quot;</span> <span class="ruby-operator">%</span>
+1101:                                                   [ <span class="ruby-identifier">word1</span>, <span class="ruby-identifier">word2</span> ] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+1102: 
+1103:                                   <span class="ruby-keyword kw">when</span> <span class="ruby-value">1</span>
+1104:                                           <span class="ruby-identifier">word1</span> = <span class="ruby-identifier">prefixes</span>[ <span class="ruby-identifier">suffix</span> ].<span class="ruby-identifier">last</span> <span class="ruby-operator">+</span>
+1105:                                                   <span class="ruby-constant">InfSuffixRules</span>[ <span class="ruby-identifier">suffix</span> ][<span class="ruby-value">:suffix1</span>]
+1106:                                           <span class="ruby-identifier">word2</span> = <span class="ruby-value str">''</span>
+1107:                                           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;For sp = -1: word1: %p, word2: %p&quot;</span> <span class="ruby-operator">%</span>
+1108:                                                   [ <span class="ruby-identifier">word1</span>, <span class="ruby-identifier">word2</span> ] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+1109: 
+1110:                                   <span class="ruby-keyword kw">when</span> <span class="ruby-value">2</span>
+1111:                                           <span class="ruby-identifier">word1</span> = <span class="ruby-identifier">prefixes</span>[ <span class="ruby-identifier">suffix</span> ].<span class="ruby-identifier">last</span> <span class="ruby-operator">+</span>
+1112:                                                   <span class="ruby-constant">InfSuffixRules</span>[ <span class="ruby-identifier">suffix</span> ][<span class="ruby-value">:suffix1</span>]
+1113:                                           <span class="ruby-identifier">word2</span> = <span class="ruby-identifier">prefixes</span>[ <span class="ruby-identifier">suffix</span> ].<span class="ruby-identifier">last</span>
+1114:                                           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;For sp = -2: word1: %p, word2: %p&quot;</span> <span class="ruby-operator">%</span>
+1115:                                                   [ <span class="ruby-identifier">word1</span>, <span class="ruby-identifier">word2</span> ] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+1116: 
+1117:                                   <span class="ruby-keyword kw">when</span> <span class="ruby-value">3</span>
+1118:                                           <span class="ruby-identifier">word1</span> = <span class="ruby-identifier">prefixes</span>[ <span class="ruby-identifier">suffix</span> ].<span class="ruby-identifier">last</span> <span class="ruby-operator">+</span>
+1119:                                                   <span class="ruby-constant">InfSuffixRules</span>[ <span class="ruby-identifier">suffix</span> ][<span class="ruby-value">:suffix1</span>]
+1120:                                           <span class="ruby-identifier">word2</span> = <span class="ruby-identifier">prefixes</span>[ <span class="ruby-identifier">suffix</span> ].<span class="ruby-identifier">last</span> <span class="ruby-operator">+</span>
+1121:                                                   <span class="ruby-constant">InfSuffixRules</span>[ <span class="ruby-identifier">suffix</span> ][<span class="ruby-value">:suffix2</span>]
+1122:                                           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;For sp = -3: word1: %p, word2: %p&quot;</span> <span class="ruby-operator">%</span>
+1123:                                                   [ <span class="ruby-identifier">word1</span>, <span class="ruby-identifier">word2</span> ] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+1124: 
+1125:                                   <span class="ruby-keyword kw">when</span> <span class="ruby-value">4</span>
+1126:                                           <span class="ruby-identifier">word1</span> = <span class="ruby-identifier">word</span>
+1127:                                           <span class="ruby-identifier">word2</span> = <span class="ruby-value str">''</span>
+1128:                                           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;For sp = -4: word1: %p, word2: %p&quot;</span> <span class="ruby-operator">%</span>
+1129:                                                   [ <span class="ruby-identifier">word1</span>, <span class="ruby-identifier">word2</span> ] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+1130: 
+1131:                                   <span class="ruby-keyword kw">else</span>
+1132:                                           <span class="ruby-identifier">raise</span> <span class="ruby-constant">IndexError</span>,
+1133:                                                   <span class="ruby-value str">&quot;Couldn't find rule for shortest prefix %p&quot;</span> <span class="ruby-operator">%</span>
+1134:                                                   <span class="ruby-identifier">shortestPrefix</span>
+1135:                                   <span class="ruby-keyword kw">end</span>
+1136: 
+1137:                                   <span class="ruby-comment cmt"># Rules 12b and 15: Strip off 'ed' or 'ing'.</span>
+1138:                                   <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">rule</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'12b'</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">rule</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'15'</span>
+1139:                                           <span class="ruby-comment cmt"># Do we have a monosyllable of this form:</span>
+1140:                                           <span class="ruby-comment cmt"># o 0+ Consonants</span>
+1141:                                           <span class="ruby-comment cmt"># o 1+ Vowel</span>
+1142:                                           <span class="ruby-comment cmt"># o      2 Non-wx</span>
+1143:                                           <span class="ruby-comment cmt"># Eg: tipped =&gt; tipp?</span>
+1144:                                           <span class="ruby-comment cmt"># Then return tip and tipp.</span>
+1145:                                           <span class="ruby-comment cmt"># Eg: swimming =&gt; swimm?</span>
+1146:                                           <span class="ruby-comment cmt"># Then return tipswim and swimm.</span>
+1147: 
+1148:                                           <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^([^aeiou]*[aeiou]+)([^wx])\22$$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">word2</span>
+1149:                                                   <span class="ruby-identifier">word1</span> = <span class="ruby-node">$1</span> <span class="ruby-operator">+</span> <span class="ruby-node">$2</span>
+1150:                                                   <span class="ruby-identifier">word2</span> = <span class="ruby-node">$1</span> <span class="ruby-operator">+</span> <span class="ruby-node">$2</span> <span class="ruby-operator">+</span> <span class="ruby-node">$2</span>
+1151:                                           <span class="ruby-keyword kw">end</span>
+1152:                                   <span class="ruby-keyword kw">end</span>
+1153:                           <span class="ruby-keyword kw">end</span>
+1154:                   <span class="ruby-keyword kw">end</span>
+1155: 
+1156:                   <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Infinitive</span><span class="ruby-operator">::</span><span class="ruby-identifier">new</span>( <span class="ruby-identifier">word1</span>, <span class="ruby-identifier">word2</span>, <span class="ruby-identifier">suffix</span>, <span class="ruby-identifier">rule</span> )
+1157:           <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+

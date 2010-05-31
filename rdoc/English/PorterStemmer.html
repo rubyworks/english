@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: English::PorterStemmer</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../assets/icon/module.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="../assets/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="../assets/highlight/styles/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="../assets/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/main.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      hookHighlightSyntax();
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind("click", highlightClickTarget);
+    });
+  </script>
+</head>
+<body class="module">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../assets/icon/module.png" align="absmiddle">&nbsp;
+      
+      <a href="../index.html">English</a>&nbsp;
+      <a href="/">English::PorterStemmer</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../lib/english/porter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/porter.rb">lib/english/porter.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+            
+            <li class="singleton">
+              <a href="#method-c-stem">::stem</a>
+            </li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Information</h3>
+        <ul>
+        
+          <li class="file"><a href="../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../PROFILE.html">PROFILE</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../VERSION.html">VERSION</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+          <li class="file"><a href="../REQUIRE.html">REQUIRE</a></li>
+        
+          <li class="file"><a href="../AUTHORS.html">AUTHORS</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../assets/icon/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="class"><a href="../English.html">English</a></li>
+        
+          <li class="class"><a href="../English/Censor.html">English::Censor</a></li>
+        
+          <li class="module"><a href="../English/Infinitive.html">English::Infinitive</a></li>
+        
+          <li class="class"><a href="../English/Infinitive/Infinitive.html">English::Infinitive::Infinitive</a></li>
+        
+          <li class="module"><a href="../English/Inflect.html">English::Inflect</a></li>
+        
+          <li class="module"><a href="../English/Metaphone.html">English::Metaphone</a></li>
+        
+          <li class="module"><a href="../English/PorterStemmer.html">English::PorterStemmer</a></li>
+        
+          <li class="class"><a href="../Array.html">Array</a></li>
+        
+          <li class="class"><a href="../Integer.html">Integer</a></li>
+        
+          <li class="class"><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="../assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
+      </div>
+      Generated with <a href="http://github.com/proutils/webri">WebRI Redfish</a> 1.2.1
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>PorterStemmer</h1>
+      
+
+      <p>
+An implementaion of the Porter Stemming algorithm by Martin Porter.
+</p>
+<p>
+This is the Porter Stemming algorithm, ported to Ruby from the version
+coded up in Perl. It&#8217;s easy to follow against the rules in the
+original paper in:
+</p>
+<pre>
+  Porter, 1980, An algorithm for suffix stripping, Program, Vol. 14,
+  no. 3, pp 130-137,
+</pre>
+<p>
+Taken from <a
+href="http://www.tartarus.org/~martin/PorterStemmer">www.tartarus.org/~martin/PorterStemmer</a>
+(Public Domain)
+</p>
+<p>
+This version based on Ray Pereda&#8217;s stemmable.rb &#169; 2003.
+</p>
+
+    </div>
+
+    <!-- Constants -->
+    
+    <div id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt><a name="PORTER_STEMS">PORTER_STEMS</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="PORTER_STEMS_RE">PORTER_STEMS_RE</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="C">C</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="V">V</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="CC">CC</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="VV">VV</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="MGR0">MGR0</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="MEQ1">MEQ1</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="MGR1">MGR1</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="VOWEL_IN_STEM">VOWEL_IN_STEM</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+      </dl>
+    </div>
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="stem-method" class="method-detail ">
+        <a name="method-c-stem"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">stem</span><span
+            class="method-args">(word)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="stem-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/english/porter.rb, line 100</span>
+100:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">stem</span>(<span class="ruby-identifier">word</span>)
+101:       <span class="ruby-comment cmt"># make a copy of the given object and convert it to a string.</span>
+102:       <span class="ruby-identifier">word</span> = <span class="ruby-identifier">word</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">to_str</span>
+103: 
+104:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">word</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+105: 
+106:       <span class="ruby-comment cmt"># now map initial y to Y so that the patterns never treat it as vowel</span>
+107:       <span class="ruby-identifier">word</span>[<span class="ruby-value">0</span>] = <span class="ruby-value str">'Y'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">yy</span>
+108: 
+109:       <span class="ruby-comment cmt"># Step 1a</span>
+110:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/(ss|i)es$/</span>
+111:         <span class="ruby-identifier">word</span> = <span class="ruby-node">$`</span> <span class="ruby-operator">+</span> <span class="ruby-node">$1</span>
+112:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/([^s])s$/</span>
+113:         <span class="ruby-identifier">word</span> = <span class="ruby-node">$`</span> <span class="ruby-operator">+</span> <span class="ruby-node">$1</span>
+114:       <span class="ruby-keyword kw">end</span>
+115: 
+116:       <span class="ruby-comment cmt"># Step 1b</span>
+117:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/eed$/</span>
+118:         <span class="ruby-identifier">word</span>.<span class="ruby-identifier">chop!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-node">$`</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">MGR0</span>
+119:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/(ed|ing)$/</span>
+120:         <span class="ruby-identifier">stem</span> = <span class="ruby-node">$`</span>
+121:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stem</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">VOWEL_IN_STEM</span>
+122:           <span class="ruby-identifier">word</span> = <span class="ruby-identifier">stem</span>
+123:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">word</span>
+124:             <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/(at|bl|iz)$/</span>             <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;e&quot;</span>
+125:             <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/([^aeiouylsz])\11$$/</span>       <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">word</span>.<span class="ruby-identifier">chop!</span>
+126:             <span class="ruby-keyword kw">when</span> <span class="ruby-node">/^#{CC}#{V}[^aeiouwxy]$/</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;e&quot;</span>
+127:           <span class="ruby-keyword kw">end</span>
+128:         <span class="ruby-keyword kw">end</span>
+129:       <span class="ruby-keyword kw">end</span>
+130: 
+131:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/y$/</span>
+132:         <span class="ruby-identifier">stem</span> = <span class="ruby-node">$`</span>
+133:         <span class="ruby-identifier">word</span> = <span class="ruby-identifier">stem</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;i&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stem</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">VOWEL_IN_STEM</span>
+134:       <span class="ruby-keyword kw">end</span>
+135: 
+136:       <span class="ruby-comment cmt"># Step 2</span>
+137:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">PORTER_STEMS_RE</span>[<span class="ruby-value">0</span>]
+138:         <span class="ruby-identifier">stem</span> = <span class="ruby-node">$`</span>
+139:         <span class="ruby-identifier">suffix</span> = <span class="ruby-node">$1</span>
+140:         <span class="ruby-comment cmt"># print &quot;stem= &quot; + stem + &quot;\n&quot; + &quot;suffix=&quot; + suffix + &quot;\n&quot;</span>
+141:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stem</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">MGR0</span>
+142:           <span class="ruby-identifier">word</span> = <span class="ruby-identifier">stem</span> <span class="ruby-operator">+</span> <span class="ruby-constant">PORTER_STEMS</span>[<span class="ruby-value">0</span>][<span class="ruby-identifier">suffix</span>]
+143:         <span class="ruby-keyword kw">end</span>
+144:       <span class="ruby-keyword kw">end</span>
+145: 
+146:       <span class="ruby-comment cmt"># Step 3</span>
+147:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">PORTER_STEMS_RE</span>[<span class="ruby-value">1</span>]
+148:         <span class="ruby-identifier">stem</span> = <span class="ruby-node">$`</span>
+149:         <span class="ruby-identifier">suffix</span> = <span class="ruby-node">$1</span>
+150:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stem</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">MGR0</span>
+151:           <span class="ruby-identifier">word</span> = <span class="ruby-identifier">stem</span> <span class="ruby-operator">+</span> <span class="ruby-constant">PORTER_STEMS</span>[<span class="ruby-value">1</span>][<span class="ruby-identifier">suffix</span>]
+152:         <span class="ruby-keyword kw">end</span>
+153:       <span class="ruby-keyword kw">end</span>
+154: 
+155:       <span class="ruby-comment cmt"># Step 4</span>
+156:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">PORTER_STEMS_RE</span>[<span class="ruby-value">2</span>]
+157:         <span class="ruby-identifier">stem</span> = <span class="ruby-node">$`</span>
+158:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stem</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">MGR1</span>
+159:           <span class="ruby-identifier">word</span> = <span class="ruby-identifier">stem</span>
+160:         <span class="ruby-keyword kw">end</span>
+161:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/(s|t)(ion)$/</span>
+162:         <span class="ruby-identifier">stem</span> = <span class="ruby-node">$`</span> <span class="ruby-operator">+</span> <span class="ruby-node">$1</span>
+163:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stem</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">MGR1</span>
+164:           <span class="ruby-identifier">word</span> = <span class="ruby-identifier">stem</span>
+165:         <span class="ruby-keyword kw">end</span>
+166:       <span class="ruby-keyword kw">end</span>
+167: 
+168:       <span class="ruby-comment cmt">#  Step 5</span>
+169:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/e$/</span>
+170:         <span class="ruby-identifier">stem</span> = <span class="ruby-node">$`</span>
+171:         <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">stem</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">MGR1</span>) <span class="ruby-operator">||</span>
+172:             (<span class="ruby-identifier">stem</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">MEQ1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">stem</span> <span class="ruby-operator">!~</span> <span class="ruby-node">/^#{CC}#{V}[^aeiouwxy]$/</span>)
+173:           <span class="ruby-identifier">word</span> = <span class="ruby-identifier">stem</span>
+174:         <span class="ruby-keyword kw">end</span>
+175:       <span class="ruby-keyword kw">end</span>
+176: 
+177:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/ll$/</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">word</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">MGR1</span>
+178:         <span class="ruby-identifier">word</span>.<span class="ruby-identifier">chop!</span>
+179:       <span class="ruby-keyword kw">end</span>
+180: 
+181:       <span class="ruby-comment cmt"># and turn initial Y back to y</span>
+182:       <span class="ruby-identifier">word</span>[<span class="ruby-value">0</span>] = <span class="ruby-value str">'y'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">word</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">YY</span>
+183: 
+184:       <span class="ruby-identifier">word</span>
+185:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+
