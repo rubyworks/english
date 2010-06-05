@@ -19,13 +19,16 @@
 
   <script type="text/javascript">
     $(document).ready( function() {
-      hookHighlightSyntax();
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
 	    hookSourceViews();
 	    hookDebuggingToggle();
 	    hookQuickSearch();
 	    highlightLocationTarget();
 
-	    $('ul.link-list a').bind("click", highlightClickTarget);
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
     });
   </script>
 </head>
@@ -46,7 +49,7 @@
       <h3 class="section-header">File Stats</h3>
       <dl>
         <dt class="modified-date">Last Modified</dt>
-        <dd class="modified-date">Fri May 28 21:31:48 -0400 2010</dd>
+        <dd class="modified-date">Sat Jun 05 12:17:56 -0400 2010</dd>
 
         
         <dt class="requires">Requires</dt>
@@ -109,7 +112,7 @@
         
           <li class="module"><a href="../../English/Infinitive.html">English::Infinitive</a></li>
         
-          <li class="class"><a href="../../English/Infinitive/Infinitive.html">English::Infinitive::Infinitive</a></li>
+          <li class="class"><a href="../../English/Infinitive/Rule.html">English::Infinitive::Rule</a></li>
         
           <li class="module"><a href="../../English/Inflect.html">English::Inflect</a></li>
         
@@ -170,8 +173,8 @@
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English</span>
-              <a href="English.html#method-c-double_metaphone">::double_metaphone</a>
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-ditto_rule">::ditto_rule</a>
             </li>
           
             
@@ -183,7 +186,43 @@
             
             <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-double_metaphone">::double_metaphone</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English</span>
               <a href="English.html#method-c-dresner">::dresner</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-infinitive">::infinitive</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-infinitives">::infinitives</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-infinitives">::infinitives</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-information">::information</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-inifinitive">::inifinitive</a>
             </li>
           
             
@@ -194,20 +233,32 @@
           
             
             <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-letter_rule">::letter_rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-long_rule">::long_rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English::Metaphone</span>
               <a href="English/Metaphone.html#method-c-lookup">::lookup</a>
             </li>
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English::Metaphone</span>
-              <a href="English/Metaphone.html#method-c-metaphone">::metaphone</a>
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-metaphone">::metaphone</a>
             </li>
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English</span>
-              <a href="English.html#method-c-metaphone">::metaphone</a>
+              <span class="method-parent-aside">English::Metaphone</span>
+              <a href="English/Metaphone.html#method-c-metaphone">::metaphone</a>
             </li>
           
             
@@ -224,8 +275,8 @@
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English::Infinitive::Infinitive</span>
-              <a href="English/Infinitive/Infinitive.html#method-c-new">::new</a>
+              <span class="method-parent-aside">English::Infinitive::Rule</span>
+              <a href="English/Infinitive/Rule.html#method-c-new">::new</a>
             </li>
           
             
@@ -242,14 +293,14 @@
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English::Inflect</span>
-              <a href="English/Inflect.html#method-c-plural">::plural</a>
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-plural">::plural</a>
             </li>
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English</span>
-              <a href="English.html#method-c-plural">::plural</a>
+              <span class="method-parent-aside">English::Inflect</span>
+              <a href="English/Inflect.html#method-c-plural">::plural</a>
             </li>
           
             
@@ -278,6 +329,12 @@
           
             
             <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-prefixes">::prefixes</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English</span>
               <a href="English.html#method-c-present_participle">::present_participle</a>
             </li>
@@ -286,6 +343,24 @@
             <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English::Inflect</span>
               <a href="English/Inflect.html#method-c-rule">::rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-rule">::rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-second_rule">::second_rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-short_rule">::short_rule</a>
             </li>
           
             
@@ -344,6 +419,12 @@
           
             
             <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-special_rule">::special_rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English::PorterStemmer</span>
               <a href="English/PorterStemmer.html#method-c-stem">::stem</a>
             </li>
@@ -370,6 +451,12 @@
             <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English::Inflect</span>
               <a href="English/Inflect.html#method-c-word">::word</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive::Rule</span>
+              <a href="English/Infinitive/Rule.html#method-i-%3C%3D%3E">#<=></a>
             </li>
           
             
@@ -410,8 +497,14 @@
           
             
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">English::Infinitive</span>
-              <a href="English/Infinitive.html#method-i-infinitive">#infinitive</a>
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-i-infinitive">#infinitive</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-i-infinitives">#infinitives</a>
             </li>
           
             
@@ -477,7 +570,7 @@
       <div style="float: right; margin-right: 5px;">
         <a href="http://validator.w3.org/check/referer"><img src="../../assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
       </div>
-      Generated with <a href="http://proutils.github.com/webri">WebRI Redfish</a> 1.2.1
+      Generated with <a href="http://proutils.github.com/webri">WebRI Newfish</a> 1.2.1
       <br/><br/>
     </div>
   </div>
@@ -494,7 +587,70 @@
    -->
 
   <div id="documentation">
-    
+    <p>
+<a href="../../English/Infinitive.html">English::Infinitive</a>
+</p>
+<pre>
+  Copyright (c) 2010 Thomas Sawyer
+  This driviative work is distributed under the terms of the MIT license.
+  See the included LICENSE file for details.
+</pre>
+<p>
+This code was ported from Michael Granger&#8217;s &#8216;Ruby
+Linguistics&#8217; project:
+</p>
+<pre>
+  Copyright (c) 2003-2008, Michael Granger
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright notice,
+      this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions and the following disclaimer in the documentation
+      and/or other materials provided with the distribution.
+
+    * Neither the name of the author/s, nor the names of the project's
+      contributors may be used to endorse or promote products derived from this
+      software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+  FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+<p>
+Which in turn was ported from the excellent
+&#8216;Lingua::EN::Infinitive&#8217; Perl module by Ron Savage, which is
+distributed under the following license:
+</p>
+<pre>
+  Australian copyright (c) 1999-2002 Ron Savage.
+   
+  All Programs of mine are 'OSI Certified Open Source Software';
+  you can redistribute them and/or modify them under the terms of
+  The Artistic License, a copy of which is available at:
+  http://www.opensource.org/licenses/index.html
+   
+</pre>
+<p>
+The Perl module derived from the work of M. Douglas McIlroy:
+</p>
+<pre>
+  Title:   Development of a Spelling List
+  Author:  M. Douglas McIlroy
+  Journal: IEEE Transactions on Communications
+  Issue:   Vol COM-30, No 1, January 1982</pre>
+
   </div>
 
 </div>

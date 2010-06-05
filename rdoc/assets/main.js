@@ -105,9 +105,3 @@ function highlightClickTarget( event ) {
 	};
 };
 
-function hookHighlightSyntax() {
-  $('#documentation pre').wrapInner('<code></code>');
-  hljs.tabReplace = '    ';
-  hljs.initHighlightingOnLoad('ruby','cpp');
-};
-

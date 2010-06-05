@@ -5,7 +5,7 @@
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-  <title>Class: English::Infinitive::Infinitive</title>
+  <title>Class: English::Infinitive::Rule</title>
 
   
     <link rel="SHORTCUT ICON" href="../../assets/icon/class.png">
@@ -21,13 +21,16 @@
 
   <script type="text/javascript">
     $(document).ready( function() {
-      hookHighlightSyntax();
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
 	    hookSourceViews();
 	    hookDebuggingToggle();
 	    hookQuickSearch();
 	    highlightLocationTarget();
 
-	    $('ul.link-list a').bind("click", highlightClickTarget);
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
     });
   </script>
 </head>
@@ -40,7 +43,7 @@
         <img src="../../assets/icon/class.png" align="absmiddle">&nbsp;
       
       <a href="../../index.html">English</a>&nbsp;
-      <a href="/">English::Infinitive::Infinitive</a>
+      <a href="/">English::Infinitive::Rule</a>
     </h1>
   </div>
 
@@ -73,8 +76,7 @@
         <h3 class="section-header">Parent</h3>
         <ul>
           
-          <!-- why was this class="link" ? -->
-          <li class="class"><a href="../../String.html">String</a></li>
+          <li class="class">Object</li>
           
         </ul>
       </div>
@@ -92,6 +94,11 @@
             
             <li class="singleton">
               <a href="#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%3C%3D%3E">#<=></a>
             </li>
           
         </ul>
@@ -149,7 +156,7 @@
         
           <li class="module"><a href="../../English/Infinitive.html">English::Infinitive</a></li>
         
-          <li class="class"><a href="../../English/Infinitive/Infinitive.html">English::Infinitive::Infinitive</a></li>
+          <li class="class"><a href="../../English/Infinitive/Rule.html">English::Infinitive::Rule</a></li>
         
           <li class="module"><a href="../../English/Inflect.html">English::Inflect</a></li>
         
@@ -182,14 +189,10 @@
 
     <div id="description">
       
-        <h1>Infinitive</h1>
+        <h1>Rule</h1>
       
 
-      <p>
-The object class for the result returned from calling
-Linguistics::EN::infinitive.
-</p>
-
+      
     </div>
 
     <!-- Constants -->
@@ -201,19 +204,17 @@ Linguistics::EN::infinitive.
       <h3 class="section-header">Attributes</h3>
 
       
-      <div id="word--attribute-method" class="method-detail">
-        <a name="word2"></a>
+      <div id="type-attribute-method" class="method-detail">
+        <a name="type"></a>
         
         <div class="method-heading attribute-method-heading">
-          <span class="method-name">word2</span><span
+          <span class="method-name">type</span><span
             class="attribute-access-type">[R]</span>
         </div>
 
         <div class="method-description">
         
-        <p>
-The fallback deconjugated form
-</p>
+        
         
         </div>
       </div>
@@ -228,25 +229,70 @@ The fallback deconjugated form
 
         <div class="method-description">
         
-        <p>
-The suffix used to to identify the transform rule
-</p>
+        
         
         </div>
       </div>
       
-      <div id="rule-attribute-method" class="method-detail">
-        <a name="rule"></a>
+      <div id="suffix--attribute-method" class="method-detail">
+        <a name="suffix1"></a>
         
         <div class="method-heading attribute-method-heading">
-          <span class="method-name">rule</span><span
+          <span class="method-name">suffix1</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="suffix--attribute-method" class="method-detail">
+        <a name="suffix2"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">suffix2</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="order-attribute-method" class="method-detail">
+        <a name="order"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">order</span><span
             class="attribute-access-type">[R]</span>
         </div>
 
         <div class="method-description">
         
         <p>
-The rule used
+Processing Order
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="number-attribute-method" class="method-detail">
+        <a name="number"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">number</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+McIlroy&#8217;s <a href="Rule.html">Rule</a> Number
 </p>
         
         </div>
@@ -267,29 +313,67 @@ The rule used
         <div class="method-heading">
         
           <span class="method-name">new</span><span
-            class="method-args">( word1, word2, suffix, rule )</span>
+            class="method-args">(type, suffix, suffix1, suffix2, order, number)</span>
           <span class="method-click-advice">click to toggle source</span>
         
         </div>
 
         <div class="method-description">
           
-          <p>
-Create and return a new <a href="Infinitive.html">Infinitive</a> object.
-</p>
+          
           
 
           
           <div class="method-source-code"
             id="new-source">
 <pre>
-      <span class="ruby-comment cmt"># File lib/english/infinitive.rb, line 1035</span>
-1035:                   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">word1</span>, <span class="ruby-identifier">word2</span>, <span class="ruby-identifier">suffix</span>, <span class="ruby-identifier">rule</span> )
-1036:                           <span class="ruby-keyword kw">super</span>( <span class="ruby-identifier">word1</span> )
-1037:                           <span class="ruby-ivar">@word2</span> = <span class="ruby-identifier">word2</span>
-1038:                           <span class="ruby-ivar">@suffix</span> = <span class="ruby-identifier">suffix</span>
-1039:                           <span class="ruby-ivar">@rule</span> = <span class="ruby-identifier">rule</span>
-1040:                   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/english/infinitive.rb, line 588</span>
+588:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">suffix</span>, <span class="ruby-identifier">suffix1</span>, <span class="ruby-identifier">suffix2</span>, <span class="ruby-identifier">order</span>, <span class="ruby-identifier">number</span>)
+589:         <span class="ruby-ivar">@type</span>    = <span class="ruby-identifier">type</span>
+590:         <span class="ruby-ivar">@suffix</span>  = <span class="ruby-identifier">suffix</span>
+591:         <span class="ruby-ivar">@suffix1</span> = <span class="ruby-identifier">suffix1</span>
+592:         <span class="ruby-ivar">@suffix2</span> = <span class="ruby-identifier">suffix2</span>
+593:         <span class="ruby-ivar">@order</span>   = <span class="ruby-identifier">order</span>
+594:         <span class="ruby-ivar">@number</span>  = <span class="ruby-identifier">number</span>
+595:       <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%3C%3D%3E"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/english/infinitive.rb, line 597</span>
+597:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+598:         <span class="ruby-identifier">order</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">order</span>
+599:       <span class="ruby-keyword kw">end</span></pre>
           </div>
           
         </div>

@@ -21,13 +21,16 @@
 
   <script type="text/javascript">
     $(document).ready( function() {
-      hookHighlightSyntax();
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
 	    hookSourceViews();
 	    hookDebuggingToggle();
 	    hookQuickSearch();
 	    highlightLocationTarget();
 
-	    $('ul.link-list a').bind("click", highlightClickTarget);
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
     });
   </script>
 </head>
@@ -139,7 +142,7 @@
         
           <li class="module"><a href="../English/Infinitive.html">English::Infinitive</a></li>
         
-          <li class="class"><a href="../English/Infinitive/Infinitive.html">English::Infinitive::Infinitive</a></li>
+          <li class="class"><a href="../English/Infinitive/Rule.html">English::Infinitive::Rule</a></li>
         
           <li class="module"><a href="../English/Inflect.html">English::Inflect</a></li>
         

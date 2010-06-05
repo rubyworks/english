@@ -19,13 +19,16 @@
 
   <script type="text/javascript">
     $(document).ready( function() {
-      hookHighlightSyntax();
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
 	    hookSourceViews();
 	    hookDebuggingToggle();
 	    hookQuickSearch();
 	    highlightLocationTarget();
 
-	    $('ul.link-list a').bind("click", highlightClickTarget);
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
     });
   </script>
 </head>
@@ -46,7 +49,7 @@
       <h3 class="section-header">File Stats</h3>
       <dl>
         <dt class="modified-date">Last Modified</dt>
-        <dd class="modified-date">Fri May 28 21:54:54 -0400 2010</dd>
+        <dd class="modified-date">Sat Jun 05 12:23:21 -0400 2010</dd>
 
         
         <dt class="requires">Requires</dt>
@@ -57,9 +60,9 @@
           
             <li>english/conjunction</li>
           
-            <li>english/inflect</li>
+            <li>english/infinitive</li>
           
-            <li>english/metaphone</li>
+            <li>english/inflect</li>
           
             <li>english/namecase</li>
           
@@ -70,6 +73,8 @@
             <li>english/dresner</li>
           
             <li>english/jumble</li>
+          
+            <li>english/metaphone</li>
           
             <li>english/soundex</li>
           
@@ -135,7 +140,7 @@
         
           <li class="module"><a href="../English/Infinitive.html">English::Infinitive</a></li>
         
-          <li class="class"><a href="../English/Infinitive/Infinitive.html">English::Infinitive::Infinitive</a></li>
+          <li class="class"><a href="../English/Infinitive/Rule.html">English::Infinitive::Rule</a></li>
         
           <li class="module"><a href="../English/Inflect.html">English::Inflect</a></li>
         
@@ -196,8 +201,8 @@
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English</span>
-              <a href="English.html#method-c-double_metaphone">::double_metaphone</a>
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-ditto_rule">::ditto_rule</a>
             </li>
           
             
@@ -209,7 +214,43 @@
             
             <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-double_metaphone">::double_metaphone</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English</span>
               <a href="English.html#method-c-dresner">::dresner</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-infinitive">::infinitive</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-infinitives">::infinitives</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-infinitives">::infinitives</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-information">::information</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-inifinitive">::inifinitive</a>
             </li>
           
             
@@ -220,20 +261,32 @@
           
             
             <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-letter_rule">::letter_rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-long_rule">::long_rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English::Metaphone</span>
               <a href="English/Metaphone.html#method-c-lookup">::lookup</a>
             </li>
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English::Metaphone</span>
-              <a href="English/Metaphone.html#method-c-metaphone">::metaphone</a>
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-metaphone">::metaphone</a>
             </li>
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English</span>
-              <a href="English.html#method-c-metaphone">::metaphone</a>
+              <span class="method-parent-aside">English::Metaphone</span>
+              <a href="English/Metaphone.html#method-c-metaphone">::metaphone</a>
             </li>
           
             
@@ -250,8 +303,8 @@
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English::Infinitive::Infinitive</span>
-              <a href="English/Infinitive/Infinitive.html#method-c-new">::new</a>
+              <span class="method-parent-aside">English::Infinitive::Rule</span>
+              <a href="English/Infinitive/Rule.html#method-c-new">::new</a>
             </li>
           
             
@@ -268,14 +321,14 @@
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English::Inflect</span>
-              <a href="English/Inflect.html#method-c-plural">::plural</a>
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-c-plural">::plural</a>
             </li>
           
             
             <li class="singleton" style="clear: both;">
-              <span class="method-parent-aside">English</span>
-              <a href="English.html#method-c-plural">::plural</a>
+              <span class="method-parent-aside">English::Inflect</span>
+              <a href="English/Inflect.html#method-c-plural">::plural</a>
             </li>
           
             
@@ -304,6 +357,12 @@
           
             
             <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-prefixes">::prefixes</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English</span>
               <a href="English.html#method-c-present_participle">::present_participle</a>
             </li>
@@ -312,6 +371,24 @@
             <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English::Inflect</span>
               <a href="English/Inflect.html#method-c-rule">::rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-rule">::rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-second_rule">::second_rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-short_rule">::short_rule</a>
             </li>
           
             
@@ -370,6 +447,12 @@
           
             
             <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive</span>
+              <a href="English/Infinitive.html#method-c-special_rule">::special_rule</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English::PorterStemmer</span>
               <a href="English/PorterStemmer.html#method-c-stem">::stem</a>
             </li>
@@ -396,6 +479,12 @@
             <li class="singleton" style="clear: both;">
               <span class="method-parent-aside">English::Inflect</span>
               <a href="English/Inflect.html#method-c-word">::word</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">English::Infinitive::Rule</span>
+              <a href="English/Infinitive/Rule.html#method-i-%3C%3D%3E">#<=></a>
             </li>
           
             
@@ -436,8 +525,14 @@
           
             
             <li class="method" style="clear: both;">
-              <span class="method-parent-aside">English::Infinitive</span>
-              <a href="English/Infinitive.html#method-i-infinitive">#infinitive</a>
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-i-infinitive">#infinitive</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">English</span>
+              <a href="English.html#method-i-infinitives">#infinitives</a>
             </li>
           
             
@@ -503,7 +598,7 @@
       <div style="float: right; margin-right: 5px;">
         <a href="http://validator.w3.org/check/referer"><img src="../assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
       </div>
-      Generated with <a href="http://proutils.github.com/webri">WebRI Redfish</a> 1.2.1
+      Generated with <a href="http://proutils.github.com/webri">WebRI Newfish</a> 1.2.1
       <br/><br/>
     </div>
   </div>

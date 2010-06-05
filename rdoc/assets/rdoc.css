@@ -12,12 +12,13 @@
 
 body {
   background: #efefef;
+  background: #ffffff;
   font: 14px "Helvetica Neue", Helvetica, Tahoma, sans-serif;
   padding: 0 40px 15px 40px;
 }
 
 #main {
-  width: 1024px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -37,13 +38,14 @@ img { border: none; }
 h1 {
   font-size: 300%;
   text-shadow: rgba(135,145,135,0.65) 2px 2px 3px;
-  color: #FF226C;
+  color: black;
 }
 
 h2,h3,h4 { margin-top: 1.5em; }
 
 a {
   color: #FF226C;
+  color: #224;
   text-decoration: none;
 }
 
@@ -64,34 +66,25 @@ ul {
   margin-left: 20px;
 }
 
-li {
-  line-height: 120%;
-}
-
 li p {
-  padding: 0; margin: 5px 0;
+  margin: 0; padding: 0;
 }
 
 .head {
   width: auto;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border-bottom: 0px solid #aaa;
-  border-left: 0px solid #aaa;
-  border-right: 0px solid #aaa;
   padding: 10px 10px;
   margin: 0 8px -0.5em 8px;
 }
 
 .head h1 {
-  /* color: #666; */
-  color: #FF226C;
+  color: #666;
   font-weight: bold;
   font-size: 18px;
 }
 
 .head h1 a {
-  color: #FF226C;
   font-weight: bold; 
 }
 
@@ -103,8 +96,8 @@ li p {
 
 .quicksearch-field {
   width: 98%;
-  background: #ddd;
-  border: 1px solid #aaa;
+  /* background: #ddd; */
+  border: 1px solid #ccc;
   height: 1.5em;
   -webkit-border-radius: 4px;
 }
@@ -114,7 +107,7 @@ li p {
 
 .missing-docs {
   font-size: 120%;
-  background: white url(images/fixme.png) no-repeat 4px center;
+  background: white url(icon/fixme.png) no-repeat 4px center;
   color: #ccc;
   line-height: 2em;
   border: 0px solid #d00;
@@ -218,8 +211,15 @@ body.file p {
 
 #metadata {
   float: right;
-  width: 320px;
+  width: 330px;
   margin-top: 10px;
+  border-left: 1px solid #ccc;
+  padding-left: 12px;
+}
+
+#documentation {
+  margin: 0 360px 5em 1em;
+  min-width: 340px;
 }
 
 /*
@@ -241,10 +241,10 @@ body.file p {
 /* @group Metadata Section */
 
 #metadata .section {
-  background-color: #dedede;
+  background-color: #fff;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border: 1px solid #aaa;
+  border: 0 solid #ccc;
   margin: 0 8px 16px;
   font-size: 90%;
   overflow: hidden;
@@ -253,13 +253,13 @@ body.file p {
 #metadata h3.section-header {
   margin: 0;
   padding: 2px 8px;
-  background: #ccc;
+  background: #fff;
   color: #666;
   -moz-border-radius-topleft: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-left-radius: 4px;
   -webkit-border-top-right-radius: 4px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #ccc;
 }
 
 #metadata ul,
@@ -269,12 +269,10 @@ body.file p {
   list-style: none;
 }
 
-/*
 #file-metadata ul {
   padding-left: 28px;
-  list-style-image: url(images/page.png);
+  list-style-image: url(icon/page.png);
 }
-*/
 
 dl.svninfo {
   color: #666;
@@ -312,10 +310,10 @@ ul.link-list .type {
 */
 
 #project-metadata .section {
-	border: 1px solid #aaa;
+	border: 0px solid #ccc;
 }
 #project-metadata h3.section-header {
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid #ccc;
 	position: relative;
 }
 #project-metadata h3.section-header .search-toggle {
@@ -326,9 +324,9 @@ ul.link-list .type {
 
 #project-metadata form {
 	color: #777;
-	background: #ccc;
+	background: #ffffff;
 	padding: 8px 8px 16px;
-	border-bottom: 1px solid #bbb;
+	border-bottom: 0px solid #ccc;
 }
 #project-metadata fieldset {
 	border: 0;
@@ -345,8 +343,10 @@ ul.link-list .type {
 .method-parent-aside {
   float: right; font-size: 0.7em;
   font-weight: bold;
-  padding: 0 0;
-  color: #999;
+  padding: 0 0 0 15px;
+  color: #aaa;
+  font-family: helvetica;
+  letter-spacing: -1px;
 }
 
 /* @end */
@@ -354,16 +354,10 @@ ul.link-list .type {
 
 /* @group Documentation Section */
 
-
-#documentation {
-  margin: 0 360px 5em 1em;
-  min-width: 340px;
-}
-
 #documentation h1 {
-  margin: 10px 0 10px 0;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  border: 1px solid #bbb;
+  margin: 8px 0 4px 0;
+  padding: 0.2em 0.1em 0.1em 0.1em;
+  border-bottom: 1px solid #bbb;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
 }
@@ -417,12 +411,11 @@ ul.link-list .type {
 }
 #documentation h3.section-header {
   margin-top: 2em;
-  padding: 0.75em 0.5em 0.5em 0.5em;
-  background-color: #dedede;
+  padding: 0.75em 0.5em 0.25em 0.5em;
+  /* background-color: #dedede; */
   color: #333;
-  color: #FF226C;
   font-size: 150%;
-  border: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
@@ -517,7 +510,7 @@ ul.link-list .type {
 }
 
 #documentation .attribute-method-heading {
-	background: url(../ima/attribute.png) no-repeat left bottom;
+	background: url(icon/attribute.png) no-repeat left bottom;
 }
 #documentation #attribute-method-details .method-detail:hover {
 	background-color: transparent;
@@ -625,7 +618,7 @@ div.method-source-code pre {
 	background: url(icon/plugin.png) no-repeat left top;
 }
 .file dt.scs-url {
-	background: url(icon/tool.png) no-repeat left top;
+	background: url(icon/wrench.png) no-repeat left top;
 }
 
 .file dl dd {
@@ -638,24 +631,6 @@ div.method-source-code pre {
 }
 .file #metadata dl dd ul li {
 }
-
-.file h1, h2, h3, h4, h5  {
-  color: #FF226C;
-  color: #222222;
-}
-
-/*
-.file h2 {
-	margin-top: 2em;
-	padding: 0.75em 0.5em 0.5em 0.5em;
-	color: #333;
-	font-size: 120%;
-	border: 1px solid #bbb;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-  background: #dedede;
-}
-
 
 /*
 .file h2 {

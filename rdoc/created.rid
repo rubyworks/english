@@ -1,14 +1,14 @@
-Mon, 31 May 2010 17:18:18 -0400
+Sat, 05 Jun 2010 12:34:29 -0400
 lib/english/numeral.rb	Fri, 28 May 2010 21:32:46 -0400
 lib/english/porter.rb	Fri, 28 May 2010 21:31:09 -0400
 lib/english/censor.rb	Fri, 28 May 2010 21:54:03 -0400
-HISTORY	Fri, 28 May 2010 22:46:14 -0400
+HISTORY	Sat, 05 Jun 2010 12:23:34 -0400
 PROFILE	Fri, 28 May 2010 23:08:23 -0400
 lib/english/ordinal.rb	Sat, 29 May 2010 06:41:31 -0400
 LICENSE	Fri, 28 May 2010 22:55:09 -0400
-lib/english/infinitive.rb	Fri, 28 May 2010 21:31:48 -0400
-lib/english.rb	Fri, 28 May 2010 21:54:54 -0400
-VERSION	Fri, 28 May 2010 22:46:49 -0400
+lib/english/infinitive.rb	Sat, 05 Jun 2010 12:17:56 -0400
+lib/english.rb	Sat, 05 Jun 2010 12:23:21 -0400
+VERSION	Sat, 05 Jun 2010 12:33:54 -0400
 README.rdoc	Fri, 28 May 2010 23:02:40 -0400
 lib/english/class.rb	Fri, 28 May 2010 21:26:07 -0400
 REQUIRE	Fri, 28 May 2010 22:47:56 -0400
