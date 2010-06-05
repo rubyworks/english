@@ -39,9 +39,9 @@ dnote:
 
 rdoc:
   service  : RDoc
-  template : redfish
+  template : newfish
   include  : ~
-  exclude  : [ Syckfile ]
+  exclude  : [Syckfile]
   main     : ~
   extra    : ~
   active   : true
