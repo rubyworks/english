@@ -1,5 +1,17 @@
 = RELEASE HISTORY
 
+== 0.6.1 / 2010-06-05
+
+This release entails two enhancments. A simple bug fix for
+the #conjunction method, and the completion of integrating
+Michael Granger's Infinitive module into the library.
+
+Changes:
+
+* Integrated Infinitive module.
+* Fixed #conjunction method.
+
+
 == 0.6.0 / 2010-05-29
 
 This release is a significant milestone and short of any bug reports
