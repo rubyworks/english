@@ -305,7 +305,8 @@ class English
     self.class.singular(@self)
   end
 
-  #alias_method(:singularize, :singular)
+  # Alias for #singular.
+  alias_method(:singularize, :singular)
 
   # Convert an English word from plurel to singular.
   #
@@ -316,7 +317,8 @@ class English
     self.class.plural(@self)
   end
 
-  #alias_method(:pluralize, :plural)
+  # Alias for #plural.
+  alias_method(:pluralize, :plural)
 
 end
 

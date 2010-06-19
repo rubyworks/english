@@ -1,5 +1,14 @@
 = RELEASE HISTORY
 
+== 0.6.2 / 2010-06-19
+
+Restored last #singularize and #pluralize aliases for #singular and #plural.
+
+Changes:
+
+* Restored common aliases #singularize and #pluralize.
+
+
 == 0.6.1 / 2010-06-05
 
 This release entails two enhancments. A simple bug fix for
