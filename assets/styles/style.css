@@ -6,9 +6,10 @@
   body {
     padding: 0;
     margin: 0;
-    background: #333333;
+    background: #000;
     color: white;
     text-align: center;
+    background: url(../images/pen.jpg) no-repeat top left black;
   }
 
   pre {
@@ -35,7 +36,6 @@
     width: 805px;
     margin: 0 auto;
     position: relative;
-    background: url(../images/pen.jpg) no-repeat black;
   }
 
   #menu {
@@ -66,7 +66,7 @@
     margin-left: 0px;
     padding-left: 60px;
     position: relative;
-    background: url(../images/spiral.png) repeat-y black;
+    background: url(../images/spiral.png) repeat-y transparent;
     border-right: 2px solid gray;
   }
 
