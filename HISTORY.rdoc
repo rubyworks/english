@@ -9,6 +9,7 @@ systems.
 Changes:
 
 * Add `en.rb` redirection script.
+* Ruby Facets is no longer needed as a dependency.
 
 
 == 0.6.2 / 2010-06-19
