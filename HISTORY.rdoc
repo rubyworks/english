@@ -1,5 +1,16 @@
 = RELEASE HISTORY
 
+== 0.6.3 / 2010-09-21
+
+This release allows the english library to be loaded via <code>require 'en'</code>.
+This offeres a way to get around Ruby's own English.rb library on case insensitive
+systems.
+
+Changes:
+
+* Add `en.rb` redirection script.
+
+
 == 0.6.2 / 2010-06-19
 
 Restored last #singularize and #pluralize aliases for #singular and #plural.

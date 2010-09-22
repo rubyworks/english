@@ -44,13 +44,15 @@ rdoc:
   exclude  : [Syckfile]
   main     : ~
   extra    : ~
+  output   : site/docs/api
   active   : true
 
 ridoc:
-  service: RIDoc
-  include: ~
-  exclude: ~
-  active : true
+  service  : RIDoc
+  include  : ~
+  exclude  : ~
+  output   : ri
+  active   : true
 
 stats:
   service  : Stats

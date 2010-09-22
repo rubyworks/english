@@ -47,6 +47,11 @@ See Language project for more information on support for other languages.
 For details on all the methods the English library supplies see the
 <a href="rubyworks.github.com/english/rdoc/">API documentation</a>.
 
+NOTE: If your system has a case insensitive file system, an alternative
+to +english.rb+ is provided. Use +en.rb+ instead:
+
+  require 'en'
+
 
 == INSTALLATION
 

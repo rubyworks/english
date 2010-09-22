@@ -1,6 +1,0 @@
-#!/usr/bin/env ratch
-
-# remove rdocs products
-
-rm_r('doc/rdoc') if File.directory?('doc/rdoc')
-

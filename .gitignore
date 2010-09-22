@@ -1,6 +1,4 @@
-MANIFEST
-.cache
 log
-doc/rdoc
-doc/ri
+ri
 pkg
+site/docs

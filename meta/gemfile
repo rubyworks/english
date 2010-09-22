@@ -1,0 +1,9 @@
+name    : english
+date    : 2010-06-19
+version : '0.6.3'
+
+requires:
+  - facets
+  - langauge
+  - syckle (build)
+

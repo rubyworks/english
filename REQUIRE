@@ -1,7 +1,0 @@
-runtime:
-  - facets
-  - language
-
-development:
-  - syckle
-
