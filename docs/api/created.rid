@@ -1,0 +1,24 @@
+Wed, 22 Sep 2010 18:09:38 -0400
+lib/english/numeral.rb	Fri, 28 May 2010 21:32:46 -0400
+lib/english/porter.rb	Fri, 28 May 2010 21:31:09 -0400
+lib/english/censor.rb	Fri, 28 May 2010 21:54:03 -0400
+HISTORY.rdoc	Wed, 22 Sep 2010 18:05:01 -0400
+lib/english/ordinal.rb	Sat, 29 May 2010 06:41:31 -0400
+LICENSE	Fri, 28 May 2010 22:55:09 -0400
+lib/english/infinitive.rb	Sat, 05 Jun 2010 12:17:56 -0400
+lib/english.rb	Sat, 05 Jun 2010 12:23:21 -0400
+lib/en.rb	Wed, 22 Sep 2010 17:39:38 -0400
+Rakefile	Wed, 22 Sep 2010 17:43:33 -0400
+README.rdoc	Wed, 22 Sep 2010 17:53:02 -0400
+lib/english/class.rb	Fri, 28 May 2010 21:26:07 -0400
+lib/english/soundex.rb	Fri, 28 May 2010 21:31:12 -0400
+lib/english/inflect.rb	Sat, 19 Jun 2010 11:14:22 -0400
+lib/english/jumble.rb	Fri, 28 May 2010 21:32:00 -0400
+lib/english/namecase.rb	Fri, 28 May 2010 21:32:12 -0400
+AUTHORS	Wed, 22 Sep 2010 17:45:56 -0400
+lib/english/conjunction.rb	Sat, 29 May 2010 06:37:45 -0400
+lib/english/words.rb	Fri, 28 May 2010 21:48:32 -0400
+lib/english/metaphone.rb	Fri, 28 May 2010 21:32:06 -0400
+lib/english/dresner.rb	Fri, 28 May 2010 21:30:16 -0400
+lib/english/mixin.rb	Mon, 10 May 2010 18:01:29 -0400
+lib/english/participle.rb	Fri, 28 May 2010 21:11:58 -0400

@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: English::Metaphone</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../assets/icon/module.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="../assets/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="../assets/highlight/styles/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="../assets/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/main.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
+</head>
+<body class="module">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../assets/icon/module.png" align="absmiddle">&nbsp;
+      
+      <a href="../index.html">English</a>&nbsp;
+      <a href="/">English::Metaphone</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../lib/english/metaphone_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/english/metaphone.rb">lib/english/metaphone.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+            
+            <li class="singleton">
+              <a href="#method-c-calculate_double_metaphone">::calculate_double_metaphone</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-double_metaphone">::double_metaphone</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-lookup">::lookup</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-metaphone">::metaphone</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-metaphone_word">::metaphone_word</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-slavo_germanic%3F">::slavo_germanic?</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-vowel%3F">::vowel?</a>
+            </li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Information</h3>
+        <ul>
+        
+          <li class="file"><a href="../HISTORY_rdoc.html">HISTORY.rdoc</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+          <li class="file"><a href="../AUTHORS.html">AUTHORS</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../assets/icon/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="class"><a href="../English.html">English</a></li>
+        
+          <li class="class"><a href="../English/Censor.html">English::Censor</a></li>
+        
+          <li class="module"><a href="../English/Infinitive.html">English::Infinitive</a></li>
+        
+          <li class="class"><a href="../English/Infinitive/Rule.html">English::Infinitive::Rule</a></li>
+        
+          <li class="module"><a href="../English/Inflect.html">English::Inflect</a></li>
+        
+          <li class="module"><a href="../English/Metaphone.html">English::Metaphone</a></li>
+        
+          <li class="module"><a href="../English/PorterStemmer.html">English::PorterStemmer</a></li>
+        
+          <li class="class"><a href="../Array.html">Array</a></li>
+        
+          <li class="class"><a href="../Integer.html">Integer</a></li>
+        
+          <li class="class"><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="../assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
+      </div>
+      Generated with <a href="http://rubyworks.github.com/rdazzle">RDazzle Newfish</a> 1.3.0
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>Metaphone</h1>
+      
+
+      <p>
+Implementation of  Lawrence Philips&#8217; <a
+href="Metaphone.html">Metaphone</a> and Double <a
+href="Metaphone.html">Metaphone</a> algorithms.
+</p>
+<p>
+<a href="Metaphone.html">Metaphone</a> encodes names into a phonetic form
+such that similar-sounding names have the same or similar <a
+href="Metaphone.html">Metaphone</a> encodings.
+</p>
+<p>
+The original system was described by Lawrence Philips in Computer Language
+Vol. 7 No. 12, December 1990, pp 39-43.
+</p>
+<p>
+There are multiple implementations of <a
+href="Metaphone.html">Metaphone</a>, each with their own quirks, I have
+based this on my interpretation of the algorithm specification. Even
+LP&#8217;s original BASIC implementation appears to contain bugs
+(specifically with the handling of CC and MB), when compared to his
+explanation of the algorithm.
+</p>
+<p>
+I have also compared this implementation with that found in PHP&#8217;s
+standard library, which appears to mimic the behaviour of LP&#8217;s
+original BASIC implementation. For compatibility, these rules can also be
+used by passing :alternate=>true to the methods.
+</p>
+<p>
+Double <a href="Metaphone.html">Metaphone</a> algoirthm originally
+published in the June 2000 issue of C/C++ Users Journal. Ruby version based
+on Stephen Woodbridge&#8217;s PHP version - <a
+href="http://swoodbridge.com/DoubleMetaPhone/">swoodbridge.com/DoubleMetaPhone/</a>
+</p>
+<p>
+Ruby implementation of Double <a href="Metaphone.html">Metaphone</a> based
+on work by Paul Battley (pbattley@gmail.com).
+</p>
+
+    </div>
+
+    <!-- Constants -->
+    
+    <div id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt><a name="METAPHONE_RULES">METAPHONE_RULES</a></dt>
+        
+        <dd class="description"><p>
+<a href="Metaphone.html">Metaphone</a> rules. These are simply applied in
+order.
+</p></dd>
+        
+      
+        <dt><a name="METAPHONE_RULES_LP">METAPHONE_RULES_LP</a></dt>
+        
+        <dd class="description"><p>
+The rules for the &#8216;buggy&#8217; alternate implementation used by PHP
+etc.
+</p></dd>
+        
+      
+      </dl>
+    </div>
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="double-metaphone-method" class="method-detail ">
+        <a name="method-c-double_metaphone"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">double_metaphone</span><span
+            class="method-args">(string)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns the primary and secondary double metaphone tokens (the secondary
+will be nil if equal to the primary).
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="double-metaphone-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/english/metaphone.rb, line 99</span>
+ 99:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">double_metaphone</span>(<span class="ruby-identifier">string</span>)
+100:       <span class="ruby-identifier">string</span> = <span class="ruby-identifier">string</span>.<span class="ruby-identifier">to_s</span>
+101:       <span class="ruby-ivar">@db_memo</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+102:       <span class="ruby-ivar">@db_memo</span>[<span class="ruby-identifier">string</span>] = <span class="ruby-identifier">calculate_double_metaphone</span>(<span class="ruby-identifier">string</span>)
+103:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="metaphone-method" class="method-detail ">
+        <a name="method-c-metaphone"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">metaphone</span><span
+            class="method-args">(string, alt=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns the <a href="Metaphone.html">Metaphone</a> representation of a
+string. If the string contains multiple words, each word in turn is
+converted into its <a href="Metaphone.html">Metaphone</a> representation.
+Note that only the letters A-Z are supported, so any language-specific
+processing should be done beforehand.
+</p>
+<p>
+If <tt>alt</tt> is set to true, alternate &#8216;buggy&#8217; rules are
+used.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="metaphone-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/english/metaphone.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">metaphone</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">alt</span>=<span class="ruby-keyword kw">nil</span>)
+81:       <span class="ruby-identifier">string</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\s+/</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">metaphone_word</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">alt</span>) }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+82:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="private-class-method-details" class="method-section section">
+      <h3 class="section-header">Private Class Methods</h3>
+
+    
+      <div id="calculate-double-metaphone-method" class="method-detail ">
+        <a name="method-c-calculate_double_metaphone"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">calculate_double_metaphone</span><span
+            class="method-args">(str)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="calculate-double-metaphone-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/english/metaphone.rb, line 107</span>
+107:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">calculate_double_metaphone</span>(<span class="ruby-identifier">str</span>)
+108:       <span class="ruby-identifier">primary</span>, <span class="ruby-identifier">secondary</span>, <span class="ruby-identifier">current</span> = <span class="ruby-value str">''</span>, <span class="ruby-value str">''</span>, <span class="ruby-value">0</span>
+109:       <span class="ruby-identifier">original</span>, <span class="ruby-identifier">length</span>, <span class="ruby-identifier">last</span> = <span class="ruby-node">&quot;#{str}     &quot;</span>.<span class="ruby-identifier">upcase</span>, <span class="ruby-identifier">str</span>.<span class="ruby-identifier">length</span>, <span class="ruby-identifier">str</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+110:       <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^GN|KN|PN|WR|PS$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">original</span>[<span class="ruby-value">0</span>, <span class="ruby-value">2</span>]
+111:         <span class="ruby-identifier">current</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+112:       <span class="ruby-keyword kw">end</span>
+113:       <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'X'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">original</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>]
+114:         <span class="ruby-identifier">primary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'S'</span>
+115:         <span class="ruby-identifier">secondary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'S'</span>
+116:         <span class="ruby-identifier">current</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+117:       <span class="ruby-keyword kw">end</span>
+118:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">primary</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">secondary</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span>
+119:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">current</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">length</span>
+120:         <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">c</span> = <span class="ruby-identifier">lookup</span>(<span class="ruby-identifier">original</span>, <span class="ruby-identifier">current</span>, <span class="ruby-identifier">length</span>, <span class="ruby-identifier">last</span>)
+121:         <span class="ruby-identifier">primary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">a</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">a</span>
+122:         <span class="ruby-identifier">secondary</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">b</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">b</span>
+123:         <span class="ruby-identifier">current</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">c</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span>
+124:       <span class="ruby-keyword kw">end</span>
+125:       <span class="ruby-identifier">primary</span>, <span class="ruby-identifier">secondary</span> = <span class="ruby-identifier">primary</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>], <span class="ruby-identifier">secondary</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>]
+126:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">primary</span>, (<span class="ruby-identifier">primary</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">secondary</span> <span class="ruby-operator">?</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">secondary</span>)
+127:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="lookup-method" class="method-detail ">
+        <a name="method-c-lookup"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">lookup</span><span
+            class="method-args">(str, pos, length, last)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="lookup-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/english/metaphone.rb, line 137</span>
+137:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lookup</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">length</span>, <span class="ruby-identifier">last</span>)
+138:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">1</span>]
+139:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/^A|E|I|O|U|Y$/</span>
+140:           <span class="ruby-keyword kw">if</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span>
+141:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'A'</span>, <span class="ruby-value str">'A'</span>, <span class="ruby-value">1</span>
+142:           <span class="ruby-keyword kw">else</span>
+143:             <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">1</span>
+144:           <span class="ruby-keyword kw">end</span>
+145:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'B'</span>
+146:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'P'</span>, <span class="ruby-value str">'P'</span>, (<span class="ruby-value str">'B'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+147:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Ç'</span>
+148:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, <span class="ruby-value str">'S'</span>, <span class="ruby-value">1</span>
+149:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'C'</span>
+150:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span>
+151:             <span class="ruby-operator">!</span><span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">&amp;&amp;</span>
+152:             <span class="ruby-value str">'ACH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">3</span>] <span class="ruby-operator">&amp;&amp;</span>
+153:             <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">!=</span> <span class="ruby-value str">'I'</span> <span class="ruby-operator">&amp;&amp;</span> (
+154:               <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">!=</span> <span class="ruby-value str">'E'</span> <span class="ruby-operator">||</span>
+155:               <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>, <span class="ruby-value">6</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^(B|M)ACHER$/</span>
+156:             ) <span class="ruby-keyword kw">then</span>
+157:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+158:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'CAESAR'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">6</span>]
+159:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, <span class="ruby-value str">'S'</span>, <span class="ruby-value">2</span>
+160:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'CHIA'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">4</span>]
+161:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+162:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'CH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>]
+163:             <span class="ruby-keyword kw">if</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'CHAE'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">4</span>]
+164:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'X'</span>, <span class="ruby-value">2</span>
+165:             <span class="ruby-keyword kw">elsif</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> (
+166:                 [<span class="ruby-value str">'HARAC'</span>, <span class="ruby-value str">'HARIS'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">5</span>]) <span class="ruby-operator">||</span>
+167:                 [<span class="ruby-value str">'HOR'</span>, <span class="ruby-value str">'HYM'</span>, <span class="ruby-value str">'HIA'</span>, <span class="ruby-value str">'HEM'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">3</span>])
+168:               ) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">5</span>] <span class="ruby-operator">!=</span> <span class="ruby-value str">'CHORE'</span> <span class="ruby-keyword kw">then</span>
+169:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+170:             <span class="ruby-keyword kw">elsif</span> [<span class="ruby-value str">'VAN '</span>,<span class="ruby-value str">'VON '</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>]) <span class="ruby-operator">||</span>
+171:                   <span class="ruby-value str">'SCH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">3</span>] <span class="ruby-operator">||</span>
+172:                   [<span class="ruby-value str">'ORCHES'</span>,<span class="ruby-value str">'ARCHIT'</span>,<span class="ruby-value str">'ORCHID'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>, <span class="ruby-value">6</span>]) <span class="ruby-operator">||</span>
+173:                   [<span class="ruby-value str">'T'</span>,<span class="ruby-value str">'S'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">||</span> (
+174:                     ((<span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span>) <span class="ruby-operator">||</span> [<span class="ruby-value str">'A'</span>,<span class="ruby-value str">'O'</span>,<span class="ruby-value str">'U'</span>,<span class="ruby-value str">'E'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>])) <span class="ruby-operator">&amp;&amp;</span>
+175:                     [<span class="ruby-value str">'L'</span>,<span class="ruby-value str">'R'</span>,<span class="ruby-value str">'N'</span>,<span class="ruby-value str">'M'</span>,<span class="ruby-value str">'B'</span>,<span class="ruby-value str">'H'</span>,<span class="ruby-value str">'F'</span>,<span class="ruby-value str">'V'</span>,<span class="ruby-value str">'W'</span>,<span class="ruby-value str">' '</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>])
+176:                   ) <span class="ruby-keyword kw">then</span>
+177:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+178:             <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+179:               <span class="ruby-keyword kw">return</span> (<span class="ruby-value str">'MC'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">?</span> <span class="ruby-value str">'K'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'X'</span>), <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+180:             <span class="ruby-keyword kw">else</span>
+181:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'X'</span>, <span class="ruby-value str">'X'</span>, <span class="ruby-value">2</span>
+182:             <span class="ruby-keyword kw">end</span>
+183:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'CZ'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'WICZ'</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>, <span class="ruby-value">4</span>]
+184:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, <span class="ruby-value str">'X'</span>, <span class="ruby-value">2</span>
+185:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'CIA'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">3</span>]
+186:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'X'</span>, <span class="ruby-value str">'X'</span>, <span class="ruby-value">3</span>
+187:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'CC'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>(<span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'M'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>])
+188:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^I|E|H$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'HU'</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">2</span>]
+189:               <span class="ruby-keyword kw">if</span> (<span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'A'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">||</span>
+190:                 <span class="ruby-regexp re">/^UCCE(E|S)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">5</span>] <span class="ruby-keyword kw">then</span>
+191:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'KS'</span>, <span class="ruby-value str">'KS'</span>, <span class="ruby-value">3</span>
+192:               <span class="ruby-keyword kw">else</span>
+193:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'X'</span>, <span class="ruby-value str">'X'</span>, <span class="ruby-value">3</span>
+194:               <span class="ruby-keyword kw">end</span>
+195:             <span class="ruby-keyword kw">else</span>
+196:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+197:             <span class="ruby-keyword kw">end</span>
+198:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-regexp re">/^C(K|G|Q)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>]
+199:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+200:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-regexp re">/^C(I|E|Y)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>]
+201:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, (<span class="ruby-regexp re">/^CI(O|E|A)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">3</span>] <span class="ruby-operator">?</span> <span class="ruby-value str">'X'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'S'</span>), <span class="ruby-value">2</span>
+202:           <span class="ruby-keyword kw">else</span>
+203:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^ (C|Q|G)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>]
+204:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">3</span>
+205:             <span class="ruby-keyword kw">else</span>
+206:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, (<span class="ruby-regexp re">/^C|K|Q$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>([<span class="ruby-value str">'CE'</span>,<span class="ruby-value str">'CI'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>])) <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+207:             <span class="ruby-keyword kw">end</span>
+208:           <span class="ruby-keyword kw">end</span>
+209:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'D'</span>
+210:           <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'DG'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>]
+211:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^I|E|Y$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>]
+212:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'J'</span>, <span class="ruby-value">3</span>
+213:             <span class="ruby-keyword kw">else</span>
+214:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'TK'</span>, <span class="ruby-value str">'TK'</span>, <span class="ruby-value">2</span>
+215:             <span class="ruby-keyword kw">end</span>
+216:           <span class="ruby-keyword kw">else</span>
+217:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'T'</span>, <span class="ruby-value str">'T'</span>, (<span class="ruby-regexp re">/^D(T|D)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+218:           <span class="ruby-keyword kw">end</span>
+219:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'F'</span>
+220:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'F'</span>, <span class="ruby-value str">'F'</span>, (<span class="ruby-value str">'F'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+221:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'G'</span>
+222:           <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'H'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+223:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>])
+224:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+225:             <span class="ruby-keyword kw">elsif</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span>
+226:               <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'I'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>]
+227:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'J'</span>, <span class="ruby-value">2</span>
+228:               <span class="ruby-keyword kw">else</span>
+229:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+230:               <span class="ruby-keyword kw">end</span>
+231:             <span class="ruby-keyword kw">elsif</span> (<span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^B|H|D$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">||</span>
+232:                   (<span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^B|H|D$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">3</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">||</span>
+233:                   (<span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^B|H$/</span>   <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">4</span>, <span class="ruby-value">1</span>])
+234:               <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">2</span>
+235:             <span class="ruby-keyword kw">else</span>
+236:               <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'U'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^C|G|L|R|T$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">3</span>, <span class="ruby-value">1</span>])
+237:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'F'</span>, <span class="ruby-value str">'F'</span>, <span class="ruby-value">2</span>
+238:               <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'I'</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+239:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+240:               <span class="ruby-keyword kw">else</span>
+241:                 <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">2</span>
+242:               <span class="ruby-keyword kw">end</span>
+243:             <span class="ruby-keyword kw">end</span>
+244:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'N'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+245:             <span class="ruby-keyword kw">if</span> <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">slavo_germanic?</span>(<span class="ruby-identifier">str</span>)
+246:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'KN'</span>, <span class="ruby-value str">'N'</span>, <span class="ruby-value">2</span>
+247:             <span class="ruby-keyword kw">else</span>
+248:               <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'EY'</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'Y'</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">slavo_germanic?</span>(<span class="ruby-identifier">str</span>)
+249:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'N'</span>, <span class="ruby-value str">'KN'</span>, <span class="ruby-value">2</span>
+250:               <span class="ruby-keyword kw">else</span>
+251:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'KN'</span>, <span class="ruby-value str">'KN'</span>, <span class="ruby-value">2</span>
+252:               <span class="ruby-keyword kw">end</span>
+253:             <span class="ruby-keyword kw">end</span>
+254:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'LI'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">slavo_germanic?</span>(<span class="ruby-identifier">str</span>)
+255:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'KL'</span>, <span class="ruby-value str">'L'</span>, <span class="ruby-value">2</span>
+256:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-value str">'Y'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-regexp re">/^(E(S|P|B|L|Y|I|R)|I(B|L|N|E))$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>])
+257:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'J'</span>, <span class="ruby-value">2</span>
+258:           <span class="ruby-keyword kw">elsif</span> ((<span class="ruby-value str">'ER'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">'Y'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">&amp;&amp;</span>
+259:                  <span class="ruby-regexp re">/^(D|R|M)ANGER$/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">6</span>] <span class="ruby-operator">&amp;&amp;</span>
+260:                  <span class="ruby-regexp re">/^E|I$/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">&amp;&amp;</span>
+261:                  <span class="ruby-regexp re">/^(R|O)GY$/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">3</span>])
+262:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'J'</span>, <span class="ruby-value">2</span>
+263:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-regexp re">/^E|I|Y$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-regexp re">/^(A|O)GGI$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">4</span>]
+264:             <span class="ruby-keyword kw">if</span> (<span class="ruby-regexp re">/^V(A|O)N $/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">'SCH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">3</span>]) <span class="ruby-operator">||</span> <span class="ruby-value str">'ET'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>]
+265:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+266:             <span class="ruby-keyword kw">else</span>
+267:               <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'IER '</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">4</span>]
+268:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'J'</span>, <span class="ruby-value">2</span>
+269:               <span class="ruby-keyword kw">else</span>
+270:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+271:               <span class="ruby-keyword kw">end</span>
+272:             <span class="ruby-keyword kw">end</span>
+273:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'G'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+274:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">2</span>
+275:           <span class="ruby-keyword kw">else</span>
+276:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, <span class="ruby-value">1</span>
+277:           <span class="ruby-keyword kw">end</span>
+278:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'H'</span>
+279:           <span class="ruby-keyword kw">if</span> (<span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>])) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>])
+280:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'H'</span>, <span class="ruby-value str">'H'</span>, <span class="ruby-value">2</span>
+281:           <span class="ruby-keyword kw">else</span>
+282:             <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">1</span>
+283:           <span class="ruby-keyword kw">end</span>
+284:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'J'</span>
+285:           <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'JOSE'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">4</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">'SAN '</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>]
+286:             <span class="ruby-keyword kw">if</span> (<span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">' '</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">4</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">||</span> <span class="ruby-value str">'SAN '</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>]
+287:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'H'</span>, <span class="ruby-value str">'H'</span>, <span class="ruby-value">1</span>
+288:             <span class="ruby-keyword kw">else</span>
+289:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'H'</span>, <span class="ruby-value">1</span>
+290:             <span class="ruby-keyword kw">end</span>
+291:           <span class="ruby-keyword kw">else</span>
+292:             <span class="ruby-identifier">current</span> = (<span class="ruby-value str">'J'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+293: 
+294:             <span class="ruby-keyword kw">if</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'JOSE'</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">4</span>]
+295:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'A'</span>, <span class="ruby-identifier">current</span>
+296:             <span class="ruby-keyword kw">else</span>
+297:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">slavo_germanic?</span>(<span class="ruby-identifier">str</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^A|O$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+298:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'H'</span>, <span class="ruby-identifier">current</span>
+299:               <span class="ruby-keyword kw">else</span>
+300:                 <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">last</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span>
+301:                   <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">current</span>
+302:                 <span class="ruby-keyword kw">else</span>
+303:                   <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^L|T|K|S|N|M|B|Z$/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^S|K|L$/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+304:                     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'J'</span>, <span class="ruby-identifier">current</span>
+305:                   <span class="ruby-keyword kw">else</span>
+306:                     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">current</span>
+307:                   <span class="ruby-keyword kw">end</span>
+308:                 <span class="ruby-keyword kw">end</span>
+309:               <span class="ruby-keyword kw">end</span>
+310:             <span class="ruby-keyword kw">end</span>
+311:           <span class="ruby-keyword kw">end</span>
+312:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'K'</span>
+313:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, (<span class="ruby-value str">'K'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+314:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'L'</span>
+315:           <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'L'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+316:             <span class="ruby-keyword kw">if</span> (((<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">3</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^(ILL(O|A)|ALLE)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">4</span>]) <span class="ruby-operator">||</span>
+317:                 ((<span class="ruby-regexp re">/^(A|O)S$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">last</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">||</span> <span class="ruby-regexp re">/^A|O$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">last</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'ALLE'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">4</span>]))
+318:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'L'</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">2</span>
+319:             <span class="ruby-keyword kw">else</span>
+320:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'L'</span>, <span class="ruby-value str">'L'</span>, <span class="ruby-value">2</span>
+321:             <span class="ruby-keyword kw">end</span>
+322:           <span class="ruby-keyword kw">else</span>
+323:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'L'</span>, <span class="ruby-value str">'L'</span>, <span class="ruby-value">1</span>
+324:           <span class="ruby-keyword kw">end</span>
+325:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'M'</span>
+326:           <span class="ruby-keyword kw">if</span> (<span class="ruby-value str">'UMB'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">3</span>] <span class="ruby-operator">&amp;&amp;</span>
+327:               ((<span class="ruby-identifier">last</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'ER'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">2</span>])) <span class="ruby-operator">||</span> <span class="ruby-value str">'M'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+328:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'M'</span>, <span class="ruby-value str">'M'</span>, <span class="ruby-value">2</span>
+329:           <span class="ruby-keyword kw">else</span>
+330:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'M'</span>, <span class="ruby-value str">'M'</span>, <span class="ruby-value">1</span>
+331:           <span class="ruby-keyword kw">end</span>
+332:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'N'</span>
+333:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'N'</span>, <span class="ruby-value str">'N'</span>, (<span class="ruby-value str">'N'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+334:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Ñ'</span>
+335:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'N'</span>, <span class="ruby-value str">'N'</span>, <span class="ruby-value">1</span>
+336:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'P'</span>
+337:           <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'H'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+338:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'F'</span>, <span class="ruby-value str">'F'</span>, <span class="ruby-value">2</span>
+339:           <span class="ruby-keyword kw">else</span>
+340:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'P'</span>, <span class="ruby-value str">'P'</span>, (<span class="ruby-regexp re">/^P|B$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+341:           <span class="ruby-keyword kw">end</span>
+342:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Q'</span>
+343:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'K'</span>, <span class="ruby-value str">'K'</span>, (<span class="ruby-value str">'Q'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+344:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'R'</span>
+345:           <span class="ruby-identifier">current</span> = (<span class="ruby-value str">'R'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+346: 
+347:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">last</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">slavo_germanic?</span>(<span class="ruby-identifier">str</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'IE'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^M(E|A)$/</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">4</span>, <span class="ruby-value">2</span>]
+348:             <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-value str">'R'</span>, <span class="ruby-identifier">current</span>
+349:           <span class="ruby-keyword kw">else</span>
+350:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'R'</span>, <span class="ruby-value str">'R'</span>, <span class="ruby-identifier">current</span>
+351:           <span class="ruby-keyword kw">end</span>
+352:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'S'</span>
+353:           <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^(I|Y)SL$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">3</span>]
+354:             <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">1</span>
+355:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'SUGAR'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">5</span>]
+356:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'X'</span>, <span class="ruby-value str">'S'</span>, <span class="ruby-value">1</span>
+357:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'SH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>]
+358:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^H(EIM|OEK|OLM|OLZ)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">4</span>]
+359:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, <span class="ruby-value str">'S'</span>, <span class="ruby-value">2</span>
+360:             <span class="ruby-keyword kw">else</span>
+361:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'X'</span>, <span class="ruby-value str">'X'</span>, <span class="ruby-value">2</span>
+362:             <span class="ruby-keyword kw">end</span>
+363:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-regexp re">/^SI(O|A)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">3</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">'SIAN'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">4</span>]
+364:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, (<span class="ruby-identifier">slavo_germanic?</span>(<span class="ruby-identifier">str</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">'S'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'X'</span>), <span class="ruby-value">3</span>
+365:           <span class="ruby-keyword kw">elsif</span> (<span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^M|N|L|W$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">||</span> <span class="ruby-value str">'Z'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+366:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, <span class="ruby-value str">'X'</span>, (<span class="ruby-value str">'Z'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+367:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'SC'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>]
+368:             <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'H'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>]
+369:               <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^OO|ER|EN|UY|ED|EM$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">3</span>, <span class="ruby-value">2</span>]
+370:                 <span class="ruby-keyword kw">return</span> (<span class="ruby-regexp re">/^E(R|N)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">3</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">?</span> <span class="ruby-value str">'X'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'SK'</span>), <span class="ruby-value str">'SK'</span>, <span class="ruby-value">3</span>
+371:               <span class="ruby-keyword kw">else</span>
+372:                 <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'X'</span>, ((<span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-value">3</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-value str">'W'</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">3</span>, <span class="ruby-value">1</span>])) <span class="ruby-operator">?</span> <span class="ruby-value str">'S'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'X'</span>), <span class="ruby-value">3</span>
+373:               <span class="ruby-keyword kw">end</span>
+374:             <span class="ruby-keyword kw">elsif</span> <span class="ruby-regexp re">/^I|E|Y$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">1</span>]
+375:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, <span class="ruby-value str">'S'</span>, <span class="ruby-value">3</span>
+376:             <span class="ruby-keyword kw">else</span>
+377:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'SK'</span>, <span class="ruby-value str">'SK'</span>, <span class="ruby-value">3</span>
+378:             <span class="ruby-keyword kw">end</span>
+379:           <span class="ruby-keyword kw">else</span>
+380:             <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">last</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-regexp re">/^(A|O)I$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'S'</span>), <span class="ruby-value str">'S'</span>, (<span class="ruby-regexp re">/^S|Z$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+381:           <span class="ruby-keyword kw">end</span>
+382:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'T'</span>
+383:           <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'TION'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">4</span>]
+384:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'X'</span>, <span class="ruby-value str">'X'</span>, <span class="ruby-value">3</span>
+385:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-regexp re">/^T(IA|CH)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">3</span>]
+386:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'X'</span>, <span class="ruby-value str">'X'</span>, <span class="ruby-value">3</span>
+387:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-value str">'TH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">'TTH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">3</span>]
+388:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^(O|A)M$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">||</span> <span class="ruby-regexp re">/^V(A|O)N $/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">'SCH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">3</span>]
+389:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'T'</span>, <span class="ruby-value str">'T'</span>, <span class="ruby-value">2</span>
+390:             <span class="ruby-keyword kw">else</span>
+391:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'0'</span>, <span class="ruby-value str">'T'</span>, <span class="ruby-value">2</span>
+392:             <span class="ruby-keyword kw">end</span>
+393:           <span class="ruby-keyword kw">else</span>
+394:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'T'</span>, <span class="ruby-value str">'T'</span>, (<span class="ruby-regexp re">/^T|D$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+395:           <span class="ruby-keyword kw">end</span>
+396:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'V'</span>
+397:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'F'</span>, <span class="ruby-value str">'F'</span>, (<span class="ruby-value str">'V'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+398:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'W'</span>
+399:           <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'WR'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>]
+400:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'R'</span>, <span class="ruby-value str">'R'</span>, <span class="ruby-value">2</span>
+401:           <span class="ruby-keyword kw">end</span>
+402:           <span class="ruby-identifier">pri</span>, <span class="ruby-identifier">sec</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>
+403:           <span class="ruby-keyword kw">if</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">||</span> <span class="ruby-value str">'WH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">2</span>])
+404:             <span class="ruby-identifier">pri</span> = <span class="ruby-value str">'A'</span>
+405:             <span class="ruby-identifier">sec</span> = <span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]) <span class="ruby-operator">?</span> <span class="ruby-value str">'F'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'A'</span>
+406:           <span class="ruby-keyword kw">end</span>
+407:           <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">last</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>])) <span class="ruby-operator">||</span> <span class="ruby-value str">'SCH'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-value">0</span>, <span class="ruby-value">3</span>] <span class="ruby-operator">||</span>
+408:               <span class="ruby-regexp re">/^EWSKI|EWSKY|OWSKI|OWSKY$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">5</span>]
+409:             <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">pri</span>, <span class="ruby-node">&quot;#{sec}F&quot;</span>, <span class="ruby-value">1</span>
+410:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-regexp re">/^WI(C|T)Z$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span>, <span class="ruby-value">4</span>]
+411:             <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;#{pri}TS&quot;</span>, <span class="ruby-node">&quot;#{sec}FX&quot;</span>, <span class="ruby-value">4</span>
+412:           <span class="ruby-keyword kw">else</span>
+413:             <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">pri</span>, <span class="ruby-identifier">sec</span>, <span class="ruby-value">1</span>
+414:           <span class="ruby-keyword kw">end</span>
+415:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'X'</span>
+416:           <span class="ruby-identifier">current</span> = (<span class="ruby-regexp re">/^C|X$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+417:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">last</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-regexp re">/^(I|E)AU$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">3</span>, <span class="ruby-value">3</span>] <span class="ruby-operator">||</span> <span class="ruby-regexp re">/^(A|O)U$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>, <span class="ruby-value">2</span>]))
+418:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'KS'</span>, <span class="ruby-value str">'KS'</span>, <span class="ruby-identifier">current</span>
+419:           <span class="ruby-keyword kw">else</span>
+420:             <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">current</span>
+421:           <span class="ruby-keyword kw">end</span>
+422:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Z'</span>
+423:           <span class="ruby-keyword kw">if</span> <span class="ruby-value str">'H'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+424:             <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'J'</span>, <span class="ruby-value str">'J'</span>, <span class="ruby-value">2</span>
+425:           <span class="ruby-keyword kw">else</span>
+426:             <span class="ruby-identifier">current</span> = (<span class="ruby-value str">'Z'</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">?</span> <span class="ruby-value">2</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)
+427:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^Z(O|I|A)$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>] <span class="ruby-operator">||</span> (<span class="ruby-identifier">slavo_germanic?</span>(<span class="ruby-identifier">str</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">pos</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-value str">'T'</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span>]))
+428:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, <span class="ruby-value str">'TS'</span>, <span class="ruby-identifier">current</span>
+429:             <span class="ruby-keyword kw">else</span>
+430:               <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'S'</span>, <span class="ruby-value str">'S'</span>, <span class="ruby-identifier">current</span>
+431:             <span class="ruby-keyword kw">end</span>
+432:           <span class="ruby-keyword kw">end</span>
+433:         <span class="ruby-keyword kw">else</span>
+434:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">1</span>
+435:       <span class="ruby-keyword kw">end</span>
+436:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="metaphone-word-method" class="method-detail ">
+        <a name="method-c-metaphone_word"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">metaphone_word</span><span
+            class="method-args">(w, alt=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="metaphone-word-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/english/metaphone.rb, line 86</span>
+86:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">metaphone_word</span>(<span class="ruby-identifier">w</span>, <span class="ruby-identifier">alt</span>=<span class="ruby-keyword kw">nil</span>)
+87:       <span class="ruby-comment cmt"># Normalise case and remove non-ASCII</span>
+88:       <span class="ruby-identifier">s</span> = <span class="ruby-identifier">w</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[^a-z]/</span>, <span class="ruby-value str">''</span>)
+89:       <span class="ruby-comment cmt"># Apply the Metaphone rules</span>
+90:       <span class="ruby-identifier">rules</span> = <span class="ruby-identifier">alt</span> <span class="ruby-operator">?</span> <span class="ruby-constant">METAPHONE_RULES_LP</span> <span class="ruby-operator">:</span> <span class="ruby-constant">METAPHONE_RULES</span>
+91:       <span class="ruby-identifier">rules</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">rx</span>, <span class="ruby-identifier">rep</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-identifier">rx</span>, <span class="ruby-identifier">rep</span>) }
+92:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">upcase</span>
+93:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="slavo-germanic--method" class="method-detail ">
+        <a name="method-c-slavo_germanic%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">slavo_germanic?</span><span
+            class="method-args">(str)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="slavo-germanic--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/english/metaphone.rb, line 129</span>
+129:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">slavo_germanic?</span>(<span class="ruby-identifier">str</span>)
+130:       <span class="ruby-regexp re">/W|K|CZ|WITZ/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>
+131:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="vowel--method" class="method-detail ">
+        <a name="method-c-vowel%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">vowel?</span><span
+            class="method-args">(str)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="vowel--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/english/metaphone.rb, line 133</span>
+133:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">vowel?</span>(<span class="ruby-identifier">str</span>)
+134:       <span class="ruby-regexp re">/^A|E|I|O|U|Y$/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">str</span>
+135:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+
