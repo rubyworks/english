@@ -14,13 +14,18 @@ description:
   It includes a number of useful libraries, such as inflect.rb, 
   metaphone.rb, ordinal.rb, and so on.
 
+requires:
+  - language
+  - syckle (build)
+
 resources:
-  homepage   : http://rubyworks.github.com/english
-  development: http://github.com/rubyworks/english
-  repository : git://github.com/rubyworks/english.git
-  mailinglist: http://groups.google.com/group/rubyworks-mailinglist
-  subscribe  : rubyworks-mailinglist+subscribe@googlegroups.com
-  distributor: http://rubygems.org/english
+  home: http://rubyworks.github.com/english
+  code: http://github.com/rubyworks/english
+  mail: http://groups.google.com/group/rubyworks-mailinglist
+  host: http://rubygems.org/english
+
+repositories:
+  public: git://github.com/rubyworks/english.git
 
 copyright:
   Copyright (c) 2007 Thomas Sawyer

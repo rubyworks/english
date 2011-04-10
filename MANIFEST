@@ -1,4 +1,5 @@
-#!mast lib meta test [A-Z]*
+#!mast .ruby lib meta test [A-Z]*
+.ruby
 lib/en.rb
 lib/english/censor.rb
 lib/english/class.rb
@@ -17,8 +18,6 @@ lib/english/porter.rb
 lib/english/soundex.rb
 lib/english/words.rb
 lib/english.rb
-meta/gemfile
-meta/profile
 test/fixture/double_metaphone.txt
 test/fixture/metaphone.txt
 test/fixture/metaphone_lp.txt
@@ -34,7 +33,10 @@ test/test_porter.rb
 test/test_soundex.rb
 Rakefile
 HISTORY.rdoc
+PROFILE
 LICENSE
 README.rdoc
 AUTHORS
+Gemfile
+NOTICE
 Syckfile
